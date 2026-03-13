@@ -1,0 +1,25 @@
+{
+  "$id": "#eggologic-carbon-credit-v1",
+  "title": "Crédito Ambiental CARBONCOIN",
+  "description": "Environmental credit — 1 instance = 1 tCO₂e avoided. Triggers CARBONCOIN NFT mint",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "credit_id": { "title": "Credit ID", "type": "string" },
+    "metodologia": { "title": "Methodology", "type": "string", "enum": ["CDM_AMS-III.F_adapted"] },
+    "batch_ids": { "title": "Batch IDs", "type": "array", "items": {"type":"string"} },
+    "kg_acumulados_brutos": { "title": "Gross Accumulated kg", "type": "number" },
+    "factor_conservador": { "title": "Conservative Factor", "type": "number", "minimum": 0, "maximum": 1 },
+    "kg_ajustados": { "title": "Adjusted kg", "type": "number" },
+    "reduccion_emisiones_tCO2e": { "title": "tCO₂e Avoided", "type": "number" },
+    "ano_vintage": { "title": "Vintage Year", "type": "integer" },
+    "estado_verificacion": { "title": "Verification Status", "type": "string", "enum": ["pending","verified","rejected"] },
+    "did_verificador": { "title": "Verifier DID", "type": "string" },
+    "nft_token_id": { "title": "CARBONCOIN Token ID", "type": "string" },
+    "nft_serial": { "title": "NFT Serial", "type": "integer" },
+    "mrv_data_cid": { "title": "MRV IPFS CID", "type": "string" }
+  },
+  "required": ["credit_id","metodologia","batch_ids","kg_ajustados","reduccion_emisiones_tCO2e","estado_verificacion"]
+}

@@ -1,0 +1,24 @@
+{
+  "$id": "#eggologic-batch-v1",
+  "title": "Lote de Procesamiento BSF/Compost",
+  "description": "Batch processing record — groups deliveries into BSF or compost lots",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "batch_id": { "title": "Batch ID", "type": "string" },
+    "tipo_batch": { "title": "Batch Type", "type": "string", "enum": ["BSF","compost"] },
+    "delivery_ids": { "title": "Delivery IDs", "type": "array", "items": {"type":"string"} },
+    "fecha_inicio": { "title": "Start Date", "type": "string", "format": "date" },
+    "fecha_fin": { "title": "End Date", "type": "string", "format": "date" },
+    "kg_ingreso": { "title": "Input Weight (kg)", "type": "number", "minimum": 0 },
+    "kg_salida": { "title": "Output Weight (kg)", "type": "number", "minimum": 0 },
+    "ratio_conversion": { "title": "Conversion Ratio (%)", "type": "number" },
+    "dias_proceso": { "title": "Processing Days", "type": "integer" },
+    "temp_max": { "title": "Max Temperature (°C)", "type": "number" },
+    "estado": { "title": "Status", "type": "string", "enum": ["activo","cerrado","descartado"] },
+    "observaciones": { "title": "Notes", "type": "string", "maxLength": 200 }
+  },
+  "required": ["batch_id","tipo_batch","delivery_ids","fecha_inicio","kg_ingreso","estado"]
+}

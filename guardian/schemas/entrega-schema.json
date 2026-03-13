@@ -1,0 +1,26 @@
+{
+  "$id": "#eggologic-entrega-v1",
+  "$comment": "{\"term\":\"eggologic-entrega-v1\",\"@id\":\"https://eggologic.com/schemas/entrega#v1\"}",
+  "title": "Entrega de Residuos Orgánicos",
+  "description": "Organic waste delivery record — MRV type triggering EGGOCOINS calculation",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "delivery_id": { "title": "Delivery ID", "type": "string", "$comment": "{\"term\":\"delivery_id\",\"@id\":\"https://schema.org/identifier\"}" },
+    "supplier_id": { "title": "Supplier ID", "type": "string", "$comment": "{\"term\":\"supplier_id\",\"@id\":\"https://schema.org/identifier\"}" },
+    "fecha": { "title": "Delivery Date", "type": "string", "format": "date" },
+    "kg_brutos": { "title": "Gross Weight (kg)", "type": "number", "minimum": 0.1, "maximum": 200, "$comment": "{\"term\":\"kg_brutos\",\"@id\":\"https://schema.org/weight\"}" },
+    "pct_impropios": { "title": "Contaminant %", "type": "number", "minimum": 0, "maximum": 100 },
+    "kg_netos": { "title": "Net Weight (kg)", "type": "number", "$comment": "{\"term\":\"kg_netos\",\"@id\":\"https://schema.org/weight\"}" },
+    "tipo_residuo": { "title": "Waste Type", "type": "string", "enum": ["organico","poda","cama_gallina","mixto"] },
+    "destino": { "title": "Destination", "type": "string", "enum": ["BSF","compost","mixto"] },
+    "quality_grade": { "title": "Quality Grade", "type": "string", "enum": ["A","B","C","D"] },
+    "factor_calidad": { "title": "Quality Factor", "type": "number", "minimum": 0.5, "maximum": 1.2 },
+    "factor_alianza": { "title": "Alliance Factor", "type": "number", "minimum": 1.0, "maximum": 1.1 },
+    "eggocoins_earned": { "title": "EGGOCOINS Earned", "type": "number" },
+    "operador": { "title": "Operator", "type": "string" }
+  },
+  "required": ["delivery_id","supplier_id","fecha","kg_brutos","pct_impropios","destino"]
+}

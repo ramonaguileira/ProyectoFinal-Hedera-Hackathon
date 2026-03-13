@@ -1,0 +1,24 @@
+{
+  "$id": "#eggologic-production-v1",
+  "title": "Registro de Producción",
+  "description": "Daily production record — eggs, larvae harvest, compost. MRV type",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "production_id": { "title": "Production ID", "type": "string" },
+    "fecha": { "title": "Date", "type": "string", "format": "date" },
+    "batch_id": { "title": "BSF Batch ID", "type": "string" },
+    "huevos_dia": { "title": "Eggs Per Day", "type": "integer", "minimum": 0, "maximum": 50 },
+    "gallinas_postura": { "title": "Active Laying Hens", "type": "integer", "minimum": 0 },
+    "pct_postura": { "title": "Laying Rate (%)", "type": "number" },
+    "kg_larva_cosechada": { "title": "Larvae Harvested (kg)", "type": "number", "minimum": 0 },
+    "kg_larva_a_gallinas": { "title": "Larvae to Hens (kg)", "type": "number", "minimum": 0 },
+    "kg_compost": { "title": "Compost Output (kg)", "type": "number", "minimum": 0 },
+    "temp_compost": { "title": "Compost Temp (°C)", "type": "number" },
+    "mortalidad_semana": { "title": "Weekly Mortality", "type": "integer", "minimum": 0 },
+    "observaciones": { "title": "Notes", "type": "string", "maxLength": 200 }
+  },
+  "required": ["production_id","fecha","huevos_dia"]
+}

@@ -1,0 +1,24 @@
+{
+  "$id": "#eggologic-supplier-v1",
+  "title": "Registro de Proveedor",
+  "description": "Supplier registration — restaurants and organic waste sources",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "supplier_id": { "title": "Supplier ID", "type": "string" },
+    "nombre": { "title": "Business Name", "type": "string" },
+    "tipo": { "title": "Supplier Type", "type": "string", "enum": ["restaurante","interno","poda","compra","otro"] },
+    "contacto": { "title": "Contact Person", "type": "string" },
+    "telefono": { "title": "Phone", "type": "string" },
+    "direccion": { "title": "Address", "type": "string" },
+    "ubicacion": { "title": "GPS Location", "type": "string" },
+    "frecuencia_retiro": { "title": "Pickup Frequency", "type": "string", "enum": ["diaria","2x_semana","semanal","variable"] },
+    "nivel_alianza": { "title": "Alliance Level", "type": "string", "enum": ["standard","premium"] },
+    "hedera_account_id": { "title": "Hedera Account ID", "type": "string" },
+    "fecha_alta": { "title": "Registration Date", "type": "string", "format": "date" },
+    "estado": { "title": "Status", "type": "string", "enum": ["activo","pausado","inactivo"] }
+  },
+  "required": ["supplier_id","nombre","tipo","estado"]
+}

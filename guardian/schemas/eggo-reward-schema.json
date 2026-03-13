@@ -1,0 +1,59 @@
+{
+  "$id": "#EggoRewardSchema",
+  "$comment": "{\"term\":\"EggoRewardSchema\",\"@id\":\"https://eggologic.com/schemas/eggo-reward#v1\"}",
+  "title": "EGGOCOINS Reward Record",
+  "description": "Stores the calculated EGGOCOINS reward record linked to an entrega. Created automatically by eggo_calculate_rewards block. Not user-editable.",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "eggo_reward_entrega_ref": {
+      "title": "Entrega Reference",
+      "description": "Links to the source EntregaSchema VC",
+      "type": "string"
+    },
+    "eggo_reward_supplier_ref": {
+      "title": "Supplier Reference",
+      "description": "Links to the SupplierProfileSchema VC",
+      "type": "string"
+    },
+    "eggo_reward_waste_kg": {
+      "title": "Waste Diverted (kg)",
+      "description": "= eggo_entrega_kg_neto",
+      "type": "number"
+    },
+    "eggo_reward_methane_avoided": {
+      "title": "Methane Avoided (tCO2e)",
+      "description": "= waste_kg * MCF * GWPCH4 * 0.001",
+      "type": "number"
+    },
+    "eggo_reward_compost_carbon": {
+      "title": "Compost Carbon (tCO2e)",
+      "description": "= compost_output_kg * 0.02 * (44/12) * 0.001",
+      "type": "number"
+    },
+    "eggo_reward_total_carbon": {
+      "title": "Total Carbon (tCO2e)",
+      "description": "= methane_avoided + compost_carbon (display only)",
+      "type": "number"
+    },
+    "eggo_reward_points": {
+      "title": "EGGOCOINS Earned",
+      "description": "= (methane_avoided + compost_carbon) * r * 100",
+      "type": "number"
+    },
+    "eggo_reward_calc_date": {
+      "title": "Calculation Date",
+      "description": "Timestamp of reward computation",
+      "type": "string",
+      "format": "date-time"
+    },
+    "eggo_reward_period": {
+      "title": "Period",
+      "description": "ISO week matching the entrega",
+      "type": "string"
+    }
+  },
+  "required": ["eggo_reward_entrega_ref", "eggo_reward_supplier_ref", "eggo_reward_waste_kg", "eggo_reward_methane_avoided", "eggo_reward_compost_carbon", "eggo_reward_total_carbon", "eggo_reward_points", "eggo_reward_calc_date", "eggo_reward_period"]
+}

@@ -1,0 +1,75 @@
+{
+  "$id": "#BSFProcessingSchema",
+  "$comment": "{\"term\":\"BSFProcessingSchema\",\"@id\":\"https://eggologic.com/schemas/bsf-processing#v1\"}",
+  "title": "BSF Processing Batch",
+  "description": "Records Black Soldier Fly processing batch data. Tracks bioconversion of organic waste into larvae biomass.",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "eggo_bsf_batch_id": {
+      "title": "Batch ID",
+      "description": "Unique batch identifier",
+      "type": "string"
+    },
+    "eggo_bsf_start_date": {
+      "title": "Processing Start",
+      "description": "Date larvae processing began",
+      "type": "string",
+      "format": "date"
+    },
+    "eggo_bsf_end_date": {
+      "title": "Processing End",
+      "description": "Date larvae processing completed",
+      "type": "string",
+      "format": "date"
+    },
+    "eggo_bsf_input_kg": {
+      "title": "Input Waste (kg)",
+      "description": "Total waste fed to larvae",
+      "type": "number",
+      "minimum": 0
+    },
+    "eggo_bsf_larvae_kg": {
+      "title": "Larvae Output (kg)",
+      "description": "Harvested larvae weight",
+      "type": "number",
+      "minimum": 0
+    },
+    "eggo_bsf_frass_kg": {
+      "title": "Residue/Frass (kg)",
+      "description": "Compost-grade residue weight",
+      "type": "number",
+      "minimum": 0
+    },
+    "eggo_bsf_conversion_rate": {
+      "title": "Conversion Rate (%)",
+      "description": "Calculated: (larvae_kg / input_kg) * 100",
+      "type": "number",
+      "readOnly": true
+    },
+    "eggo_bsf_temp_avg": {
+      "title": "Temperature Avg (C)",
+      "description": "Average processing temperature",
+      "type": "number"
+    },
+    "eggo_bsf_humidity_avg": {
+      "title": "Humidity Avg (%)",
+      "description": "Average humidity during processing",
+      "type": "number"
+    },
+    "eggo_bsf_entrega_refs": {
+      "title": "Linked Entregas",
+      "description": "References to EntregaSchema VCs used as input",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "eggo_bsf_notes": {
+      "title": "Notes",
+      "description": "Processing observations",
+      "type": "string"
+    }
+  },
+  "required": ["eggo_bsf_batch_id", "eggo_bsf_start_date", "eggo_bsf_end_date", "eggo_bsf_input_kg", "eggo_bsf_larvae_kg", "eggo_bsf_frass_kg", "eggo_bsf_entrega_refs"]
+}

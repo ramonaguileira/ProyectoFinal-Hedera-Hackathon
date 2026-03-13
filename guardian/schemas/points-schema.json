@@ -1,0 +1,19 @@
+{
+  "$id": "#eggologic-points-v1",
+  "title": "EGGOCOINS Mint Record",
+  "description": "Records EGGOCOINS calculation and minting details per delivery",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "supplier_id": { "title": "Supplier ID", "type": "string" },
+    "delivery_id": { "title": "Delivery ID", "type": "string" },
+    "eggocoins_earned": { "title": "EGGOCOINS Earned", "type": "number" },
+    "formula_inputs": { "title": "Formula Inputs", "type": "string" },
+    "token_mint_tx": { "title": "Mint Transaction ID", "type": "string" },
+    "token_transfer_tx": { "title": "Transfer Transaction ID", "type": "string" },
+    "periodo": { "title": "Period", "type": "string" }
+  },
+  "required": ["supplier_id","delivery_id","eggocoins_earned"]
+}

@@ -1,0 +1,60 @@
+{
+  "$id": "#ProductOutputSchema",
+  "$comment": "{\"term\":\"ProductOutputSchema\",\"@id\":\"https://eggologic.com/schemas/product-output#v1\"}",
+  "title": "Product Output Record",
+  "description": "Records final product outputs (eggs, compost, animal feed) from the Eggologic circular economy cycle.",
+  "type": "object",
+  "properties": {
+    "@context": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "type": { "oneOf": [{"type":"string"},{"type":"array","items":{"type":"string"}}], "readOnly": true },
+    "id": { "type": "string", "readOnly": true },
+    "eggo_product_date": {
+      "title": "Output Date",
+      "description": "Date of product output recording",
+      "type": "string",
+      "format": "date"
+    },
+    "eggo_product_type": {
+      "title": "Product Type",
+      "type": "string",
+      "enum": ["Eggs", "Compost", "Animal Feed", "Larvae (raw)"]
+    },
+    "eggo_product_quantity_kg": {
+      "title": "Quantity (kg)",
+      "description": "Output weight in kg",
+      "type": "number",
+      "minimum": 0
+    },
+    "eggo_product_quantity_units": {
+      "title": "Quantity (units)",
+      "description": "Output in units (e.g. number of eggs)",
+      "type": "number"
+    },
+    "eggo_product_destination": {
+      "title": "Destination",
+      "description": "Where the product was sent/sold",
+      "type": "string"
+    },
+    "eggo_product_bsf_ref": {
+      "title": "Linked BSF Batch",
+      "description": "Reference to BSFProcessingSchema VC",
+      "type": "string"
+    },
+    "eggo_product_compost_use": {
+      "title": "Compost Application",
+      "type": "string",
+      "enum": ["Soil Application", "Sale", "Storage", "Other"]
+    },
+    "eggo_product_compost_kg": {
+      "title": "Compost Output (kg)",
+      "description": "Compost weight specifically (for carbon calc)",
+      "type": "number"
+    },
+    "eggo_product_notes": {
+      "title": "Notes",
+      "description": "Product quality observations",
+      "type": "string"
+    }
+  },
+  "required": ["eggo_product_date", "eggo_product_type", "eggo_product_quantity_kg", "eggo_product_destination"]
+}

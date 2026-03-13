@@ -1,0 +1,39 @@
+{
+  "name": "eggologic-hedera",
+  "version": "1.0.0",
+  "description": "Tokenizing the circular economy — Organic Waste → BSF → Eggs → Compost → Verified Carbon Credits on Hedera",
+  "private": true,
+  "workspaces": [
+    "middleware",
+    "dashboard"
+  ],
+  "scripts": {
+    "setup": "node scripts/setup-testnet.js",
+    "demo": "node scripts/demo-flow.js",
+    "seed": "node scripts/seed-demo-data.js",
+    "middleware:dev": "cd middleware && npm run dev",
+    "dashboard:dev": "cd dashboard && npm run dev",
+    "test": "cd middleware && npm test"
+  },
+  "keywords": [
+    "hedera",
+    "guardian",
+    "circular-economy",
+    "carbon-credits",
+    "sustainability",
+    "HTS",
+    "HCS",
+    "MRV",
+    "BSF",
+    "tokenization"
+  ],
+  "author": "Ramon Aguileira",
+  "license": "MIT",
+  "dependencies": {
+    "@hashgraph/sdk": "2.80.0",
+    "dotenv": "17.3.1"
+  },
+  "overrides": {
+    "pino": "8.19.0"
+  }
+}

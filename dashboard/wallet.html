@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eggologic Wallet - Eggocoin Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed": "#c1edc7", "inverse-on-surface": "#f5f0e7", "on-primary": "#ffffff",
+            "on-tertiary-container": "#95c093", "on-secondary": "#ffffff", "surface-dim": "#ded9d1",
+            "primary-container": "#284f33", "secondary": "#386846", "inverse-primary": "#a5d1ac",
+            "on-surface": "#1d1c16", "on-error": "#ffffff", "tertiary": "#113817",
+            "outline-variant": "#c1c8bf", "on-primary-fixed": "#00210d", "primary-fixed-dim": "#a5d1ac",
+            "surface-container": "#f2ede4", "tertiary-container": "#284f2c",
+            "on-secondary-container": "#3d6d4a", "on-background": "#1d1c16",
+            "on-primary-container": "#95c09c", "inverse-surface": "#32302a",
+            "surface-container-lowest": "#ffffff", "surface-container-low": "#f8f3ea",
+            "error": "#ba1a1a", "background": "#F5F3E8", "surface-bright": "#fef9f0",
+            "on-tertiary": "#ffffff", "on-error-container": "#93000a",
+            "on-secondary-fixed-variant": "#205030", "surface-tint": "#3f6749",
+            "surface": "#F5F3E8", "on-tertiary-fixed-variant": "#284f2c",
+            "on-secondary-fixed": "#00210d", "tertiary-fixed-dim": "#a6d2a4",
+            "surface-container-high": "#ece8df", "primary": "#10381e",
+            "secondary-fixed-dim": "#9fd3a9", "surface-variant": "#e7e2d9",
+            "outline": "#727971", "tertiary-fixed": "#c1eebe", "error-container": "#ffdad6",
+            "secondary-fixed": "#baefc3", "on-surface-variant": "#424942",
+            "on-primary-fixed-variant": "#284f33", "on-tertiary-fixed": "#002107",
+            "secondary-container": "#b7ecc1", "surface-container-highest": "#e7e2d9"
+          },
+          fontFamily: {
+            "headline": ["Newsreader", "serif"],
+            "body": ["Plus Jakarta Sans", "sans-serif"],
+            "label": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1.5rem", "3xl": "2.5rem", "full": "9999px"},
+        },
+      },
+    }
+</script>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F5F3E8;
+      background-image: radial-gradient(circle at 100% 100%, rgba(56, 104, 70, 0.05) 0%, transparent 50%),
+                        linear-gradient(45deg, transparent 48%, rgba(56, 104, 70, 0.03) 50%, transparent 52%);
+      background-size: 100% 100%, 60px 60px; }
+    .hero-curved-bg { background: linear-gradient(180deg, #10381E 0%, #1A4D2E 100%); border-bottom-left-radius: 120px; border-bottom-right-radius: 120px; position: relative; overflow: hidden; }
+    .hero-curved-bg::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(circle at 50% 120%, rgba(193, 237, 199, 0.1) 0%, transparent 60%); pointer-events: none; }
+    .glass-card { background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1); }
+</style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="hero-curved-bg pb-32">
+<header class="w-full">
+<nav class="flex justify-between items-center px-4 md:px-10 py-4 md:py-6 mx-auto glass-card rounded-full mt-4 md:px-12 !border-white/10 max-w-screen-2xl">
+  <a href="index.html" class="flex items-center gap-2 bg-white/95 rounded-full px-4 py-2 shadow-sm">
+    <div class="w-6 h-6 bg-[#10381E] rounded-full flex items-center justify-center">
+      <span class="material-symbols-outlined text-[14px] text-white">egg</span>
+    </div>
+    <span class="text-sm font-bold text-[#10381E]">EGGOLOGIC</span>
+  </a>
+  <div class="hidden md:flex items-center gap-10 text-white/80 font-medium text-sm">
+    <a class="hover:text-white transition-colors" href="index.html">Dashboard</a>
+    <a class="hover:text-white transition-colors" href="impact.html">Impact Report</a>
+    <a class="nav-active" href="wallet.html">Wallet</a>
+    <a class="hover:text-white transition-colors" href="marketplace.html">Marketplace</a>
+  </div>
+  <div class="flex items-center gap-4">
+    <div id="auth-btn" class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10 cursor-pointer">
+      <div class="w-6 h-6 rounded-full overflow-hidden border border-white/20 bg-white/10 flex items-center justify-center">
+        <span class="material-symbols-outlined text-[14px] text-white">person</span>
+      </div>
+      <span class="text-white text-xs font-semibold">Log In</span>
+      <span class="material-symbols-outlined text-white text-sm">keyboard_arrow_down</span>
+    </div>
+  </div>
+</nav>
+</header>
+<!-- Hero -->
+<div class="max-w-screen-2xl mx-auto px-4 md:px-10 pt-12 md:pt-16 relative z-10">
+  <span class="font-label text-xs uppercase tracking-[0.3em] text-white/60 font-bold mb-4 block">Your Wallet</span>
+  <h1 class="font-headline text-4xl md:text-6xl text-white font-medium tracking-tight mb-4">Eggocoin <i class="italic" style="color: #FBD54E;">Balance</i></h1>
+  <p class="text-white/70 text-base md:text-lg max-w-xl leading-relaxed">Track your EGGOCOIN holdings, view transaction history, and monitor your regenerative investment.</p>
+  <div class="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8 md:mt-10">
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col gap-2 min-w-[280px] text-center">
+      <span class="text-white/60 font-label text-xs uppercase tracking-widest">Total Balance</span>
+      <div id="hero-balance" class="text-4xl md:text-6xl font-headline italic text-white">— EGO</div>
+      <div id="hero-hedera" class="text-white/40 text-xs font-mono mt-2"></div>
+    </div>
+    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col gap-2 min-w-[200px] text-center">
+      <span class="text-white/60 font-label text-xs uppercase tracking-widest">Total Supply</span>
+      <div id="hero-supply" class="text-4xl font-headline italic text-white">—</div>
+      <div class="text-[#C1EDC7] text-xs mt-2">EGGOCOIN on Hedera</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<main class="max-w-screen-2xl mx-auto px-4 md:px-10 mt-8 md:mt-16 mb-16 md:mb-24">
+<div class="grid grid-cols-12 gap-8">
+  <!-- Transaction History -->
+  <section class="col-span-12 lg:col-span-7">
+    <div class="bg-white rounded-3xl p-10 shadow-sm border border-stone-200/50">
+      <div class="flex justify-between items-center mb-8">
+        <h3 class="font-bold text-2xl text-primary">Transaction History</h3>
+        <div class="bg-surface-container-low px-4 py-2 rounded-full text-xs font-bold text-primary flex items-center gap-2 border border-stone-100">
+          EGGOCOIN <span class="material-symbols-outlined text-sm">filter_list</span>
+        </div>
+      </div>
+      <div id="tx-history" class="space-y-3">
+        <p class="text-stone-400 text-sm text-center py-12">Sign in to view transaction history</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Staking Info -->
+  <aside class="col-span-12 lg:col-span-5 flex flex-col gap-8">
+    <div class="bg-white rounded-3xl p-10 shadow-sm border border-stone-200/50 h-full flex flex-col justify-between">
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-full bg-[#C1EDC7]/20 flex items-center justify-center border border-[#C1EDC7]/30">
+            <span class="material-symbols-outlined text-primary text-2xl">eco</span>
+          </div>
+          <h3 class="font-bold text-2xl text-primary">Staking Rewards</h3>
+        </div>
+        <p class="text-on-surface-variant text-sm leading-relaxed mb-8">Your contributions to sustainable farming earn you weekly rewards at a fixed rate of 4.2% APY.</p>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center p-6 bg-surface-container rounded-2xl">
+            <span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Next Payout</span>
+            <span class="font-bold text-primary text-lg">Coming Soon</span>
+          </div>
+          <div class="flex justify-between items-center p-6 bg-surface-container rounded-2xl">
+            <span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Est. Reward</span>
+            <span class="font-bold text-secondary text-lg">4.2% APY</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 p-6 bg-surface-container-low rounded-2xl border border-stone-100">
+        <p class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2">Token Details</p>
+        <div class="space-y-2 text-sm">
+          <div class="flex justify-between"><span class="text-stone-500">Token ID</span><span class="font-mono text-primary text-xs">0.0.8287358</span></div>
+          <div class="flex justify-between"><span class="text-stone-500">Network</span><span class="font-bold text-primary">Hedera Testnet</span></div>
+          <div class="flex justify-between"><span class="text-stone-500">Type</span><span class="font-bold text-primary">HTS Fungible</span></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- Recent Activity -->
+<section class="mt-24">
+  <div class="flex justify-between items-center mb-12">
+    <h3 class="font-headline text-4xl text-primary">All Holders</h3>
+  </div>
+  <div id="all-holders" class="space-y-4">
+    <p class="text-stone-400 text-sm text-center py-12">Sign in to view all EGGOCOIN holders</p>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low mt-32 py-16 px-8">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+  <div class="max-w-md">
+    <span class="text-2xl font-serif font-bold text-primary mb-6 block font-headline">Eggologic</span>
+    <p class="text-on-surface-variant text-sm leading-relaxed mb-8">We are building the infrastructure for a regenerative future.</p>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+    <div>
+      <h6 class="font-bold text-primary text-xs uppercase tracking-widest mb-6">Platform</h6>
+      <ul class="space-y-4 text-sm text-on-surface-variant font-medium">
+        <li><a class="hover:text-primary" href="index.html">Dashboard</a></li>
+        <li><a class="hover:text-primary" href="impact.html">Impact Report</a></li>
+        <li><a class="hover:text-primary" href="marketplace.html">Marketplace</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6 class="font-bold text-primary text-xs uppercase tracking-widest mb-6">Company</h6>
+      <ul class="space-y-4 text-sm text-on-surface-variant font-medium">
+        <li><a href="#">About Us</a></li><li><a href="#">Partners</a></li><li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h6 class="font-bold text-primary text-xs uppercase tracking-widest mb-6">Legal</h6>
+      <ul class="space-y-4 text-sm text-on-surface-variant font-medium">
+        <li><a href="#">Privacy</a></li><li><a href="#">Terms</a></li><li><a href="#">Security</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="max-w-screen-2xl mx-auto border-t border-outline-variant/15 mt-16 pt-8 text-center text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">
+    &copy; 2026 Eggologic Sustainable Estates. All Rights Reserved.
+</div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/hedera.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/wallet.js"></script>
+</body></html>

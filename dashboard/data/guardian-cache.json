@@ -1,0 +1,3003 @@
+{
+  "fetchedAt": "2026-03-21T02:49:19.374Z",
+  "blocks": {
+    "VVB_DELIVERY": {
+      "id": "3a5afd50-d4a5-49ca-866b-75477790ae4c",
+      "blockType": "interfaceDocumentsSourceBlock",
+      "actionType": "local",
+      "readonly": false,
+      "data": [
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:27.943Z",
+          "updateDate": "2026-03-20T01:16:27.951Z",
+          "_propHash": "64ee01507abfe3ec94e87a2dba996fcf",
+          "_docHash": "d33d88398bef3913ae9d914905be0ddb",
+          "hash": "Bf6Rx5TvHjDsNc3WRwUszV8vCm4BaFhvAuAVyxT3hpvm",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773969116.544352000"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773969386.050540000",
+          "messageHash": "HJGc9s8QSEXXsFmPt6yUqeTF5B6fGc8GK7JbAh667cVX",
+          "document": {
+            "id": "urn:uuid:40919f9e-78bd-4af2-a4fe-6cb1bef34415",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T01:16:24.311Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-001",
+                "field5": "SUP-001",
+                "field6": "2026-03-19T08:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 48.5,
+                "field9": 1.2,
+                "field10": 2.5,
+                "field11": 47.3,
+                "field12": 33.11,
+                "field13": "A",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-001"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-001-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:c59aefe7-40d6-449e-9b0d-534630e10825",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:24Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..L7c9FpTaxxghn4pI4nQkvqlTNgjdqhU3vsSg6GacQginycYekZEfjjSunSHzdG5yBtDdbESn4_V8OcL9YJcxDg"
+            }
+          },
+          "documentFileId": "69bc9febe44c63dcad8b9919",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bc9febe44c63dcad8b9916",
+          "id": "69bc9febe44c63dcad8b9916",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T01:16:27.969Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:32.264Z",
+          "updateDate": "2026-03-20T01:16:32.271Z",
+          "_propHash": "927b77bace8725e2c0ae430f9c54c142",
+          "_docHash": "67330bcb022e5cc1b0e7b4fcca3c6a22",
+          "hash": "BRv97anX42AohudqawJeSYco351FhRumgV2zcHmdKVne",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773969119.989555000"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773969390.950321000",
+          "messageHash": "9ZGfxjjbiMZrPcTiQrvk2wBkUjW2KbJs37jRK4Lj1G14",
+          "document": {
+            "id": "urn:uuid:f44f04b2-b416-4ab4-b810-54ae4e6c2633",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T01:16:28.819Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-002",
+                "field5": "SUP-001",
+                "field6": "2026-03-19T09:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 52,
+                "field9": 3.8,
+                "field10": 7.3,
+                "field11": 48.2,
+                "field12": 33.74,
+                "field13": "B",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-002"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-002-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:2959488c-0932-4161-bd50-7aa1d7de974b",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:28Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..h0ctmBp5UK7BDdFiAhSrmGfNwnC9CLobrQMFQM1a7teANiN6AOZnFaf633EbArXmiB6ZtQALycjlIxTJxbQcCQ"
+            }
+          },
+          "documentFileId": "69bc9ff0e44c63dcad8b992c",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bc9ff0e44c63dcad8b9929",
+          "id": "69bc9ff0e44c63dcad8b9929",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T01:16:32.280Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:36.739Z",
+          "updateDate": "2026-03-20T01:16:36.747Z",
+          "_propHash": "e6f005ddfab195e6a5c4b8466c3cb918",
+          "_docHash": "0f92331dc907121db0d186d7f3e3d5f7",
+          "hash": "3V2e9s6QoBg38nsAN7zT5rk7asm2WhEouxZtoM3X4hVm",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773969124.000501745"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773969394.597238704",
+          "messageHash": "HrNmqYCKeJsT7Xa5g2DjFiBPDE8VeEx7KUYJohWHUj2P",
+          "document": {
+            "id": "urn:uuid:e1d65cf8-55ca-48a0-a21c-8bd531159fea",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T01:16:33.184Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-003",
+                "field5": "SUP-001",
+                "field6": "2026-03-19T10:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 45,
+                "field9": 0.5,
+                "field10": 1.1,
+                "field11": 44.5,
+                "field12": 31.15,
+                "field13": "A",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-003"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-003-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:ca4261b4-192a-43c2-a7cc-926c95ede587",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:33Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..MLGp1BEWYqcLFoDyZwsq7KWOuA2mVpCwv1gyCovpPY_vsBWruL9-lbYXExVVgE_1Gm9UL6dthj_2ifTLreHyCQ"
+            }
+          },
+          "documentFileId": "69bc9ff4e44c63dcad8b9947",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bc9ff4e44c63dcad8b9942",
+          "id": "69bc9ff4e44c63dcad8b9942",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T01:16:36.761Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:45.863Z",
+          "updateDate": "2026-03-20T01:16:45.870Z",
+          "_propHash": "2c050ffdc6e80bd6af333928d8795d3d",
+          "_docHash": "a80804760205a427f612cd2fb32845c4",
+          "hash": "EaSPhFWext5cWa8axo2LsVs1annbJZ9PFjs8XqxRs5CB",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773969130.982942139"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773969404.466062000",
+          "messageHash": "EzRCaHRyfY3XxdvknMbXbymv5x84hCP4aE4Aj84WFTEa",
+          "document": {
+            "id": "urn:uuid:27e3363b-afcf-4d9d-bc7b-e7166214f240",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T01:16:42.101Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-005",
+                "field5": "SUP-001",
+                "field6": "2026-03-19T12:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 55,
+                "field9": 2,
+                "field10": 3.6,
+                "field11": 53,
+                "field12": 37.1,
+                "field13": "A",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-005"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-005-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:c22d3630-30da-4feb-8800-a9e7efbfc720",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:42Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..IyhKQDz14qJSF3EtqhFCadTiKK-teZ6_Db2-D6_8rZit1BmpC2k_R_NH9d7FdWTdOHsFeRKW0hncbD8hCBx7DA"
+            }
+          },
+          "documentFileId": "69bc9ffde44c63dcad8b9974",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bc9ffde44c63dcad8b9971",
+          "id": "69bc9ffde44c63dcad8b9971",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T01:16:45.879Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:16.219Z",
+          "updateDate": "2026-03-20T04:22:16.225Z",
+          "_propHash": "08418fd47e4854e6d29d48ceed9f1fbc",
+          "_docHash": "2f96b4a2d770a454b86e796708af53c4",
+          "hash": "E9pbXk8TZamFTUHd4i9vECzHHRe64dYhxU4EdUzGfaJr",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773980364.255581049"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773980534.569829744",
+          "messageHash": "3yUG8ExKAx3svGr5SeaWa2nUdqQwcSaMJd6nYLRrrLef",
+          "document": {
+            "id": "urn:uuid:6c0c7e58-ab1d-4997-920e-bc56b14dcd60",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T04:22:12.386Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-006",
+                "field5": "SUP-001",
+                "field6": "2026-03-20T08:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 300,
+                "field9": 5,
+                "field10": 1.7,
+                "field11": 295,
+                "field12": 206.5,
+                "field13": "A",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-006"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-006-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:cc0b1030-c034-4b23-b2fc-d2e434d85fa1",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:12Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..KF6j0G6vYcb173EnXj_0nFNstBgrTLsxsAOXOpfHCMbEwRc2-7oZzuf4E2MYWt6XM1WBt4MaOQnkIjqC626ZDQ"
+            }
+          },
+          "documentFileId": "69bccb78e44c63dcad8b99fb",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bccb78e44c63dcad8b99f8",
+          "id": "69bccb78e44c63dcad8b99f8",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T04:22:16.234Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:22.366Z",
+          "updateDate": "2026-03-20T04:22:22.372Z",
+          "_propHash": "11fe4e956091ea6593e481f15158d193",
+          "_docHash": "2aeda17ecc9bd48fe50b7a37351f76ae",
+          "hash": "6jWVszWdzxTfpcpuecGYtvN713nXSQvfSSBhmhWe5f5e",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773980373.489508059"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773980540.902863000",
+          "messageHash": "4SKHd1KXpeg6GU8MKP274QDzgUZi8gx5ZBN1hcr9m83m",
+          "document": {
+            "id": "urn:uuid:f63c67b0-72fb-44be-ac81-97226c7bb364",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T04:22:19.416Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-007",
+                "field5": "SUP-001",
+                "field6": "2026-03-20T09:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 320,
+                "field9": 8,
+                "field10": 2.5,
+                "field11": 312,
+                "field12": 218.4,
+                "field13": "A",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-007"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-007-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:2f29ce24-bdc1-4d38-984a-29fd440d4861",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:19Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..5fENS8j37uJZdvLoi30Y4yOEChFSjjQsRAsawUeQ_DHJvw5FTnfWeHQjnskF3LoBxmNkbCOV_a8QoBRldqDgDA"
+            }
+          },
+          "documentFileId": "69bccb7ee44c63dcad8b9a0e",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bccb7ee44c63dcad8b9a0b",
+          "id": "69bccb7ee44c63dcad8b9a0b",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T04:22:22.381Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:29.439Z",
+          "updateDate": "2026-03-20T04:22:29.448Z",
+          "_propHash": "7316b3ab64486f1a8378da55110dc968",
+          "_docHash": "41ffc805abd6975a69c743cc64d5edf0",
+          "hash": "J2tY5ZhFe27TkGKVgE8Y3AcKzrs7W779zgo97MdAya9M",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773980383.340405077"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773980547.447769000",
+          "messageHash": "6WxaqFBZ6tb9i7FNiHKRFqFAqNav4XYcF7FbdmjvLttv",
+          "document": {
+            "id": "urn:uuid:cc3365be-b963-47b1-8098-f0556ced56dd",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T04:22:26.287Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-008",
+                "field5": "SUP-001",
+                "field6": "2026-03-20T10:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 280,
+                "field9": 4,
+                "field10": 1.4,
+                "field11": 276,
+                "field12": 193.2,
+                "field13": "B",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-008"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-008-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:0ca6e039-8ad9-4031-9752-82be94833b0e",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:26Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..aEswtVre9XECJqb2IyP42AfdNO9YrqNztKZg8br3ND4ayHQR23AUoqsIaGXzruzHtaCpOkMw8saj1vD7qfU_Cw"
+            }
+          },
+          "documentFileId": "69bccb85e44c63dcad8b9a2c",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bccb85e44c63dcad8b9a29",
+          "id": "69bccb85e44c63dcad8b9a29",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T04:22:29.457Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:36.744Z",
+          "updateDate": "2026-03-20T04:22:36.751Z",
+          "_propHash": "0a3cfb8478aea374edbe2f315e7b3307",
+          "_docHash": "cd4a17814d68d2dc3432cb6c97fafca2",
+          "hash": "3wV41od3ri1NdguwNttFCWk9kFEoTTpHaaqyDhpbaxgG",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773980391.642739000"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773980555.300734000",
+          "messageHash": "5HfYgPoapUA1Dxx5uzBG9R4PDhwsFcXDqmTUdwhz8Ps4",
+          "document": {
+            "id": "urn:uuid:4601a97d-9208-4447-b652-e63260f0600c",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T04:22:33.553Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-009",
+                "field5": "SUP-001",
+                "field6": "2026-03-20T11:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 350,
+                "field9": 10,
+                "field10": 2.9,
+                "field11": 340,
+                "field12": 238,
+                "field13": "A",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-009"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-009-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:892c4fbf-2b33-44b2-aae0-ac8c099aee9f",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:33Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..LkMWRCX5dUF61BUn__UGMRz4u903m0Qj7jr6B8c0yIE6Xc1FwzB4DGolzxApMqiZf69uRz12567MiiwVsOSWBA"
+            }
+          },
+          "documentFileId": "69bccb8ce44c63dcad8b9a4a",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bccb8ce44c63dcad8b9a47",
+          "id": "69bccb8ce44c63dcad8b9a47",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T04:22:36.762Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:43.642Z",
+          "updateDate": "2026-03-20T04:22:43.649Z",
+          "_propHash": "38990ec7467ab961a3efde4fd10b370a",
+          "_docHash": "a36dee02630dab3d9d00501aa50c50c0",
+          "hash": "3DAttL6AWWSsxafJDcrcvzaDfkYFgu9YjdcCMT3fDLFh",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_130",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773980400.428740492"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773980561.700304476",
+          "messageHash": "7bBJ8Bhnp9w4Riy5xcKrUGiFVnsCdQCqrd564SdjEdxe",
+          "document": {
+            "id": "urn:uuid:5bb8f372-8f28-4bac-b9af-ef8ccfb2d91c",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T04:22:39.968Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-010",
+                "field5": "SUP-001",
+                "field6": "2026-03-20T12:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 290,
+                "field9": 6,
+                "field10": 2.1,
+                "field11": 284,
+                "field12": 198.8,
+                "field13": "A",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-010"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-010-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:162c5b18-2d9f-416e-9dac-e7035da02af5",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:39Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XvkoMI49TZXuScCRzpunLMHheDVf_9nlLPkrMtDu6KKZZoRMr2srmpC0_QO4B6tUrP6E9cKDljsP53prgn2DDQ"
+            }
+          },
+          "documentFileId": "69bccb93e44c63dcad8b9a68",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bccb93e44c63dcad8b9a65",
+          "id": "69bccb93e44c63dcad8b9a65",
+          "__sourceTag__": "VVB  _documentsSourceAddon_125",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T04:22:43.657Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:41.738Z",
+          "updateDate": "2026-03-20T01:16:41.750Z",
+          "_propHash": "28a009a44a6f38ed540cca13809f162b",
+          "_docHash": "e8e82d5e19657f2ae35c623f3bb582ea",
+          "hash": "YWopmpMcKT5RzgfaLdSEuGLNo6N624uGFQPR2YcqNqp",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "rejected_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_133",
+          "schema": "#8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0",
+          "option": {
+            "status": "Rejected"
+          },
+          "relationships": [
+            "1773969127.974303000"
+          ],
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "group": "5b6e67f2-e8e0-4d36-a5b5-4536f193cccb",
+          "accounts": {
+            "default": "0.0.8294621"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773969400.136196000",
+          "messageHash": "Ey1PybUXoUtfvwYoDofRkQKGAn6PWpsqU7tJoaiaLV1M",
+          "document": {
+            "id": "urn:uuid:13dddd93-1067-4603-86bf-cbda33cb19ed",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T01:16:37.598Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field1": "0.3",
+                "field2": "v0.3",
+                "field3": "v0.3",
+                "field4": "ENT-004",
+                "field5": "SUP-001",
+                "field6": "2026-03-19T11:00:00Z",
+                "field7": "food_waste_mixed",
+                "field8": 60,
+                "field9": 7,
+                "field10": 11.7,
+                "field11": 53,
+                "field12": 37.1,
+                "field13": "C",
+                "field14": true,
+                "field15": [
+                  "https://evidence.eggologic.com/ent-004"
+                ],
+                "field16": "Submitted",
+                "field17": [
+                  "https://evidence.eggologic.com/ent-004-photo"
+                ],
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "id": "urn:uuid:1f991904-789a-4fa1-8394-60ed77cef85e",
+                "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:37Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..pnJyT0oTcAGGjUhIsUpClUuvGpXN2Y4VDsp2hobQU5rHboWk2oiqEKHOI5sLvZCudX99S2RLk7KUoWmwNfJeCg"
+            }
+          },
+          "documentFileId": "69bc9ff9e44c63dcad8b9961",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bc9ff9e44c63dcad8b995d",
+          "id": "69bc9ff9e44c63dcad8b995d",
+          "__sourceTag__": "VVB  _documentsSourceAddon_126",
+          "history": [
+            {
+              "labelValue": "Rejected",
+              "created": "2026-03-20T01:16:41.803Z"
+            }
+          ]
+        }
+      ],
+      "blocks": [],
+      "commonAddons": [
+        {
+          "id": "40d1b8e8-9898-4f0f-a42b-72ffcc59968e",
+          "blockType": "historyAddon"
+        },
+        {
+          "id": "0f702163-af16-4907-95e5-faa77bbea4e9",
+          "blockType": "documentsSourceAddon"
+        },
+        {
+          "id": "a6574557-3c3b-49df-b057-f6933aabe386",
+          "blockType": "documentsSourceAddon"
+        },
+        {
+          "id": "edf0a777-929f-40fe-8c36-2188db456274",
+          "blockType": "documentsSourceAddon"
+        }
+      ],
+      "fields": [
+        {
+          "name": "document",
+          "title": "Document",
+          "tooltip": "",
+          "type": "button",
+          "action": "dialog",
+          "content": "View Document",
+          "uiClass": "link",
+          "dialogContent": "VC",
+          "dialogClass": "",
+          "dialogType": "json"
+        },
+        {
+          "title": "Operation",
+          "name": "option.status",
+          "tooltip": "",
+          "type": "block",
+          "action": "",
+          "url": "",
+          "dialogContent": "",
+          "dialogClass": "",
+          "dialogType": "",
+          "bindBlock": "VVB  _buttonBlock_129",
+          "width": "250px",
+          "bindGroup": "VVB  _documentsSourceAddon_124"
+        }
+      ],
+      "viewHistory": true
+    },
+    "VVB_IMPACT_CALC": {
+      "id": "a77f0551-9cce-41c9-889d-c7b1110c059e",
+      "blockType": "interfaceDocumentsSourceBlock",
+      "actionType": "local",
+      "readonly": false,
+      "data": [
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:14:06.105Z",
+          "updateDate": "2026-03-20T01:14:06.116Z",
+          "_propHash": "749f7b07e3cbbc2ca0c39d79ae71a6ca",
+          "_docHash": "fedf68dca8faec9d02af754e43ce0a25",
+          "hash": "C9TJkDaFPWB7q8GPR6Ukrfq8MjCJwEbW6WJGN9q79bEB",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_88",
+          "schema": "#35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773968863.220306754",
+            "1773968760.595386360"
+          ],
+          "owner": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+          "group": null,
+          "accounts": {
+            "default": "0.0.7166777"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773969243.862017707",
+          "messageHash": "2xcgovd3BpvsXAuuQ8TpTciaUFLu8h6gFYZ2qaZei7fY",
+          "document": {
+            "id": "urn:uuid:7dd377a1-4ac7-43a5-90c1-451e159f5ad2",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T01:14:02.316Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field2": "v0.3",
+                "field3": "CALC-2026-001",
+                "field4": "2026-01-01",
+                "field5": "2026-03-31",
+                "field7": [],
+                "field11": "CALC-LOT-001",
+                "field12": "by_delivery_atomic",
+                "field13": "delivery_id_must_be_unique_across_all_issuance_records",
+                "field15": "Draft",
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+                ],
+                "id": "urn:uuid:9879c424-8bb4-44b5-babb-1557ab08803a",
+                "type": "35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:14:02Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..lhDdgWsHzd12z5P0xk-DxRxsZ-tPUgzukJUBercA9lcciu8z1Vm_DLCJQWipq3-g2DpUrQ_wtU1fdA1Fg7r_AA"
+            }
+          },
+          "documentFileId": "69bc9f5ee44c63dcad8b98e7",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bc9f5ee44c63dcad8b98e4",
+          "id": "69bc9f5ee44c63dcad8b98e4",
+          "__sourceTag__": "VVB  _documentsSourceAddon_83",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T01:14:06.131Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:15:35.687Z",
+          "updateDate": "2026-03-20T01:15:35.695Z",
+          "_propHash": "5e8ed5303170474f20a18dcf74333aae",
+          "_docHash": "b0d88e72911fadfd91f0772f7a520c51",
+          "hash": "52qo8Ntk3M5226HZbNE16m58FqyayRUak2Hah5WQmpL5",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_88",
+          "schema": "#35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773969302.658601901",
+            "1773968760.595386360"
+          ],
+          "owner": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+          "group": null,
+          "accounts": {
+            "default": "0.0.7166777"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773969333.862671884",
+          "messageHash": "2gdGB4JSx6X5C92C3Nkmw6KnGXvEY7AjDoeL2xFJGZFx",
+          "document": {
+            "id": "urn:uuid:651c5ec5-14af-4f98-9090-cfdb2f9eb593",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T01:15:32.502Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field2": "v0.3",
+                "field3": "CALC-2026-002",
+                "field4": "2026-01-01",
+                "field5": "2026-03-31",
+                "field6": [
+                  "LOT-001"
+                ],
+                "field7": [
+                  "ENT-001",
+                  "ENT-002",
+                  "ENT-003",
+                  "ENT-005"
+                ],
+                "field8": 135.1,
+                "field9": 1000,
+                "field10": 0,
+                "field11": "CALC-LOT-002",
+                "field12": "by_delivery_atomic",
+                "field13": "delivery_id_must_be_unique_across_all_issuance_records",
+                "field15": "Calculated",
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+                ],
+                "id": "urn:uuid:90914761-a72c-46c5-b981-785cbb41f14d",
+                "type": "35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:15:32Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..d282BbXjbNV61K-aYnkGe20skd8auPiD6I1EHmeaA02hoIArdUwOuMlSWD7LbaVUttefFKT_eyCwnpfD1NxkAA"
+            }
+          },
+          "documentFileId": "69bc9fb7e44c63dcad8b98fd",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bc9fb7e44c63dcad8b98fa",
+          "id": "69bc9fb7e44c63dcad8b98fa",
+          "__sourceTag__": "VVB  _documentsSourceAddon_83",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T01:15:35.705Z"
+            }
+          ]
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:21:31.256Z",
+          "updateDate": "2026-03-20T04:21:31.266Z",
+          "_propHash": "90e2138429f34d61881e23d687c72fb3",
+          "_docHash": "2da23f11d295895b60ea65dcdb60c6c8",
+          "hash": "HK5M6Jh6QZPfosEQr9DGFvHZzEkDNXs7wCuPiECACB71",
+          "hederaStatus": "ISSUE",
+          "signature": 0,
+          "type": "approved_entity",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _sendToGuardianBlock_88",
+          "schema": "#35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0",
+          "option": {
+            "status": "Approved"
+          },
+          "relationships": [
+            "1773980442.649140973",
+            "1773968760.595386360"
+          ],
+          "owner": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+          "group": null,
+          "accounts": {
+            "default": "0.0.7166777"
+          },
+          "topicId": "0.0.8294148",
+          "messageId": "1773980489.842259000",
+          "messageHash": "EKjNGzqauJVd48WXYCJeAwWnUKTzCVYHt4bg8YTC7Lmu",
+          "document": {
+            "id": "urn:uuid:b52ab212-2908-41a3-b506-f6db9723ffac",
+            "type": [
+              "VerifiableCredential"
+            ],
+            "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+            "issuanceDate": "2026-03-20T04:21:28.618Z",
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+            ],
+            "credentialSubject": [
+              {
+                "field0": "EWD-RB",
+                "field2": "v0.3",
+                "field3": "CALC-2026-003",
+                "field4": "2026-03-01",
+                "field5": "2026-03-31",
+                "field6": [
+                  "LOT-002"
+                ],
+                "field7": [
+                  "ENT-006",
+                  "ENT-007",
+                  "ENT-008",
+                  "ENT-009",
+                  "ENT-010"
+                ],
+                "field8": 1054.9,
+                "field9": 1000,
+                "field10": 1,
+                "field11": "CALC-LOT-003",
+                "field12": "by_delivery_atomic",
+                "field13": "delivery_id_must_be_unique_across_all_issuance_records",
+                "field15": "Calculated",
+                "policyId": "69bc4638e755119d0774dd03",
+                "guardianVersion": "3.3.0-rc",
+                "@context": [
+                  "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+                ],
+                "id": "urn:uuid:ae321862-7f7d-49e1-8264-890823d85d74",
+                "type": "35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0"
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:21:28Z",
+              "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+              "proofPurpose": "assertionMethod",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..apHMqaENz4jvS8QPrlsRxBhJMYOEnzQCzUSm3SIeoL0P_FttsTELxTkcnNGqfjZprjY6k2JbP__cZbMFPen3Bw"
+            }
+          },
+          "documentFileId": "69bccb4be44c63dcad8b99de",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "_id": "69bccb4be44c63dcad8b99db",
+          "id": "69bccb4be44c63dcad8b99db",
+          "__sourceTag__": "VVB  _documentsSourceAddon_83",
+          "history": [
+            {
+              "labelValue": "Approved",
+              "created": "2026-03-20T04:21:31.275Z"
+            }
+          ]
+        }
+      ],
+      "blocks": [],
+      "commonAddons": [
+        {
+          "id": "6c8cf61d-633d-4d5a-a0e2-90d99a975817",
+          "blockType": "historyAddon"
+        },
+        {
+          "id": "3535b727-c0d3-4653-b8d4-eb16a02b0bc1",
+          "blockType": "documentsSourceAddon"
+        },
+        {
+          "id": "cd8a14cc-ad65-497d-8974-0ef6afe9127e",
+          "blockType": "documentsSourceAddon"
+        },
+        {
+          "id": "67d38ea6-5cba-49fc-aac1-95311c27cffa",
+          "blockType": "documentsSourceAddon"
+        }
+      ],
+      "fields": [
+        {
+          "name": "document",
+          "title": "Document",
+          "tooltip": "",
+          "type": "button",
+          "action": "dialog",
+          "content": "View Document",
+          "uiClass": "link",
+          "dialogContent": "VC",
+          "dialogClass": "",
+          "dialogType": "json"
+        },
+        {
+          "title": "Operation",
+          "name": "option.status",
+          "tooltip": "",
+          "type": "block",
+          "action": "",
+          "url": "",
+          "dialogContent": "",
+          "dialogClass": "",
+          "dialogType": "",
+          "bindBlock": "VVB  _buttonBlock_87",
+          "width": "250px",
+          "bindGroup": "VVB  _documentsSourceAddon_82"
+        }
+      ],
+      "viewHistory": true
+    },
+    "TOKEN_HISTORY": {
+      "id": "cd9ed4c2-ff79-474c-bd7c-6a9c525c6035",
+      "blockType": "interfaceDocumentsSourceBlock",
+      "actionType": "local",
+      "readonly": false,
+      "data": [
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:15:42.627Z",
+          "updateDate": "2026-03-20T01:15:42.651Z",
+          "_propHash": "14951a2f4748d23d475f355ace1e7da5",
+          "_docHash": "95b2b05ab681499fdf04f68930d3c7f1",
+          "owner": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+          "hash": "F1HgmipLwBW58BL9YUSvg5nvMxXc4RTjy6s7VAqyXfMT",
+          "document": {
+            "id": "urn:uuid:4f66b2b6-494c-4566-a072-ae849ebb0d9d",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:651c5ec5-14af-4f98-9090-cfdb2f9eb593",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:15:32.502Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field2": "v0.3",
+                    "field3": "CALC-2026-002",
+                    "field4": "2026-01-01",
+                    "field5": "2026-03-31",
+                    "field6": [
+                      "LOT-001"
+                    ],
+                    "field7": [
+                      "ENT-001",
+                      "ENT-002",
+                      "ENT-003",
+                      "ENT-005"
+                    ],
+                    "field8": 135.1,
+                    "field9": 1000,
+                    "field10": 0,
+                    "field11": "CALC-LOT-002",
+                    "field12": "by_delivery_atomic",
+                    "field13": "delivery_id_must_be_unique_across_all_issuance_records",
+                    "field15": "Calculated",
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+                    ],
+                    "id": "urn:uuid:90914761-a72c-46c5-b981-785cbb41f14d",
+                    "type": "35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:15:32Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..d282BbXjbNV61K-aYnkGe20skd8auPiD6I1EHmeaA02hoIArdUwOuMlSWD7LbaVUttefFKT_eyCwnpfD1NxkAA"
+                }
+              },
+              {
+                "id": "urn:uuid:b03999bc-2c98-4338-991e-c20880209450",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:15:35.885Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T01:15:35.878Z",
+                    "tokenId": "0.0.8287362",
+                    "amount": "0",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:15:35Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..SrFEYozxO4O64mqCwhW3b0A-Xk1Dfx_vlOfK4P2fewgBnT-p-fgvk5G336sqsGu8IIw6lITeLAj16mIqmDojAg"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:15:35Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..3p1IahrKmGI000fGu1JuncZAV4dzgfLHuEZfXcfSpKFmG8Jw8Gm-qcBAJcxatRiySGQgtsYzgd2sfjr521XUDQ"
+            }
+          },
+          "documentFileId": "69bc9fbee44c63dcad8b990a",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_90",
+          "messageId": "1773969341.158175000",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773969333.862671884",
+            "1773969337.898834000"
+          ],
+          "amount": 0,
+          "serials": [],
+          "_id": "69bc9fbee44c63dcad8b9907",
+          "id": "69bc9fbee44c63dcad8b9907",
+          "error": "",
+          "wasTransferNeeded": false,
+          "transferSerials": [],
+          "transferAmount": 0,
+          "tokenIds": [
+            "0.0.8287362"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:35.079Z",
+          "updateDate": "2026-03-20T01:16:35.089Z",
+          "_propHash": "06ac8c2461ba5febb76d308908567923",
+          "_docHash": "8ee249fd90f1f0fe21e716b4f0bcefbd",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "2YbprVSvZM7T2st4GPXY31R2pX8wf27hd6qYJfaqd319",
+          "document": {
+            "id": "urn:uuid:868542eb-14bd-45ba-a1b1-510002a22b7a",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:40919f9e-78bd-4af2-a4fe-6cb1bef34415",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:24.311Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-001",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-19T08:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 48.5,
+                    "field9": 1.2,
+                    "field10": 2.5,
+                    "field11": 47.3,
+                    "field12": 33.11,
+                    "field13": "A",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-001"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-001-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:c59aefe7-40d6-449e-9b0d-534630e10825",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:24Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..L7c9FpTaxxghn4pI4nQkvqlTNgjdqhU3vsSg6GacQginycYekZEfjjSunSHzdG5yBtDdbESn4_V8OcL9YJcxDg"
+                }
+              },
+              {
+                "id": "urn:uuid:816c31a3-c2bd-4888-851a-9ed97cd16a80",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:28.168Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T01:16:28.160Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "33",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:28Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..zKn1jsBbXigyO9pUImHUQ0vCAnoCoJGx7AvOH5nd96hOhydCvv7vEfY0JlmdKOFsVcHnEiBOt9DgoP02bc-2DQ"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:28Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XD7TFIIsTz6ddsKmSiIPDIwUg-ssZWS2Ai4nIjRDw2-iqHcw-GUJ0pTaaZrsW7YHzVFmOQVLieCSRvjvngT2DQ"
+            }
+          },
+          "documentFileId": "69bc9ff3e44c63dcad8b993a",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773969393.397709000",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773969386.050540000",
+            "1773969389.976648235"
+          ],
+          "amount": 33,
+          "serials": [],
+          "_id": "69bc9ff3e44c63dcad8b9937",
+          "id": "69bc9ff3e44c63dcad8b9937",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 33,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:40.659Z",
+          "updateDate": "2026-03-20T01:16:40.666Z",
+          "_propHash": "7f1d842133322e4781e7126ebda481a5",
+          "_docHash": "5131162172eb3670b496d55f953c510e",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "52FMnZ3skKU7nH7LJMHazkLDuypFTRhCCt7Ryb6M5Wsn",
+          "document": {
+            "id": "urn:uuid:e1662d1c-e477-48cd-aaa0-ba5c5da6f908",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:f44f04b2-b416-4ab4-b810-54ae4e6c2633",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:28.819Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-002",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-19T09:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 52,
+                    "field9": 3.8,
+                    "field10": 7.3,
+                    "field11": 48.2,
+                    "field12": 33.74,
+                    "field13": "B",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-002"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-002-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:2959488c-0932-4161-bd50-7aa1d7de974b",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:28Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..h0ctmBp5UK7BDdFiAhSrmGfNwnC9CLobrQMFQM1a7teANiN6AOZnFaf633EbArXmiB6ZtQALycjlIxTJxbQcCQ"
+                }
+              },
+              {
+                "id": "urn:uuid:f57d010f-fdbf-4908-8499-bd9b0f362ad1",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:32.448Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T01:16:32.441Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "34",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:32Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..mRRuohtJEhPKSyy54ekB2H3XE9V3kLK7J7ixEUZ7_uOrWsUj18Q0r-pWfW10loGbbUg0X6Yce7src1pweQJzBg"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:32Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..6-b3AcSyIMvaytQXmf3CnPjLWVXfkyZX3DHQH5_wLZJyivQQKGdIXSsaN_RVEqYr_jPVKLm8NqRxqynFt6PoAg"
+            }
+          },
+          "documentFileId": "69bc9ff8e44c63dcad8b9958",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773969399.021927010",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773969390.950321000",
+            "1773969394.613364425"
+          ],
+          "amount": 34,
+          "serials": [],
+          "_id": "69bc9ff8e44c63dcad8b9955",
+          "id": "69bc9ff8e44c63dcad8b9955",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 34,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:46.092Z",
+          "updateDate": "2026-03-20T01:16:46.114Z",
+          "_propHash": "1d791565f3d21eb5a80a0f86cfbe74b8",
+          "_docHash": "32dda6c00fcae0dea7bd27e1df3ab00c",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "BwvNYhQhj6f2ym7H6UL119RxbkGsvSx9vwvfbZjBoyBL",
+          "document": {
+            "id": "urn:uuid:dc759291-3a67-455e-91bf-a2864ec3cf9e",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:e1d65cf8-55ca-48a0-a21c-8bd531159fea",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:33.184Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-003",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-19T10:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 45,
+                    "field9": 0.5,
+                    "field10": 1.1,
+                    "field11": 44.5,
+                    "field12": 31.15,
+                    "field13": "A",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-003"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-003-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:ca4261b4-192a-43c2-a7cc-926c95ede587",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:33Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..MLGp1BEWYqcLFoDyZwsq7KWOuA2mVpCwv1gyCovpPY_vsBWruL9-lbYXExVVgE_1Gm9UL6dthj_2ifTLreHyCQ"
+                }
+              },
+              {
+                "id": "urn:uuid:6785e225-a678-4c23-97a4-fca2db45d95d",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:36.922Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T01:16:36.914Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "31",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:36Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..k37diQdgxLw5eBiNVumQMuLCrWWnmKy3qp5gmjbnQ5zdi24tm7moT5F6Iptw2o1FU8QG05xkdtHgHTQzSiGSDQ"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:37Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..1Hh-vhwdVueKuTdevkeiQBZ08NYbDvXpJrUrN8d203kkNp1h88VaXo7wkVz-PibsGuzUBvON3peFp-3dgdxZAg"
+            }
+          },
+          "documentFileId": "69bc9ffee44c63dcad8b997a",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773969404.002950569",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773969394.597238704",
+            "1773969400.082150294"
+          ],
+          "amount": 31,
+          "serials": [],
+          "_id": "69bc9ffee44c63dcad8b9977",
+          "id": "69bc9ffee44c63dcad8b9977",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 31,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T01:16:53.301Z",
+          "updateDate": "2026-03-20T01:16:53.308Z",
+          "_propHash": "fa490ae0beefcc34123a408ce4295413",
+          "_docHash": "af92ac27674a2ae4178ebce4812e810d",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "AAhsFxucx8BQQ1HQibffCm2eHi1pUrfTw4wwTFBtBDWr",
+          "document": {
+            "id": "urn:uuid:737d2a44-f277-4e22-9c6e-40cf51922dc4",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:27e3363b-afcf-4d9d-bc7b-e7166214f240",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:42.101Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-005",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-19T12:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 55,
+                    "field9": 2,
+                    "field10": 3.6,
+                    "field11": 53,
+                    "field12": 37.1,
+                    "field13": "A",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-005"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-005-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:c22d3630-30da-4feb-8800-a9e7efbfc720",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:42Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..IyhKQDz14qJSF3EtqhFCadTiKK-teZ6_Db2-D6_8rZit1BmpC2k_R_NH9d7FdWTdOHsFeRKW0hncbD8hCBx7DA"
+                }
+              },
+              {
+                "id": "urn:uuid:a8a3f386-22cb-4b15-b94d-8b4a99819bae",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T01:16:46.112Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T01:16:46.090Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "37",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T01:16:46Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..kJOh9ie8KcvQ8xwXpJpeKQRnMyVZu9Xoq6KoZ2IbjUgjZgzYBSmwqORxu2-AmeCIpS-NSJxbypbc3a6lmpgVAg"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T01:16:46Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..-ncE2SHIWcPBmQHGcRrOEgdEM32JbT-L0kLC7jAKwUGFqoxV57N7lhChBJROImBpW0FlbOXQXt5Mrj4AkRBDBg"
+            }
+          },
+          "documentFileId": "69bca005e44c63dcad8b998c",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773969411.230804542",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773969404.466062000",
+            "1773969407.798642000"
+          ],
+          "amount": 37,
+          "serials": [],
+          "_id": "69bca005e44c63dcad8b9989",
+          "id": "69bca005e44c63dcad8b9989",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 37,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:21:39.626Z",
+          "updateDate": "2026-03-20T04:21:39.633Z",
+          "_propHash": "3b59eadc0179105482cd45630c4a809f",
+          "_docHash": "8a1f292d90476471b036ad8430b4877b",
+          "owner": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+          "hash": "8GQ9yVhupcxL2uU6wSYnST5Wd1qGkrGvWQ3ZLoFmBWoX",
+          "document": {
+            "id": "urn:uuid:2011f5be-2461-4541-a5d9-0c057a4cdae9",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:b52ab212-2908-41a3-b506-f6db9723ffac",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:21:28.618Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field2": "v0.3",
+                    "field3": "CALC-2026-003",
+                    "field4": "2026-03-01",
+                    "field5": "2026-03-31",
+                    "field6": [
+                      "LOT-002"
+                    ],
+                    "field7": [
+                      "ENT-006",
+                      "ENT-007",
+                      "ENT-008",
+                      "ENT-009",
+                      "ENT-010"
+                    ],
+                    "field8": 1054.9,
+                    "field9": 1000,
+                    "field10": 1,
+                    "field11": "CALC-LOT-003",
+                    "field12": "by_delivery_atomic",
+                    "field13": "delivery_id_must_be_unique_across_all_issuance_records",
+                    "field15": "Calculated",
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSSe2os1uTK66h5Ww3xSF6eLoQWJJQnPek1Qo9T7Gwc9d"
+                    ],
+                    "id": "urn:uuid:ae321862-7f7d-49e1-8264-890823d85d74",
+                    "type": "35dd5b7f-5f1c-46f0-809e-26a0e3fd6198&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:21:28Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..apHMqaENz4jvS8QPrlsRxBhJMYOEnzQCzUSm3SIeoL0P_FttsTELxTkcnNGqfjZprjY6k2JbP__cZbMFPen3Bw"
+                }
+              },
+              {
+                "id": "urn:uuid:6a9d1f5a-a67f-4412-8cf7-f1bbdf3bbc27",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:21:31.441Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T04:21:31.434Z",
+                    "tokenId": "0.0.8287362",
+                    "amount": "1",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:21:31Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Gs5MC0oeer03pyjjn1IjLYDM2HwlYHeYDqm63N_XkVjZknEHnsm8XWUnaM5nGUyB6OR_2E_SfEyn016JUSANDw"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:21:31Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..ZIobwGgvAMKJc8Gf-UB-0ao9NugyIzyWoysw161FNJtt6zydpzagOQT5rrbJIRkyx59hMksTjqx6gBd1hPiEAg"
+            }
+          },
+          "documentFileId": "69bccb53e44c63dcad8b99eb",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_90",
+          "messageId": "1773980497.578706905",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773980489.842259000",
+            "1773980493.637431000"
+          ],
+          "amount": 1,
+          "serials": [
+            {
+              "serial": 4,
+              "tokenId": "0.0.8287362"
+            }
+          ],
+          "_id": "69bccb53e44c63dcad8b99e8",
+          "id": "69bccb53e44c63dcad8b99e8",
+          "error": "",
+          "wasTransferNeeded": false,
+          "transferSerials": [],
+          "transferAmount": 0,
+          "tokenIds": [
+            "0.0.8287362"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:24.639Z",
+          "updateDate": "2026-03-20T04:22:24.646Z",
+          "_propHash": "8398934562d1379e56b4aceaa5ecb20a",
+          "_docHash": "f5e761783ccc78afce1595ac3aaeb2ae",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "xUC5LAJU4ZwysDFuLaUtDQspRR849mrn8f5LxVqXxTq",
+          "document": {
+            "id": "urn:uuid:d026b377-cff1-4d8a-8958-2ffe43ce63a5",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:6c0c7e58-ab1d-4997-920e-bc56b14dcd60",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:12.386Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-006",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-20T08:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 300,
+                    "field9": 5,
+                    "field10": 1.7,
+                    "field11": 295,
+                    "field12": 206.5,
+                    "field13": "A",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-006"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-006-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:cc0b1030-c034-4b23-b2fc-d2e434d85fa1",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:12Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..KF6j0G6vYcb173EnXj_0nFNstBgrTLsxsAOXOpfHCMbEwRc2-7oZzuf4E2MYWt6XM1WBt4MaOQnkIjqC626ZDQ"
+                }
+              },
+              {
+                "id": "urn:uuid:af8d2d1c-9d61-4339-902a-3bdc2a6dd041",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:16.402Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T04:22:16.395Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "207",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:16Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..W-ZrBwoMnM0__sfCmv8SwQzCuljcC0SYcgr19oMDIaOSXHofDIegjRbGEcYLQ39rzb-eQvfkTiYHc9wj16syBg"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:16Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Wmwu7RKR5J6bYgcrLTWQY1NiKD87kA2xOom5sHlt2aXVmE0diFQ84jM8aH12DiMoC-rV_xq9hdkBcpX0XmdxAA"
+            }
+          },
+          "documentFileId": "69bccb80e44c63dcad8b9a15",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773980542.637397000",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773980534.569829744",
+            "1773980538.670596252"
+          ],
+          "amount": 207,
+          "serials": [],
+          "_id": "69bccb80e44c63dcad8b9a12",
+          "id": "69bccb80e44c63dcad8b9a12",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 207,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:30.614Z",
+          "updateDate": "2026-03-20T04:22:30.621Z",
+          "_propHash": "7d1b88b4cb555a4ef726bb79339dae4f",
+          "_docHash": "eda67d70b9eeba1bd337e70f2e2eb493",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "C3GTULajuQrJQZ9KUjPG8KFDvfWtcbe5coZAz7vVqDuM",
+          "document": {
+            "id": "urn:uuid:ef8d678f-b614-4c78-aa82-61c08b86b140",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:f63c67b0-72fb-44be-ac81-97226c7bb364",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:19.416Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-007",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-20T09:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 320,
+                    "field9": 8,
+                    "field10": 2.5,
+                    "field11": 312,
+                    "field12": 218.4,
+                    "field13": "A",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-007"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-007-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:2f29ce24-bdc1-4d38-984a-29fd440d4861",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:19Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..5fENS8j37uJZdvLoi30Y4yOEChFSjjQsRAsawUeQ_DHJvw5FTnfWeHQjnskF3LoBxmNkbCOV_a8QoBRldqDgDA"
+                }
+              },
+              {
+                "id": "urn:uuid:ea3f723f-80f5-4077-ba22-35b9c9bb8597",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:22.539Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T04:22:22.532Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "218",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:22Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..JMdfG9jELa7JzgZyxokl_4JujIQXFQd4BSiKVtGRE8bOZCHwKElskBFuZ3wkmCZNMTsHP8e2qAJZHCeVnbJCAw"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:22Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..6gNN2ie7VipUVKRkC3jelwLt0EaGzTdIu0j7hT0Kwk8QCjUYCSIdluqiAT0MlxRM3dCyKCwN54Em3Q3j15RGDw"
+            }
+          },
+          "documentFileId": "69bccb86e44c63dcad8b9a33",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773980548.699274000",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773980540.902863000",
+            "1773980544.580850000"
+          ],
+          "amount": 218,
+          "serials": [],
+          "_id": "69bccb86e44c63dcad8b9a30",
+          "id": "69bccb86e44c63dcad8b9a30",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 218,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:37.383Z",
+          "updateDate": "2026-03-20T04:22:37.392Z",
+          "_propHash": "734ca789e445e32424e77569c3ef747d",
+          "_docHash": "4124b684ad58768e36a371f727e14cdd",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "WCBt2dFEcwckcsCfFWz9u3N1Fk89mfDTuvmhMjb9P7i",
+          "document": {
+            "id": "urn:uuid:ff246fe8-3dd6-468d-97ef-e10baa0226de",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:cc3365be-b963-47b1-8098-f0556ced56dd",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:26.287Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-008",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-20T10:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 280,
+                    "field9": 4,
+                    "field10": 1.4,
+                    "field11": 276,
+                    "field12": 193.2,
+                    "field13": "B",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-008"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-008-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:0ca6e039-8ad9-4031-9752-82be94833b0e",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:26Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..aEswtVre9XECJqb2IyP42AfdNO9YrqNztKZg8br3ND4ayHQR23AUoqsIaGXzruzHtaCpOkMw8saj1vD7qfU_Cw"
+                }
+              },
+              {
+                "id": "urn:uuid:5f06ade5-7174-4e82-bd29-0bbca58ad6ca",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:29.626Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T04:22:29.619Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "193",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:29Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..6QfKmWfZldQnCDZ6QD-JU8ffspUsxGGPrfq8Bcy0bsLJt9gzGTbFJmbHGfZwkOjvA10lElIM_cYaTrQvQhNLAA"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:29Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..o2FOJyVs4sBR3V-G-5qbAuuVh8bdPedmBRxhw9UywnsZ5R_rJ8Zcxv5dyBT4PEmdwE5UxA5QfmfuVV6RiJV8CQ"
+            }
+          },
+          "documentFileId": "69bccb8de44c63dcad8b9a51",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773980555.620800000",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773980547.447769000",
+            "1773980551.370659000"
+          ],
+          "amount": 193,
+          "serials": [],
+          "_id": "69bccb8de44c63dcad8b9a4e",
+          "id": "69bccb8de44c63dcad8b9a4e",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 193,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:44.499Z",
+          "updateDate": "2026-03-20T04:22:44.508Z",
+          "_propHash": "a4241ad8582b70de4cde8a7b09d092c0",
+          "_docHash": "6529c8e2be054ced08faff3c96597e5f",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "EsHo1uWrQApp3QeWdQxkYYmeraPw7dG1cv1duwqLePXw",
+          "document": {
+            "id": "urn:uuid:5072927a-e646-4581-b7f2-09f4d8fb1311",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:4601a97d-9208-4447-b652-e63260f0600c",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:33.553Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-009",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-20T11:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 350,
+                    "field9": 10,
+                    "field10": 2.9,
+                    "field11": 340,
+                    "field12": 238,
+                    "field13": "A",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-009"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-009-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:892c4fbf-2b33-44b2-aae0-ac8c099aee9f",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:33Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..LkMWRCX5dUF61BUn__UGMRz4u903m0Qj7jr6B8c0yIE6Xc1FwzB4DGolzxApMqiZf69uRz12567MiiwVsOSWBA"
+                }
+              },
+              {
+                "id": "urn:uuid:dc168466-fe85-4155-9a96-3796801ddfbd",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:36.938Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T04:22:36.931Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "238",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:36Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..t00_3QSSbohpmg9SFi6L1pRDrj_B-YQtkkvKHgIIyuoFK2000lUIZWyuCJ2CUgiHi3zfL22FC0-_bcpV9KHoCw"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:37Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..DYcKKq9JhZTPrG4qU6nnJEs9if3gswvKxnqb2bjK0P1S1_HjaidUd_wIDm6UGo-wcDoAusSjrj05VCnIGc1jAw"
+            }
+          },
+          "documentFileId": "69bccb94e44c63dcad8b9a6f",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773980562.509621587",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773980555.300734000",
+            "1773980558.643543110"
+          ],
+          "amount": 238,
+          "serials": [],
+          "_id": "69bccb94e44c63dcad8b9a6c",
+          "id": "69bccb94e44c63dcad8b9a6c",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 238,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        },
+        {
+          "tenantId": "69a20b80b545b115a3d33542",
+          "createDate": "2026-03-20T04:22:51.649Z",
+          "updateDate": "2026-03-20T04:22:51.655Z",
+          "_propHash": "1dbb468e7065170c3f2400be32cc2bae",
+          "_docHash": "3f15a7642d3ea59b5371701d73c81fc1",
+          "owner": "did:hedera:testnet:AvoVn6AJiBpNLLJQJSJUDTdkkan6ks3VQa6Pk2nL7ytb_0.0.8187554",
+          "hash": "2ZkiBVD6KS5J8ZKYSfdiD7e112TYmzVi2YtYKa8CHycH",
+          "document": {
+            "id": "urn:uuid:55315e7f-04aa-459b-882f-e2fab5308015",
+            "type": [
+              "VerifiablePresentation"
+            ],
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1"
+            ],
+            "verifiableCredential": [
+              {
+                "id": "urn:uuid:5bb8f372-8f28-4bac-b9af-ef8ccfb2d91c",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:39.968Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                ],
+                "credentialSubject": [
+                  {
+                    "field0": "EWD-RB",
+                    "field1": "0.3",
+                    "field2": "v0.3",
+                    "field3": "v0.3",
+                    "field4": "ENT-010",
+                    "field5": "SUP-001",
+                    "field6": "2026-03-20T12:00:00Z",
+                    "field7": "food_waste_mixed",
+                    "field8": 290,
+                    "field9": 6,
+                    "field10": 2.1,
+                    "field11": 284,
+                    "field12": 198.8,
+                    "field13": "A",
+                    "field14": true,
+                    "field15": [
+                      "https://evidence.eggologic.com/ent-010"
+                    ],
+                    "field16": "Submitted",
+                    "field17": [
+                      "https://evidence.eggologic.com/ent-010-photo"
+                    ],
+                    "policyId": "69bc4638e755119d0774dd03",
+                    "guardianVersion": "3.3.0-rc",
+                    "@context": [
+                      "ipfs://QmSZiqPtR5vz5SuKnhCmYsukkugB7eyPAPNUiMQCCHWxrw"
+                    ],
+                    "id": "urn:uuid:162c5b18-2d9f-416e-9dac-e7035da02af5",
+                    "type": "8f0b83a5-da18-47ac-a849-e2f46d3ae9b6&1.0.0"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:39Z",
+                  "verificationMethod": "did:hedera:testnet:ABqKgFp53JKKLW7ViSkzRVrw61Eskvgor1LMvNgqhHiz_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..XvkoMI49TZXuScCRzpunLMHheDVf_9nlLPkrMtDu6KKZZoRMr2srmpC0_QO4B6tUrP6E9cKDljsP53prgn2DDQ"
+                }
+              },
+              {
+                "id": "urn:uuid:33bed687-09de-4881-8ed9-1b1f5546c234",
+                "type": [
+                  "VerifiableCredential"
+                ],
+                "issuer": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554",
+                "issuanceDate": "2026-03-20T04:22:43.806Z",
+                "@context": [
+                  "https://www.w3.org/2018/credentials/v1",
+                  "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                ],
+                "credentialSubject": [
+                  {
+                    "date": "2026-03-20T04:22:43.799Z",
+                    "tokenId": "0.0.8287358",
+                    "amount": "199",
+                    "@context": [
+                      "ipfs://QmZ6GQo2YRYjT4mrDAiF6QsqkyXe9w4CCnSRzXRyjWtc8u"
+                    ],
+                    "type": "MintToken"
+                  }
+                ],
+                "proof": {
+                  "type": "Ed25519Signature2018",
+                  "created": "2026-03-20T04:22:43Z",
+                  "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+                  "proofPurpose": "assertionMethod",
+                  "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..aX3m2UVUF984uhXOGSw-fVJnyWUt8JWilhvFHQFRs2sThumUmSe9EyMZi7PbWDmxX4p8NGjPFLWc1uljjfLjBA"
+                }
+              }
+            ],
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2026-03-20T04:22:43Z",
+              "verificationMethod": "did:hedera:testnet:Gt2DaoWQqV1NA5P6X4EqoTh9PcrZCv5qAUytYnCGrUJy_0.0.8187554#did-root-key",
+              "proofPurpose": "authentication",
+              "challenge": "123",
+              "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..L_cdzcGeS6ttQlLTmBgfMlZ0Wv7HuDLYZcMvz29lxqaCqR7QQ6DvSPU0q6YdF4TS0-zhvkULSD1dqSTiR7xJCQ"
+            }
+          },
+          "documentFileId": "69bccb9be44c63dcad8b9a7f",
+          "documentFields": [
+            "id",
+            "credentialSubject.id",
+            "credentialSubject.0.id",
+            "verifiableCredential.1.credentialSubject.0.date",
+            "verifiableCredential.1.credentialSubject.0.tokenId",
+            "verifiableCredential.1.credentialSubject.0.serials"
+          ],
+          "status": "NEW",
+          "signature": 0,
+          "type": "mint",
+          "policyId": "69bc4638e755119d0774dd03",
+          "tag": "VVB  _mintDocumentBlock_132",
+          "messageId": "1773980569.625632297",
+          "topicId": "0.0.8294148",
+          "relationships": [
+            "1773980561.700304476",
+            "1773980565.562428000"
+          ],
+          "amount": 199,
+          "serials": [],
+          "_id": "69bccb9be44c63dcad8b9a7c",
+          "id": "69bccb9be44c63dcad8b9a7c",
+          "error": "",
+          "wasTransferNeeded": true,
+          "transferSerials": [],
+          "transferAmount": 199,
+          "tokenIds": [
+            "0.0.8287358"
+          ],
+          "__sourceTag__": "OWNER_documentsSourceAddon_184"
+        }
+      ],
+      "blocks": [],
+      "commonAddons": [
+        {
+          "id": "b250eaa0-2177-426c-a788-9320d2cf67e2",
+          "blockType": "documentsSourceAddon"
+        }
+      ],
+      "fields": [
+        {
+          "title": "HASH",
+          "name": "hash",
+          "tooltip": "",
+          "type": "text"
+        },
+        {
+          "title": "Date",
+          "name": "document.verifiableCredential.1.credentialSubject.0.date",
+          "tooltip": "",
+          "type": "text"
+        },
+        {
+          "title": "Token Id",
+          "name": "document.verifiableCredential.1.credentialSubject.0.tokenId",
+          "tooltip": "",
+          "type": "text"
+        },
+        {
+          "title": "Serials",
+          "name": "document.verifiableCredential.1.credentialSubject.0.serials",
+          "tooltip": "",
+          "type": "text"
+        },
+        {
+          "title": "TrustChain",
+          "name": "hash",
+          "tooltip": "",
+          "type": "button",
+          "action": "link",
+          "url": "",
+          "dialogContent": "",
+          "dialogClass": "",
+          "dialogType": "",
+          "bindBlock": "OWNER_reportBlock_180",
+          "content": "View TrustChain",
+          "width": "150px"
+        }
+      ],
+      "viewHistory": false
+    }
+  }
+}

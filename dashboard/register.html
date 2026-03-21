@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registro de Restaurante — Eggologic</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='55' rx='35' ry='42' fill='%2310381E'/%3E%3Cellipse cx='50' cy='52' rx='26' ry='32' fill='%23C1EDC7'/%3E%3C/svg%3E"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#10381e", "secondary": "#386846", "primary-container": "#284f33",
+            "background": "#F5F3E8", "surface": "#F5F3E8", "on-surface-variant": "#424942",
+          },
+          fontFamily: { "headline": ["Newsreader", "serif"], "body": ["Plus Jakarta Sans", "sans-serif"] },
+          borderRadius: {"DEFAULT": "0.25rem", "2xl": "1.5rem", "3xl": "2.5rem", "full": "9999px"},
+        },
+      },
+    }
+</script>
+<style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F5F3E8; }
+    .hero-curved-bg { background: linear-gradient(180deg, #10381E 0%, #1A4D2E 100%); border-bottom-left-radius: 80px; border-bottom-right-radius: 80px; }
+</style>
+</head>
+<body class="bg-background text-on-background">
+<div class="hero-curved-bg pb-20">
+    <header class="w-full pt-6 px-10 max-w-screen-2xl mx-auto flex justify-between items-center text-white">
+        <a href="index.html" class="flex items-center gap-2">
+            <span class="material-symbols-outlined">egg</span>
+            <span class="font-bold">EGGOLOGIC</span>
+        </a>
+        <a href="index.html" class="text-sm border border-white/20 rounded-full px-4 py-2 hover:bg-white/10 transition-all">Volver</a>
+    </header>
+    <div class="max-w-2xl mx-auto px-10 pt-16 text-center text-white">
+        <h1 class="font-headline text-5xl mb-4 tracking-tight">Únete a la <i class="italic text-[#FBD54E]">Logica</i> Circular.</h1>
+        <p class="text-white/70">Registra tu restaurante para empezar a transformar tus residuos en impacto positivo.</p>
+    </div>
+</div>
+
+<main class="max-w-2xl mx-auto px-10 -mt-10 pb-20">
+    <div id="form-container" class="bg-white rounded-3xl p-10 shadow-2xl">
+        <form id="register-form" class="space-y-6">
+            <div>
+                <label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2 block">Nombre del Restaurante</label>
+                <input id="restaurant-name" type="text" required placeholder="Ej: La Parrilla de Melo" class="w-full px-5 py-4 rounded-2xl border border-stone-200 bg-stone-50 focus:ring-2 focus:ring-primary/20 outline-none" />
+            </div>
+            <div>
+                <label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2 block">Contacto (Email / Tel)</label>
+                <input id="restaurant-contact" type="text" required placeholder="Ej: contacto@parrilla.com" class="w-full px-5 py-4 rounded-2xl border border-stone-200 bg-stone-50 focus:ring-2 focus:ring-primary/20 outline-none" />
+            </div>
+            <div>
+                <label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-2 block">Ubicación</label>
+                <input id="restaurant-location" type="text" required placeholder="Ej: Melo, Cerro Largo" class="w-full px-5 py-4 rounded-2xl border border-stone-200 bg-stone-50 focus:ring-2 focus:ring-primary/20 outline-none" />
+            </div>
+            <p class="text-[10px] text-stone-400 leading-relaxed italic">Al registrarte, declaras tu intención de separar residuos orgánicos. Un administrador de Eggologic validará tu registro.</p>
+            <button type="submit" class="w-full py-5 bg-primary text-white rounded-full font-bold text-sm shadow-xl hover:opacity-90 transition-all">
+                Registrar mi Restaurante
+            </button>
+        </form>
+    </div>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/suppliers.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => initRegisterPage());</script>
+</body></html>

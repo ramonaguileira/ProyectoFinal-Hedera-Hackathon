@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<title>Admin: Aprobación de Proveedores — Eggologic</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: { extend: { colors: { "primary": "#10381e", "background": "#F5F3E8" } } }
+    }
+</script>
+</head>
+<body class="bg-background min-h-screen py-10 px-6">
+    <div class="max-w-4xl mx-auto">
+        <header class="flex justify-between items-center mb-12">
+            <div>
+                <h1 class="text-3xl font-headline font-bold text-primary">Proponent: <span class="italic">Supplier Approval</span></h1>
+                <p class="text-stone-500 text-sm">Gestiona las nuevas solicitudes de restaurantes para el ecosistema Eggologic.</p>
+            </div>
+            <a href="index.html" class="bg-white border border-stone-200 rounded-full px-6 py-2 text-xs font-bold shadow-sm">Panel General</a>
+        </header>
+
+        <section>
+            <h3 class="text-xs font-bold uppercase tracking-widest text-stone-400 mb-6">Solicitudes Pendientes</h3>
+            <div id="pending-list" class="space-y-4">
+                <p class="text-center py-20 text-stone-300">Cargando solicitudes...</p>
+            </div>
+        </section>
+    </div>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/suppliers.js"></script>
+<script>document.addEventListener('DOMContentLoaded', () => initAdminPage());</script>
+</body></html>

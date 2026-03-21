@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eggologic README Preview</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  /* GitHub-style repo header */
+  .repo-header {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .repo-header svg { color: #8b949e; }
+  .repo-owner { color: #58a6ff; font-size: 20px; text-decoration: none; font-weight: 600; }
+  .repo-slash { color: #8b949e; font-size: 20px; margin: 0 2px; }
+  .repo-name { color: #58a6ff; font-size: 20px; font-weight: 700; text-decoration: none; }
+  .repo-badges { display: flex; gap: 8px; margin-left: auto; }
+  .repo-badge {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 4px 12px;
+    font-size: 12px;
+    color: #8b949e;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .repo-badge .count { color: #e6edf3; font-weight: 600; }
+
+  /* Tab bar */
+  .tab-bar {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 0 32px;
+    display: flex;
+    gap: 0;
+  }
+  .tab {
+    padding: 10px 16px;
+    font-size: 14px;
+    color: #8b949e;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tab.active {
+    color: #e6edf3;
+    border-bottom-color: #f78166;
+    font-weight: 600;
+  }
+
+  /* File list bar */
+  .file-bar {
+    max-width: 1012px;
+    margin: 24px auto 0;
+    padding: 0 32px;
+  }
+  .file-info {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px 6px 0 0;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #8b949e;
+  }
+  .file-info .commit-msg { color: #8b949e; flex: 1; }
+  .file-info .commit-hash { color: #58a6ff; font-family: monospace; font-size: 12px; }
+  .file-info .time-ago { color: #8b949e; font-size: 12px; }
+
+  /* README container */
+  .readme-container {
+    max-width: 1012px;
+    margin: 0 auto 48px;
+    padding: 0 32px;
+  }
+  .readme-header {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-top: none;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .readme-header svg { color: #8b949e; }
+  .readme-body {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    padding: 32px 40px;
+  }
+
+  /* Markdown rendered styles (GitHub Dark) */
+  .readme-body h1 {
+    font-size: 2em;
+    font-weight: 600;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.3em;
+    margin: 24px 0 16px;
+    color: #e6edf3;
+  }
+  .readme-body h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.3em;
+    margin: 24px 0 16px;
+    color: #e6edf3;
+  }
+  .readme-body h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+    margin: 24px 0 16px;
+    color: #e6edf3;
+  }
+  .readme-body p {
+    margin: 0 0 16px;
+    color: #e6edf3;
+  }
+  .readme-body a { color: #58a6ff; text-decoration: none; }
+  .readme-body a:hover { text-decoration: underline; }
+  .readme-body strong { color: #e6edf3; font-weight: 600; }
+  .readme-body em { font-style: italic; }
+  .readme-body code {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 85%;
+    color: #e6edf3;
+  }
+  .readme-body pre {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 16px;
+    overflow-x: auto;
+    margin: 0 0 16px;
+    line-height: 1.45;
+  }
+  .readme-body pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 85%;
+    color: #e6edf3;
+  }
+  .readme-body blockquote {
+    border-left: 4px solid #3b82f6;
+    padding: 8px 16px;
+    margin: 0 0 16px;
+    color: #8b949e;
+    background: rgba(56, 139, 253, 0.05);
+    border-radius: 0 6px 6px 0;
+  }
+  .readme-body blockquote p { margin: 0; color: #8b949e; }
+  .readme-body blockquote strong { color: #c9d1d9; }
+  .readme-body hr {
+    height: 3px;
+    background: #30363d;
+    border: none;
+    margin: 24px 0;
+    border-radius: 2px;
+  }
+  .readme-body ul, .readme-body ol {
+    margin: 0 0 16px;
+    padding-left: 2em;
+  }
+  .readme-body li { margin: 4px 0; }
+  .readme-body li + li { margin-top: 4px; }
+  .readme-body img {
+    max-width: 100%;
+    border-radius: 6px;
+  }
+
+  /* Tables */
+  .readme-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 0 16px;
+    display: block;
+    overflow-x: auto;
+  }
+  .readme-body thead { background: #161b22; }
+  .readme-body th {
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid #30363d;
+    text-align: left;
+    color: #e6edf3;
+    white-space: nowrap;
+  }
+  .readme-body td {
+    padding: 8px 16px;
+    border: 1px solid #30363d;
+    color: #c9d1d9;
+  }
+  .readme-body tbody tr:nth-child(even) { background: rgba(22, 27, 34, 0.5); }
+
+  /* Center-aligned content (like badges) */
+  .readme-body p[align="center"],
+  .readme-body h1[align="center"] {
+    text-align: center;
+  }
+
+  /* Badge images */
+  .readme-body img[alt="Sustainability"],
+  .readme-body img[alt="Hiero"],
+  .readme-body img[alt="Testnet"],
+  .readme-body img[alt="Cost"],
+  .readme-body img[alt="Running"] {
+    display: inline-block;
+    margin: 2px 4px;
+    vertical-align: middle;
+  }
+
+  /* Centered heading override */
+  .readme-body [align="center"] { text-align: center; }
+
+  /* Logo */
+  .readme-body img[alt="Eggologic Logo"] {
+    border-radius: 50%;
+    background: #1c2128;
+    padding: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- GitHub Repo Header -->
+<div class="repo-header">
+  <svg height="20" width="20" viewBox="0 0 16 16" fill="currentColor">
+    <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"/>
+  </svg>
+  <a class="repo-owner" href="#">c4p5</a>
+  <span class="repo-slash">/</span>
+  <a class="repo-name" href="#">EggoLogic-Hedera-Hackathon</a>
+  <div class="repo-badges">
+    <span class="repo-badge">
+      <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z"/></svg>
+      Star <span class="count">3</span>
+    </span>
+    <span class="repo-badge">
+      <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor"><path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"/></svg>
+      Fork <span class="count">1</span>
+    </span>
+  </div>
+</div>
+
+<!-- Tab bar -->
+<div class="tab-bar">
+  <div class="tab active">
+    <svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor"><path d="M1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75C0 1.784.784 1 1.75 1Zm12.5 1.5H1.75a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25Z"/></svg>
+    Code
+  </div>
+  <div class="tab">Issues</div>
+  <div class="tab">Pull requests</div>
+  <div class="tab">Actions</div>
+  <div class="tab">Settings</div>
+</div>
+
+<!-- File bar -->
+<div class="file-bar">
+  <div class="file-info">
+    <img src="https://avatars.githubusercontent.com/u/0?s=20&v=4" width="20" height="20" style="border-radius:50%;background:#30363d;">
+    <strong style="color:#e6edf3;">c4p5</strong>
+    <span class="commit-msg">LOGIN BUGFIX + SUBMIT_FORM + NFT Viewer + MinorDesign tweaks</span>
+    <span class="commit-hash">b7f49a8</span>
+    <span class="time-ago">2 days ago</span>
+  </div>
+</div>
+
+<!-- README -->
+<div class="readme-container">
+  <div class="readme-header">
+    <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor" style="color:#8b949e;">
+      <path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.744 3.744 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.623-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"/>
+    </svg>
+    README.md
+  </div>
+  <div class="readme-body" id="readme-content">
+    <p style="text-align:center;color:#8b949e;">Loading README...</p>
+  </div>
+</div>
+
+<script>
+  // Fetch and render the README
+  fetch('README.md')
+    .then(r => r.text())
+    .then(md => {
+      const container = document.getElementById('readme-content');
+      container.innerHTML = marked.parse(md);
+
+      // Fix center-aligned HTML that marked doesn't handle
+      container.querySelectorAll('p, h1, h2, h3').forEach(el => {
+        if (el.getAttribute('align') === 'center') {
+          el.style.textAlign = 'center';
+        }
+      });
+    })
+    .catch(err => {
+      document.getElementById('readme-content').innerHTML =
+        '<p style="color:#f85149;">Error loading README.md: ' + err.message + '</p>';
+    });
+</script>
+
+</body>
+</html>

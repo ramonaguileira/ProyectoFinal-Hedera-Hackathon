@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<title>Mi Restaurante — Eggologic Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: { extend: { colors: { "primary": "#10381e", "secondary": "#284f33", "background": "#F5F3E8" } } }
+    }
+</script>
+</head>
+<body class="bg-background min-h-screen">
+    <div id="login-section" class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-10 rounded-3xl shadow-2xl max-w-sm w-full">
+            <h2 class="text-2xl font-bold text-primary mb-6">Acceso Restaurante</h2>
+            <div class="space-y-4">
+                <div>
+                    <label class="text-[10px] font-bold uppercase mb-1 block">ID de Restaurante (Ej: SUP_001)</label>
+                    <input id="supplier-id-input" type="text" class="w-full px-4 py-3 rounded-xl border border-stone-200 outline-none" placeholder="Ingresa tu ID" />
+                </div>
+                <button onclick="loadRestaurantDashboard()" class="w-full py-4 bg-primary text-white rounded-full font-bold text-sm shadow-lg">Ver mis Balances</button>
+            </div>
+            <p class="text-[10px] text-center mt-6 text-stone-400">Si aún no tienes un ID, contacta con el Project Proponent o regístrate en la web.</p>
+        </div>
+    </div>
+
+    <div id="dashboard-content" class="hidden pb-20">
+        <div class="bg-primary text-white p-20 rounded-b-[80px] shadow-xl">
+            <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="text-center md:text-left">
+                    <h2 id="res-name" class="text-4xl font-headline italic text-[#FBD54E] mb-2">—</h2>
+                    <p class="text-white/60 text-xs font-bold uppercase tracking-widest"><span id="res-id">—</span> • <span id="res-status">—</span></p>
+                </div>
+                <div class="text-center bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/10 min-w-[200px]">
+                    <span class="text-xs uppercase tracking-widest text-white/50">Mi Balance</span>
+                    <h3 id="res-balance" class="text-4xl font-headline mt-2">— $EGGO</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-12 px-6">
+            <div class="bg-white p-10 rounded-3xl shadow-sm border border-stone-100 mb-10 text-center">
+                <h3 class="text-xl font-headline text-primary mb-4">¿Cómo funciona la custodia?</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed max-w-2xl mx-auto">
+                    Para facilitar tu participación, el Project Proponent custodia tus EGGOCOINS. Esto significa que **no necesitas una billetera blockchain de Hedera**. Tus monedas están seguras y acumuladas bajo tu ID de restaurante, listas para ser canjeadas por productos o beneficios en el marketplace.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                     <button onclick="UI.showToast('Funcionalidad de canje próximamente')" class="px-8 py-3 bg-primary text-white rounded-full font-bold text-sm">Canjear Monedas</button>
+                     <a href="index.html" class="px-8 py-3 border border-primary text-primary rounded-full font-bold text-sm">Regresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/suppliers.js"></script>
+</body></html>

@@ -3,6 +3,7 @@ const CONFIG = {
   // Guardian Managed Service
   GUARDIAN_URL: 'https://guardianservice.app/api/v1',
   POLICY_ID: '69bc4638e755119d0774dd03',
+  MIDDLEWARE_URL: 'http://localhost:4000/api',
 
   // Hedera Testnet Mirror Node
   MIRROR_URL: 'https://testnet.mirrornode.hedera.com',

@@ -24,10 +24,8 @@ const UI = (() => {
         <div id="login-error" class="hidden mb-4 p-3 bg-red-50 text-red-700 rounded-xl text-sm"></div>
         <div class="space-y-4">
           <div>
-            <label class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 block">Account</label>
-            <select id="login-account" class="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#10381E]/20 bg-stone-50">
-              ${CONFIG.ACCOUNTS.map(a => `<option value="${a.email}">${a.role} — ${a.email}</option>`).join('')}
-            </select>
+            <label class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 block">Email</label>
+            <input id="login-email" type="email" placeholder="you@email.com" class="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#10381E]/20 bg-stone-50" />
           </div>
           <div>
             <label class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 block">Password</label>
@@ -37,29 +35,7 @@ const UI = (() => {
             Sign In
           </button>
         </div>
-        <p class="text-[10px] text-stone-400 text-center mt-6">Demo accounts — Hedera Testnet</p>
-        <div id="privy-section" class="hidden">
-          <div class="relative flex items-center my-6">
-            <div class="flex-grow border-t border-stone-200"></div>
-            <span class="mx-4 text-xs text-stone-400 font-medium">or continue with email</span>
-            <div class="flex-grow border-t border-stone-200"></div>
-          </div>
-          <div id="privy-email-step">
-            <div class="flex gap-2">
-              <input id="privy-email" type="email" placeholder="you@email.com" class="flex-1 px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#6C63FF]/20 bg-stone-50" />
-              <button id="privy-send-btn" onclick="Privy.sendCode()" class="px-5 py-3 bg-[#6C63FF] text-white rounded-xl font-bold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">Send Code</button>
-            </div>
-          </div>
-          <div id="privy-otp-step" class="hidden">
-            <p class="text-xs text-stone-500 mb-2">Enter the code sent to your email</p>
-            <div class="flex gap-2">
-              <input id="privy-otp" type="text" placeholder="6-digit code" maxlength="6" class="flex-1 px-4 py-3 rounded-xl border border-stone-200 text-sm text-center tracking-[0.3em] font-mono focus:outline-none focus:ring-2 focus:ring-[#6C63FF]/20 bg-stone-50" />
-              <button id="privy-verify-btn" onclick="Privy.verifyCode()" class="px-5 py-3 bg-[#6C63FF] text-white rounded-xl font-bold text-sm hover:opacity-90 transition-opacity">Verify</button>
-            </div>
-            <button onclick="Privy.reset()" class="text-xs text-stone-400 hover:text-stone-600 mt-2">Use a different email</button>
-          </div>
-          <p class="text-[10px] text-stone-400 text-center mt-3">Powered by <span class="font-bold">Privy</span> — Web2 onboarding</p>
-        </div>
+        <p class="text-[10px] text-stone-400 text-center mt-6 italic">Project Proponents should use their Guardian email. Registered Restaurants use their application email.</p>
       </div>
     `;
     document.body.appendChild(modal);
@@ -150,7 +126,7 @@ const UI = (() => {
   }
 
   async function doLogin() {
-    const email = document.getElementById('login-account').value;
+    const email = document.getElementById('login-email').value;
     const password = document.getElementById('login-password').value;
     const errorEl = document.getElementById('login-error');
     const btn = document.getElementById('login-submit');
@@ -191,16 +167,6 @@ const UI = (() => {
         </div>
         <span class="text-white text-xs font-semibold">${user.role || 'User'}</span>
         <span class="material-symbols-outlined text-white text-sm cursor-pointer" onclick="event.stopPropagation(); GuardianAPI.logout(); UI.updateAuthUI(); location.reload();">logout</span>
-      `;
-      authBtn.onclick = null;
-    } else if (window.Privy?.isLoggedIn()) {
-      const pUser = window.Privy.getUser();
-      authBtn.innerHTML = `
-        <div class="w-6 h-6 rounded-full bg-[#6C63FF] flex items-center justify-center">
-          <span class="material-symbols-outlined text-[14px] text-white">mail</span>
-        </div>
-        <span class="text-white text-xs font-semibold">${pUser.email || 'Web2 User'}</span>
-        <span class="material-symbols-outlined text-white text-sm cursor-pointer" onclick="event.stopPropagation(); Privy.logout();">logout</span>
       `;
       authBtn.onclick = null;
     } else {

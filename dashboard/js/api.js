@@ -19,45 +19,78 @@ const GuardianAPI = (() => {
    */
   async function login(email, password) {
     const account = CONFIG.ACCOUNTS.find(a => a.email === email);
+    let supplierId = null;
+    let restaurantName = null;
+
+    if (!account) {
+      const apps = JSON.parse(localStorage.getItem('eggologic_applications') || '[]');
+      const restaurant = apps.find(a => a.email === email && (a.status === 'Approved by Project Proponent' || a.status === 'Ingested in Guardian'));
+      if (restaurant) {
+        supplierId = restaurant.supplierId;
+        restaurantName = restaurant.restaurantName;
+      }
+    }
+
     try {
-      const res = await fetch(`${CONFIG.GUARDIAN_URL}/accounts/loginByEmail`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
-      if (!res.ok) throw new Error(`Login failed: ${res.status}`);
-      const data = await res.json();
-      const refreshToken = data.login?.refreshToken || data.refreshToken;
-      if (!refreshToken) throw new Error('No refreshToken in response');
-
-      // Immediately get access token
-      const accessToken = await _getAccessToken(refreshToken);
-
-      const auth = {
-        email,
-        refreshToken,
-        accessToken,
-        ts: Date.now(),
-        hedera: account?.hedera || null,
-        role: account?.role || null,
-      };
-      _saveAuth(auth);
-      return auth;
+      // For hardcoded accounts, try real login. For restaurants, skip to "offline" success for demo.
+      if (account) {
+        const res = await fetch(`${CONFIG.GUARDIAN_URL}/accounts/loginByEmail`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password }),
+        });
+        if (!res.ok) throw new Error(`Login failed: ${res.status}`);
+        const data = await res.json();
+        const refreshToken = data.login?.refreshToken || data.refreshToken;
+        if (!refreshToken) throw new Error('No refreshToken in response');
+  
+        // Immediately get access token
+        const accessToken = await _getAccessToken(refreshToken);
+  
+        const auth = {
+          email,
+          refreshToken,
+          accessToken,
+          ts: Date.now(),
+          hedera: account?.hedera || null,
+          role: account?.role || null,
+        };
+        _saveAuth(auth);
+        return auth;
+      } else if (supplierId) {
+        // Successful Restaurant Login (Demo bypass)
+        const auth = {
+          email,
+          refreshToken: 'offline-restaurant',
+          accessToken: 'offline-restaurant',
+          ts: Date.now(),
+          hedera: null,
+          role: 'Supplier',
+          supplierId,
+          restaurantName,
+          offline: true,
+        };
+        _saveAuth(auth);
+        return auth;
+      } else {
+        throw new Error('Account not found or not approved');
+      }
     } catch (e) {
-      console.warn('[Guardian] Login failed (CORS?), using offline mode:', e.message);
-      // Offline/demo mode — store auth without real tokens
-      // Hedera Mirror Node + cached Guardian data will still work
-      const auth = {
-        email,
-        refreshToken: 'offline-mode',
-        accessToken: 'offline-mode',
-        ts: Date.now(),
-        hedera: account?.hedera || null,
-        role: account?.role || null,
-        offline: true,
-      };
-      _saveAuth(auth);
-      return auth;
+      console.warn('[Guardian] Login failed (or demo bypass):', e.message);
+      if (account) {
+        const auth = {
+          email,
+          refreshToken: 'offline-mode',
+          accessToken: 'offline-mode',
+          ts: Date.now(),
+          hedera: account?.hedera || null,
+          role: account?.role || null,
+          offline: true,
+        };
+        _saveAuth(auth);
+        return auth;
+      }
+      throw e;
     }
   }
 

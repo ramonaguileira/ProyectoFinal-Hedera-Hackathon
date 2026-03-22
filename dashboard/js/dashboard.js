@@ -93,11 +93,22 @@ async function loadUserData() {
   UI.showSkeletonRows('recent-activity', 3);
 
   try {
-    const balance = await HederaMirror.getEggocoinBalance(user.hedera);
-    UI.setText('wallet-balance', `${UI.fmt(balance)} $EGGO`);
-    const hederaEl = document.getElementById('wallet-hedera-id');
-    if (hederaEl) hederaEl.innerHTML = `<a href="${CONFIG.HASHSCAN_URL}/account/${user.hedera}" target="_blank" rel="noopener" class="hover:text-[#C1EDC7] transition-colors no-underline text-inherit">${user.hedera} <span class="material-symbols-outlined text-[10px]">open_in_new</span></a>`;
-    loadWalletWidget(user.hedera);
+    if (user.role === 'Supplier') {
+      const balances = JSON.parse(localStorage.getItem('eggologic_balances') || '{}');
+      const balance = balances[user.supplierId] || 0;
+      UI.setText('wallet-balance', `${UI.fmt(balance)} $EGGO`);
+      const hederaEl = document.getElementById('wallet-hedera-id');
+      if (hederaEl) hederaEl.textContent = user.supplierId;
+      // No wallet widget for suppliers (custodied)
+      const widget = document.getElementById('wallet-widget-container');
+      if (widget) widget.innerHTML = '<div class="text-stone-400 text-xs italic py-8 text-center bg-stone-50 rounded-2xl border border-stone-100">Tokens are custodied by EggoLogic for maximizing impact.</div>';
+    } else {
+      const balance = await HederaMirror.getEggocoinBalance(user.hedera);
+      UI.setText('wallet-balance', `${UI.fmt(balance)} $EGGO`);
+      const hederaEl = document.getElementById('wallet-hedera-id');
+      if (hederaEl) hederaEl.innerHTML = `<a href="${CONFIG.HASHSCAN_URL}/account/${user.hedera}" target="_blank" rel="noopener" class="hover:text-[#C1EDC7] transition-colors no-underline text-inherit">${user.hedera} <span class="material-symbols-outlined text-[10px]">open_in_new</span></a>`;
+      loadWalletWidget(user.hedera);
+    }
     loadRecentActivity(user.hedera);
   } catch (e) {
     console.error('Hedera data error:', e);
@@ -170,17 +181,54 @@ async function loadWalletWidget(accountId) {
  * Recent activity section load.
  */
 async function loadRecentActivity(accountId) {
-  try {
-    const txs = await HederaMirror.getTransactions(accountId, 10);
-    const container = document.getElementById('recent-activity');
-    if (!container) return;
+  const user = GuardianAPI.currentUser();
+  const list = document.getElementById('recent-activity');
+  if (!list) return;
 
-    if (txs.length === 0) {
-      container.innerHTML = '<p class="text-stone-400 text-sm text-center py-12">No recent activity</p>';
+  // Supplier Role: Load from local activity tracking (Web2)
+  if (user && user.role === 'Supplier') {
+    const local = JSON.parse(localStorage.getItem('eggologic_activity') || '[]');
+    const supplierActs = local.filter(a => a.supplierId === user.supplierId);
+    
+    if (supplierActs.length === 0) {
+      list.innerHTML = '<div class="text-stone-400 text-xs italic py-12 text-center bg-stone-50 rounded-2xl border border-stone-100/50">No recent deliveries found.</div>';
       return;
     }
 
-    container.innerHTML = txs.slice(0, 5).map(tx => {
+    list.innerHTML = supplierActs.map(act => `
+      <div class="flex items-center justify-between p-6 bg-stone-50 rounded-2xl border border-stone-100/50 hover:bg-white transition-all rounded-xl hover:shadow-lg border border-transparent hover:border-primary/10 duration-300 cursor-default group">
+        <div class="flex items-center gap-6">
+          <div class="w-14 h-14 rounded-full bg-[#FBD54E]/20 flex items-center justify-center text-[#10381E]">
+            <span class="material-symbols-outlined text-2xl">recycling</span>
+          </div>
+          <div>
+            <h5 class="font-bold text-primary">Waste Delivery ${act.id}</h5>
+            <p class="text-sm text-stone-500 font-medium">${UI.timeAgo(new Date(act.ts))}</p>
+          </div>
+        </div>
+        <div class="text-right">
+          <p class="font-headline text-xl text-secondary">+${UI.fmt(act.amount)} $EGGO</p>
+          <p class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest leading-none">Verified</p>
+        </div>
+      </div>
+    `).join('');
+    return;
+  }
+
+  // Other Roles (Project Proponent, etc): Load from Mirror Node
+  if (!accountId) {
+    list.innerHTML = '<p class="text-stone-400 text-sm text-center py-12">Sign in to view transaction history.</p>';
+    return;
+  }
+
+  try {
+    const txs = await HederaMirror.getTransactions(accountId, 10);
+    if (!txs || txs.length === 0) {
+      list.innerHTML = '<p class="text-stone-400 text-sm text-center py-12">No recent activity</p>';
+      return;
+    }
+
+    list.innerHTML = txs.slice(0, 5).map(tx => {
       const amount = tx.eggocoin.amount;
       const isCredit = amount > 0;
       const icon = isCredit ? 'volunteer_activism' : 'shopping_basket';
@@ -226,7 +274,8 @@ function updateDeliveryCard() {
   if (!cta || !form) return;
 
   const user = GuardianAPI.isLoggedIn() ? GuardianAPI.currentUser() : null;
-  const isPP = user && user.role === 'Project_Proponent';
+  const isPP = user && (user.role === 'Project_Proponent' || user.role === 'OWNER');
+  const isSupplier = user && user.role === 'Supplier';
 
   if (isPP) {
     cta.classList.add('hidden');
@@ -240,6 +289,11 @@ function updateDeliveryCard() {
     cta.classList.remove('hidden');
     form.classList.add('hidden');
     document.getElementById('admin-section')?.classList.add('hidden');
+    if (isSupplier) {
+      cta.classList.add('hidden');
+      const welcome = document.querySelector('h1.text-4xl');
+      if (welcome) welcome.textContent = `Welcome, ${user.restaurantName || 'Partner'}`;
+    }
   }
 }
 
@@ -387,6 +441,17 @@ async function submitDeliveryForm() {
       const balances = JSON.parse(localStorage.getItem('eggologic_balances') || '{}');
       balances[supplierId] = (balances[supplierId] || 0) + eggo;
       localStorage.setItem('eggologic_balances', JSON.stringify(balances));
+
+      // Save local activity for demo/supplier login
+      const localActivity = JSON.parse(localStorage.getItem('eggologic_activity') || '[]');
+      localActivity.unshift({
+        id: deliveryId,
+        supplierId,
+        amount: eggo,
+        wasteType,
+        ts: Date.now()
+      });
+      localStorage.setItem('eggologic_activity', JSON.stringify(localActivity.slice(0, 20)));
 
       UI.showToast(`${deliveryId} approved — +${eggo} $EGGO minted! (Balance updated for ${supplierId})`);
     } catch (vvbErr) {

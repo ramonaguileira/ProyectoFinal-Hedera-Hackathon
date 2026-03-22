@@ -97,25 +97,15 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   <!-- Large Feature Card -->
   <div id="card-restaurants" class="lg:col-span-2 relative group overflow-hidden rounded-3xl bg-white shadow-xl">
-    <div class="relative h-[360px] md:h-[480px] overflow-hidden bg-gradient-to-br from-[#10381E] to-[#284f33] flex items-center justify-center">
-      <!-- Decorative pattern -->
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-32 h-32 border-2 border-white/40 rounded-full"></div>
-        <div class="absolute top-20 right-20 w-48 h-48 border border-white/20 rounded-full"></div>
-        <div class="absolute bottom-32 left-1/3 w-24 h-24 border border-white/30 rounded-full"></div>
-      </div>
-      <div class="text-center p-6 md:p-10 relative z-10">
-        <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-[#C1EDC7]/15 border border-[#C1EDC7]/20 flex items-center justify-center">
-          <span class="material-symbols-outlined text-[#C1EDC7] text-5xl">restaurant</span>
-        </div>
-        <h2 class="font-headline text-3xl md:text-5xl text-white font-medium mb-4">Dine Out</h2>
-        <p class="text-white/70 text-base md:text-lg mb-6 max-w-md mx-auto">Explore our partners and get discounts at their Restaurants for brunch, tea, or dinner!</p>
-      </div>
+    <div class="relative h-[360px] md:h-[480px] overflow-hidden">
+      <img src="img/Dine out.jpg" alt="Restaurant partners for Eggologic" class="absolute inset-0 w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
       <div class="absolute bottom-6 md:bottom-10 left-6 md:left-10 right-6 md:right-10">
         <span class="inline-block px-3 py-1 rounded-full bg-[#FBD54E] text-primary text-[10px] font-bold uppercase tracking-widest mb-4">Featured Tier</span>
+        <h2 class="font-headline text-3xl md:text-5xl text-white font-medium mb-4">Dine Out</h2>
+        <p class="text-white/70 text-base md:text-lg mb-6 max-w-md mx-auto">Explore our partners and get discounts at their Restaurants for brunch, tea, or dinner!</p>
         <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-6">
-          <button onclick="UI.showToast('Coming soon')" class="px-8 py-3.5 rounded-full bg-white text-primary font-bold hover:bg-[#C1EDC7] transition-all shadow-lg">Explore Venues</button>
+          <a href="https://www.instagram.com/naturalypopular" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-white text-primary font-bold hover:bg-[#C1EDC7] transition-all shadow-lg inline-block no-underline">Explore Venues</a>
         </div>
       </div>
     </div>
@@ -169,14 +159,9 @@
 
   <!-- Product Card 3: Soil Sensors -->
   <div class="premium-card rounded-3xl overflow-hidden flex flex-col h-full">
-    <div class="h-56 md:h-64 overflow-hidden relative bg-gradient-to-br from-[#284f33] to-[#386846] flex items-center justify-center">
-      <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 30% 70%, white 1px, transparent 1px), radial-gradient(circle at 70% 30%, white 1px, transparent 1px); background-size: 24px 24px;"></div>
-      <div class="relative flex flex-col items-center gap-3">
-        <div class="w-20 h-20 rounded-2xl bg-[#C1EDC7]/15 border border-[#C1EDC7]/20 flex items-center justify-center backdrop-blur-sm">
-          <span class="material-symbols-outlined text-[#C1EDC7] text-4xl">sensors</span>
-        </div>
-        <span class="text-[#C1EDC7]/60 text-[10px] font-bold uppercase tracking-widest">GREEN CERT</span>
-      </div>
+    <div class="h-56 md:h-64 overflow-hidden relative">
+      <img src="img/Zero_Waste.png" alt="Zero-Waste Certification" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent"></div>
     </div>
     <div class="p-6 md:p-8 flex-1 flex flex-col">
       <div class="flex justify-between items-start mb-2">
@@ -192,14 +177,9 @@
 
   <!-- Product Card 4: Eggs -->
   <div id="card-eggs" class="premium-card rounded-3xl overflow-hidden flex flex-col h-full">
-    <div class="h-56 md:h-64 overflow-hidden relative bg-gradient-to-br from-[#DCC49C]/30 to-[#F5F3E8] flex items-center justify-center">
-      <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 30% 70%, #10381E 1px, transparent 1px), radial-gradient(circle at 70% 30%, #10381E 1px, transparent 1px); background-size: 24px 24px;"></div>
-      <div class="relative flex flex-col items-center gap-3">
-        <div class="w-20 h-20 rounded-2xl bg-[#10381E]/8 border border-[#10381E]/10 flex items-center justify-center">
-          <span class="material-symbols-outlined text-[#10381E]/40 text-4xl">egg</span>
-        </div>
-        <span class="text-[#C1EDC7]/40 text-[10px] font-bold uppercase tracking-widest">Free Range</span>
-      </div>
+    <div class="h-56 md:h-64 overflow-hidden relative">
+      <img src="img/Eggs.jpg" alt="Free range Eggologic eggs" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent"></div>
     </div>
     <div class="p-6 md:p-8 flex-1 flex flex-col">
       <div class="flex justify-between items-start mb-2">

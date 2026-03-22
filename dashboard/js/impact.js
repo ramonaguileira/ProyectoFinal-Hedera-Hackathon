@@ -51,8 +51,8 @@ async function loadImpact() {
     const el = document.getElementById(id);
     if (el) el.innerHTML = connectingHTML;
   });
-  UI.showLoading('methane-pct');
-  UI.showLoading('supply-pct');
+  UI.showLoading('co2-verified');
+  UI.showLoading('co2-remaining');
 
   // Hedera public API data load
   try {
@@ -108,20 +108,12 @@ async function loadImpact() {
       b.id = `ENT-${String(i + 1).padStart(3, '0')}`;
     });
 
-    // CO2 Avoidance (kg_ajustados × 0.70)
+    // CO2 Avoidance (kg_ajustados × 0.70 CDM emission factor)
     const co2Kg = totalKgAdj * 0.70;
     UI.setText('co2-tonnes', UI.fmt(co2Kg, 1));
 
-    // Update ring chart proportion
-    const circumference = 502; // 2 * PI * 80
-    const pct = Math.min(co2Kg / 1000, 1); // Proportion towards 1 tonne
-    const offset = circumference * (1 - pct);
-    const ring = document.getElementById('co2-ring');
-    if (ring) ring.setAttribute('stroke-dashoffset', offset.toString());
-
-    // Methane / Supply chain split (estimated from waste categories)
-    UI.setText('methane-pct', '72%');
-    UI.setText('supply-pct', '28%');
+    // Pie chart reseset (every 1,000 kg CO2)
+    updateCO2Ring(co2Kg);
 
     // Update NFT's milestone with actual kg - fun little details
     const nftDetail = document.getElementById('ms-nft-detail');
@@ -139,8 +131,7 @@ async function loadImpact() {
     console.error('Guardian impact error:', e);
     // Fallback to known verified values
     UI.setText('co2-tonnes', '859');
-    UI.setText('methane-pct', '72%');
-    UI.setText('supply-pct', '28%');
+    updateCO2Ring(859);
     renderFallbackChart();
     updateAggregateScore();
     UI.showToast('Using cached data — Guardian connection unavailable');
@@ -169,6 +160,27 @@ function updateAggregateScore() {
     detailEl.textContent = `${approved} approved, ${rejected} rejected of ${total} deliveries`;
     detailEl.style.opacity = '1';
   }
+}
+
+/**
+ * Pie chart: resets every 1,000 kg.
+ * Shows progress status within the current tonne, and which NFT mint we're working towards.
+ */
+function updateCO2Ring(co2Kg) {
+  const circumference = 502; // 2 * PI * 80
+  const tonnesCompleted = Math.floor(co2Kg / 1000);
+  const progressInCurrentTonne = co2Kg % 1000;
+  const pct = progressInCurrentTonne / 1000;
+  const offset = circumference * (1 - pct);
+
+  const ring = document.getElementById('co2-ring');
+  if (ring) ring.setAttribute('stroke-dashoffset', offset.toString());
+
+  const nextTonne = tonnesCompleted + 1;
+  const remaining = 1000 - progressInCurrentTonne;
+
+  UI.setText('co2-verified', `${UI.fmt(co2Kg, 1)} kg total`);
+  UI.setText('co2-remaining', `${UI.fmt(remaining, 1)} kg to NFT #${nextTonne}`);
 }
 
 function extractDocs(blockData) {

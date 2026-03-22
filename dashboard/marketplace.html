@@ -12,19 +12,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="css/custom.css" rel="stylesheet"/>
+<script src="js/theme.js"></script>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
           colors: {
-            "primary": "#10381e", "secondary": "#386846", "primary-container": "#284f33",
-            "on-primary": "#ffffff", "background": "#F5F3E8", "surface": "#F5F3E8",
-            "surface-container-low": "#f8f3ea", "surface-container-high": "#ece8df",
-            "surface-container-highest": "#e7e2d9", "on-surface": "#1d1c16",
-            "on-surface-variant": "#424942", "outline": "#727971", "outline-variant": "#c1c8bf",
-            "secondary-container": "#b7ecc1", "on-secondary-container": "#3d6d4a",
-            "surface-container": "#f2ede4", "error": "#ba1a1a",
+            "background": "rgb(var(--c-background) / <alpha-value>)", "surface": "rgb(var(--c-surface) / <alpha-value>)",
+            "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)", "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)",
+            "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)",
+            "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)",
+            "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)",
+            "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)",
+            "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)",
+            "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)",
+            "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)",
+            "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)", "on-background": "rgb(var(--c-on-background) / <alpha-value>)",
+            "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)",
+            "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)",
+            "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)",
+            "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)",
+            "primary": "rgb(var(--c-primary) / <alpha-value>)", "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
+            "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)",
+            "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)",
+            "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)",
+            "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)",
+            "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)",
+            "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)",
+            "secondary": "rgb(var(--c-secondary) / <alpha-value>)", "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)",
+            "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)",
+            "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)",
+            "outline": "rgb(var(--c-outline) / <alpha-value>)", "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)",
+            "error": "rgb(var(--c-error) / <alpha-value>)", "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
+            "error-container": "rgb(var(--c-error-container) / <alpha-value>)",
+            "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)"
           },
           fontFamily: {
             "headline": ["Newsreader", "serif"],
@@ -65,13 +87,16 @@
     <a class="hover:text-white transition-colors" href="wallet.html">Wallet</a>
     <a class="nav-active" href="marketplace.html">Marketplace</a>
   </div>
-  <div class="flex items-center gap-4">
-    <div id="auth-btn" class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10 cursor-pointer">
+  <div class="flex items-center gap-3">
+    <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="material-symbols-outlined text-[18px] theme-toggle-icon">dark_mode</span>
+    </button>
+    <div id="auth-btn" role="button" aria-label="Sign in to your account" tabindex="0" class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10 cursor-pointer">
       <div class="w-6 h-6 rounded-full overflow-hidden border border-white/20 bg-white/10 flex items-center justify-center">
-        <span class="material-symbols-outlined text-[14px] text-white">person</span>
+        <span class="material-symbols-outlined text-[14px] text-white" aria-hidden="true">person</span>
       </div>
       <span class="text-white text-xs font-semibold">Log In</span>
-      <span class="material-symbols-outlined text-white text-sm">keyboard_arrow_down</span>
+      <span class="material-symbols-outlined text-white text-sm" aria-hidden="true">keyboard_arrow_down</span>
     </div>
   </div>
 </nav>
@@ -96,7 +121,7 @@
 <!-- Marketplace Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   <!-- Large Feature Card -->
-  <div id="card-restaurants" class="lg:col-span-2 relative group overflow-hidden rounded-3xl bg-white shadow-xl">
+  <div id="card-restaurants" class="lg:col-span-2 relative group overflow-hidden rounded-3xl bg-surface-container-lowest shadow-xl">
     <div class="relative h-[360px] md:h-[480px] overflow-hidden">
       <img src="img/Dine out.jpg" alt="Restaurant partners for Eggologic" class="absolute inset-0 w-full h-full object-cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
@@ -129,7 +154,7 @@
       </div>
       <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">All natural, A+ quality compost. High in organic nutrients from EGGOLOGIC's composting chain.</p>
       <div class="mt-auto">
-        <button onclick="UI.showToast('Coming soon')" class="w-full py-4 rounded-full bg-primary text-white font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md">Get it now</button>
+        <button onclick="UI.showToast('Coming soon')" class="w-full py-4 rounded-full bg-primary text-on-primary font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md">Get it now</button>
       </div>
     </div>
   </div>
@@ -152,7 +177,7 @@
       </div>
       <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Automated aerobic composting smart systems. Each Bin is production ready, blockchain connected and comes with BSF Larvaes as composting agents</p>
       <div class="mt-auto">
-        <button onclick="UI.showToast('Coming soon')" class="w-full py-4 rounded-full bg-primary text-white font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md">Get it now</button>
+        <button onclick="UI.showToast('Coming soon')" class="w-full py-4 rounded-full bg-primary text-on-primary font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md">Get it now</button>
       </div>
     </div>
   </div>
@@ -170,7 +195,7 @@
       </div>
       <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">For business only. Make your Restaurant carbon-neutral and get a zero-waste certification.</p>
       <div class="mt-auto">
-        <a href="mailto:Eggologic-Registry@outlook.com" target="_blank" rel="noopener" class="w-full py-4 rounded-full bg-primary text-white font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md block text-center no-underline">Contact us</a>
+        <a href="mailto:Eggologic-Registry@outlook.com" target="_blank" rel="noopener" class="w-full py-4 rounded-full bg-primary text-on-primary font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md block text-center no-underline">Contact us</a>
       </div>
     </div>
   </div>
@@ -188,7 +213,7 @@
       </div>
       <p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Fresh, free-range, premium quality eggs made in our regenerative facilities.</p>
       <div class="mt-auto">
-        <button onclick="UI.showToast('Coming soon')" class="w-full py-4 rounded-full bg-primary text-white font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md">Get it now</button>
+        <button onclick="UI.showToast('Coming soon')" class="w-full py-4 rounded-full bg-primary text-on-primary font-bold hover:bg-secondary transition-all shadow-sm hover:shadow-md">Get it now</button>
       </div>
     </div>
   </div>
@@ -264,8 +289,8 @@
 
 <!-- Floating Cart FAB -->
 <div class="fixed bottom-10 right-10 z-50">
-  <button onclick="UI.showToast('Coming soon')" class="h-16 w-16 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all active:scale-95 group">
-    <span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform">shopping_cart</span>
+  <button onclick="UI.showToast('Coming soon')" aria-label="Shopping cart (coming soon)" class="h-16 w-16 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all active:scale-95 group">
+    <span class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform" aria-hidden="true">shopping_cart</span>
   </button>
 </div>
 

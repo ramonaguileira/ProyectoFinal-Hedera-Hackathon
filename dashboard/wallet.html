@@ -12,32 +12,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="css/custom.css" rel="stylesheet"/>
+<script src="js/theme.js"></script>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
           colors: {
-            "primary-fixed": "#c1edc7", "inverse-on-surface": "#f5f0e7", "on-primary": "#ffffff",
-            "on-tertiary-container": "#95c093", "on-secondary": "#ffffff", "surface-dim": "#ded9d1",
-            "primary-container": "#284f33", "secondary": "#386846", "inverse-primary": "#a5d1ac",
-            "on-surface": "#1d1c16", "on-error": "#ffffff", "tertiary": "#113817",
-            "outline-variant": "#c1c8bf", "on-primary-fixed": "#00210d", "primary-fixed-dim": "#a5d1ac",
-            "surface-container": "#f2ede4", "tertiary-container": "#284f2c",
-            "on-secondary-container": "#3d6d4a", "on-background": "#1d1c16",
-            "on-primary-container": "#95c09c", "inverse-surface": "#32302a",
-            "surface-container-lowest": "#ffffff", "surface-container-low": "#f8f3ea",
-            "error": "#ba1a1a", "background": "#F5F3E8", "surface-bright": "#fef9f0",
-            "on-tertiary": "#ffffff", "on-error-container": "#93000a",
-            "on-secondary-fixed-variant": "#205030", "surface-tint": "#3f6749",
-            "surface": "#F5F3E8", "on-tertiary-fixed-variant": "#284f2c",
-            "on-secondary-fixed": "#00210d", "tertiary-fixed-dim": "#a6d2a4",
-            "surface-container-high": "#ece8df", "primary": "#10381e",
-            "secondary-fixed-dim": "#9fd3a9", "surface-variant": "#e7e2d9",
-            "outline": "#727971", "tertiary-fixed": "#c1eebe", "error-container": "#ffdad6",
-            "secondary-fixed": "#baefc3", "on-surface-variant": "#424942",
-            "on-primary-fixed-variant": "#284f33", "on-tertiary-fixed": "#002107",
-            "secondary-container": "#b7ecc1", "surface-container-highest": "#e7e2d9"
+            "background": "rgb(var(--c-background) / <alpha-value>)", "surface": "rgb(var(--c-surface) / <alpha-value>)",
+            "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)", "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)",
+            "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)",
+            "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)",
+            "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)",
+            "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)",
+            "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)",
+            "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)",
+            "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)",
+            "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)", "on-background": "rgb(var(--c-on-background) / <alpha-value>)",
+            "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)",
+            "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)",
+            "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)",
+            "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)",
+            "primary": "rgb(var(--c-primary) / <alpha-value>)", "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
+            "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)",
+            "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)",
+            "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)",
+            "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)",
+            "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)",
+            "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)",
+            "secondary": "rgb(var(--c-secondary) / <alpha-value>)", "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)",
+            "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)",
+            "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)",
+            "secondary-fixed": "rgb(var(--c-secondary-fixed) / <alpha-value>)",
+            "secondary-fixed-dim": "rgb(var(--c-secondary-fixed-dim) / <alpha-value>)",
+            "on-secondary-fixed": "rgb(var(--c-on-secondary-fixed) / <alpha-value>)",
+            "on-secondary-fixed-variant": "rgb(var(--c-on-secondary-fixed-variant) / <alpha-value>)",
+            "tertiary": "rgb(var(--c-tertiary) / <alpha-value>)", "on-tertiary": "rgb(var(--c-on-tertiary) / <alpha-value>)",
+            "tertiary-container": "rgb(var(--c-tertiary-container) / <alpha-value>)",
+            "on-tertiary-container": "rgb(var(--c-on-tertiary-container) / <alpha-value>)",
+            "tertiary-fixed": "rgb(var(--c-tertiary-fixed) / <alpha-value>)",
+            "tertiary-fixed-dim": "rgb(var(--c-tertiary-fixed-dim) / <alpha-value>)",
+            "on-tertiary-fixed": "rgb(var(--c-on-tertiary-fixed) / <alpha-value>)",
+            "on-tertiary-fixed-variant": "rgb(var(--c-on-tertiary-fixed-variant) / <alpha-value>)",
+            "outline": "rgb(var(--c-outline) / <alpha-value>)", "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)",
+            "error": "rgb(var(--c-error) / <alpha-value>)", "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
+            "error-container": "rgb(var(--c-error-container) / <alpha-value>)",
+            "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)"
           },
           fontFamily: {
             "headline": ["Newsreader", "serif"],
@@ -76,29 +96,32 @@
     <a class="nav-active" href="wallet.html">Wallet</a>
     <a class="hover:text-white transition-colors" href="marketplace.html">Marketplace</a>
   </div>
-  <div class="flex items-center gap-4">
-    <div id="auth-btn" class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10 cursor-pointer">
+  <div class="flex items-center gap-3">
+    <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="material-symbols-outlined text-[18px] theme-toggle-icon">dark_mode</span>
+    </button>
+    <div id="auth-btn" role="button" aria-label="Sign in to your account" tabindex="0" class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10 cursor-pointer">
       <div class="w-6 h-6 rounded-full overflow-hidden border border-white/20 bg-white/10 flex items-center justify-center">
-        <span class="material-symbols-outlined text-[14px] text-white">person</span>
+        <span class="material-symbols-outlined text-[14px] text-white" aria-hidden="true">person</span>
       </div>
       <span class="text-white text-xs font-semibold">Log In</span>
-      <span class="material-symbols-outlined text-white text-sm">keyboard_arrow_down</span>
+      <span class="material-symbols-outlined text-white text-sm" aria-hidden="true">keyboard_arrow_down</span>
     </div>
   </div>
 </nav>
 </header>
-<!-- Hero — Stitch "True Impact" centered style -->
+<!-- Hero -->
 <div class="max-w-screen-2xl mx-auto px-4 md:px-10 pt-12 md:pt-20 text-center relative z-10">
   <h1 class="font-headline text-4xl md:text-6xl text-white mb-4 tracking-tight">True Impact</h1>
-  <p class="text-white/70 text-lg font-medium max-w-2xl mx-auto">After reaching 10,000 $EGGO — users can mint the Circular Impact Token</p>
+  <p class="text-white/70 text-lg font-medium max-w-2xl mx-auto">After reaching 1,000 $EGGO — users can mint the Circular Impact Token</p>
 </div>
 </div>
 
 <main class="max-w-screen-2xl mx-auto px-4 md:px-10 mt-8 md:mt-16 mb-16 md:mb-24 relative z-20">
 <div class="grid grid-cols-12 gap-8">
-  <!-- Wallet & Tokens Card (Stitch dark card) -->
+  <!-- Wallet & Tokens Card -->
   <section class="col-span-12 lg:col-span-7">
-    <div class="bg-[#10381E] rounded-3xl overflow-hidden shadow-xl glass-card !bg-primary/90 h-full">
+    <div class="bg-[#10381E] rounded-3xl overflow-hidden shadow-xl glass-card h-full">
       <div class="p-8 pb-4 flex justify-between items-start">
         <h4 class="text-white text-xl font-bold">Wallet &amp; Tokens</h4>
         <a href="https://hashscan.io/testnet/token/0.0.8287358" target="_blank" rel="noopener" class="bg-white/10 rounded-full px-3 py-1 flex items-center gap-1.5 border border-white/10 hover:bg-white/20 transition-all no-underline">
@@ -124,15 +147,15 @@
           <button onclick="UI.showToast('Coming soon')" class="flex-1 bg-transparent border border-white/20 text-white py-4 rounded-full text-sm font-bold hover:bg-white/5 transition-all">Redeem Credits</button>
         </div>
       </div>
-      <div id="tx-history" class="bg-white p-6 md:p-8 space-y-4">
+      <div id="tx-history" class="bg-surface-container-lowest p-6 md:p-8 space-y-4">
         <p class="text-stone-400 text-sm text-center py-6">Sign in to view transactions</p>
       </div>
     </div>
   </section>
 
-  <!-- CIT Progress Tracker Column -->
+  <!-- NFT Progress Tracker -->
   <aside class="col-span-12 lg:col-span-5 flex flex-col gap-8">
-    <div class="bg-white rounded-3xl p-10 shadow-sm border border-stone-200/50 h-full flex flex-col justify-between">
+    <div class="bg-surface-container-lowest rounded-3xl p-10 shadow-sm border border-stone-200/50 h-full flex flex-col justify-between">
       <div>
         <div class="flex items-center gap-4 mb-8">
           <div class="w-14 h-14 rounded-full bg-[#C1EDC7]/20 flex items-center justify-center border border-[#C1EDC7]/30">
@@ -163,14 +186,14 @@
       <div id="cit-log" class="mt-6 space-y-3">
         <p class="text-stone-400 text-sm text-center py-4">Loading minted CITs...</p>
       </div>
-      <a href="https://hashscan.io/testnet/token/0.0.8287362" target="_blank" rel="noopener" class="w-full mt-6 py-4 bg-[#10381E] text-white rounded-full font-bold text-sm hover:opacity-90 transition-opacity text-center block no-underline">
+      <a href="https://hashscan.io/testnet/token/0.0.8287362" target="_blank" rel="noopener" class="w-full mt-6 py-4 bg-primary text-on-primary rounded-full font-bold text-sm hover:opacity-90 transition-opacity text-center block no-underline">
         View on HashScan
       </a>
     </div>
   </aside>
 </div>
 
-<!-- All Holders (styled like Stitch Recent Activity) -->
+<!-- All Holders -->
 <section class="mt-24">
   <div class="flex justify-between items-center mb-12">
     <h3 class="font-headline text-4xl text-primary">All Holders</h3>

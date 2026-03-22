@@ -45,11 +45,14 @@ async function fetchImpactData() {
 }
 
 async function loadImpact() {
-  UI.showLoading('aggregate-score');
-  UI.showLoading('co2-tonnes');
+  // Show "Connecting..." states instead of silent skeletons
+  const connectingHTML = '<span class="animate-pulse">Connecting...</span>';
+  ['aggregate-score', 'co2-tonnes', 'total-minted'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = connectingHTML;
+  });
   UI.showLoading('methane-pct');
   UI.showLoading('supply-pct');
-  UI.showLoading('total-minted');
 
   // Hedera public API data load
   try {
@@ -140,6 +143,7 @@ async function loadImpact() {
     UI.setText('supply-pct', '28%');
     renderFallbackChart();
     updateAggregateScore();
+    UI.showToast('Using cached data — Guardian connection unavailable');
   }
 }
 

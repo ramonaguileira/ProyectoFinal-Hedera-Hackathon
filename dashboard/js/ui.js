@@ -11,13 +11,13 @@ const UI = (() => {
     modal.id = 'login-modal';
     modal.className = 'fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm hidden';
     modal.innerHTML = `
-      <div class="bg-white rounded-3xl p-10 w-full max-w-md shadow-2xl relative">
+      <div class="bg-surface-container-lowest rounded-3xl p-10 w-full max-w-md shadow-2xl relative">
         <button onclick="UI.closeLogin()" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700">
           <span class="material-symbols-outlined">close</span>
         </button>
         <div class="flex items-center gap-3 mb-8">
           <div class="w-10 h-10 bg-[#10381E] rounded-full flex items-center justify-center">
-            <span class="material-symbols-outlined text-white">egg</span>
+            <span class="material-symbols-outlined text-white" aria-hidden="true">egg</span>
           </div>
           <h2 class="text-2xl font-bold text-[#10381E]">Sign In</h2>
         </div>
@@ -33,7 +33,7 @@ const UI = (() => {
             <label class="text-xs font-bold text-stone-500 uppercase tracking-wider mb-1 block">Password</label>
             <input id="login-password" type="password" value="test" class="w-full px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#10381E]/20 bg-stone-50" />
           </div>
-          <button id="login-submit" onclick="UI.doLogin()" class="w-full py-3 bg-[#10381E] text-white rounded-full font-bold text-sm hover:opacity-90 transition-opacity mt-4">
+          <button id="login-submit" onclick="UI.doLogin()" class="w-full py-3 bg-primary text-on-primary rounded-full font-bold text-sm hover:opacity-90 transition-opacity mt-4">
             Sign In
           </button>
         </div>
@@ -242,6 +242,10 @@ const UI = (() => {
         <a href="wallet.html" class="${currentPage === 'wallet.html' ? 'nav-active' : ''}">Wallet</a>
         <a href="marketplace.html" class="${currentPage === 'marketplace.html' ? 'nav-active' : ''}">Marketplace</a>
       </nav>
+      <button onclick="toggleTheme()" class="flex items-center gap-3 text-white/80 font-semibold text-lg py-3 border-b border-white/10 hover:text-[#FBD54E] transition-colors">
+        <span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
+        Toggle Theme
+      </button>
       <div id="mobile-auth-slot" class="mt-auto"></div>
     `;
 

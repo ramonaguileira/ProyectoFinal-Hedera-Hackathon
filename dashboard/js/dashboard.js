@@ -37,7 +37,10 @@ function countUp(elementId, target, suffix = '', decimals = 0, duration = 1100) 
  * Sources: Cache(local JSON) + Hedera Mirror Node (public API).
  */
 async function loadGlobalMetrics() {
-  ['metric-waste', 'metric-co2', 'metric-eggs'].forEach(id => UI.showLoading(id));
+  ['metric-waste', 'metric-co2', 'metric-eggs'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = '<span class="text-white/40 text-lg font-body animate-pulse">Connecting to Hedera...</span>';
+  });
 
   try {
     // Live EGGOCOIN supply from Mirror Node
@@ -65,9 +68,11 @@ async function loadGlobalMetrics() {
 
   } catch (e) {
     console.error('Mirror Node error, using fallback:', e);
+    // Show fallback values but flag them as cached
     countUp('metric-waste', 1.8, 't', 1);
     countUp('metric-co2', 859, 'kg', 0);
     countUp('metric-eggs', 936, '', 0);
+    UI.showToast('Using cached metrics — Hedera Mirror Node unavailable');
   }
 
   // Guardian fetch for delivery count (used by form ID generation)
@@ -88,7 +93,7 @@ async function loadUserData() {
   if (!GuardianAPI.isLoggedIn()) return;
 
   const user = GuardianAPI.currentUser();
-  UI.showLoading('wallet-balance');
+  UI.setText('wallet-balance', 'Connecting...');
   UI.showSkeletonRows('wallet-tx-list', 3);
   UI.showSkeletonRows('recent-activity', 3);
 
@@ -101,7 +106,8 @@ async function loadUserData() {
     loadRecentActivity(user.hedera);
   } catch (e) {
     console.error('Hedera data error:', e);
-    UI.setText('wallet-balance', 'Error');
+    UI.setText('wallet-balance', '— $EGGO');
+    UI.showToast('Could not load wallet data — check connection');
   }
 }
 

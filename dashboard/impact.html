@@ -12,19 +12,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="css/custom.css" rel="stylesheet"/>
+<script src="js/theme.js"></script>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
           colors: {
-            "primary": "#10381e", "secondary": "#386846", "primary-container": "#284f33",
-            "on-primary": "#ffffff", "background": "#F5F3E8", "surface": "#F5F3E8",
-            "surface-container-low": "#f8f3ea", "surface-container-high": "#ece8df",
-            "surface-container-highest": "#e7e2d9", "on-surface": "#1d1c16",
-            "on-surface-variant": "#424942", "outline": "#727971", "outline-variant": "#c1c8bf",
-            "secondary-container": "#b7ecc1", "on-secondary-container": "#3d6d4a",
-            "surface-container": "#f2ede4", "error": "#ba1a1a",
+            "background": "rgb(var(--c-background) / <alpha-value>)", "surface": "rgb(var(--c-surface) / <alpha-value>)",
+            "surface-dim": "rgb(var(--c-surface-dim) / <alpha-value>)", "surface-bright": "rgb(var(--c-surface-bright) / <alpha-value>)",
+            "surface-container-lowest": "rgb(var(--c-surface-container-lowest) / <alpha-value>)",
+            "surface-container-low": "rgb(var(--c-surface-container-low) / <alpha-value>)",
+            "surface-container": "rgb(var(--c-surface-container) / <alpha-value>)",
+            "surface-container-high": "rgb(var(--c-surface-container-high) / <alpha-value>)",
+            "surface-container-highest": "rgb(var(--c-surface-container-highest) / <alpha-value>)",
+            "surface-variant": "rgb(var(--c-surface-variant) / <alpha-value>)",
+            "surface-tint": "rgb(var(--c-surface-tint) / <alpha-value>)",
+            "on-surface": "rgb(var(--c-on-surface) / <alpha-value>)", "on-background": "rgb(var(--c-on-background) / <alpha-value>)",
+            "on-surface-variant": "rgb(var(--c-on-surface-variant) / <alpha-value>)",
+            "inverse-surface": "rgb(var(--c-inverse-surface) / <alpha-value>)",
+            "inverse-on-surface": "rgb(var(--c-inverse-on-surface) / <alpha-value>)",
+            "inverse-primary": "rgb(var(--c-inverse-primary) / <alpha-value>)",
+            "primary": "rgb(var(--c-primary) / <alpha-value>)", "on-primary": "rgb(var(--c-on-primary) / <alpha-value>)",
+            "primary-container": "rgb(var(--c-primary-container) / <alpha-value>)",
+            "on-primary-container": "rgb(var(--c-on-primary-container) / <alpha-value>)",
+            "primary-fixed": "rgb(var(--c-primary-fixed) / <alpha-value>)",
+            "primary-fixed-dim": "rgb(var(--c-primary-fixed-dim) / <alpha-value>)",
+            "on-primary-fixed": "rgb(var(--c-on-primary-fixed) / <alpha-value>)",
+            "on-primary-fixed-variant": "rgb(var(--c-on-primary-fixed-variant) / <alpha-value>)",
+            "secondary": "rgb(var(--c-secondary) / <alpha-value>)", "on-secondary": "rgb(var(--c-on-secondary) / <alpha-value>)",
+            "secondary-container": "rgb(var(--c-secondary-container) / <alpha-value>)",
+            "on-secondary-container": "rgb(var(--c-on-secondary-container) / <alpha-value>)",
+            "outline": "rgb(var(--c-outline) / <alpha-value>)", "outline-variant": "rgb(var(--c-outline-variant) / <alpha-value>)",
+            "error": "rgb(var(--c-error) / <alpha-value>)", "on-error": "rgb(var(--c-on-error) / <alpha-value>)",
+            "error-container": "rgb(var(--c-error-container) / <alpha-value>)",
+            "on-error-container": "rgb(var(--c-on-error-container) / <alpha-value>)"
           },
           fontFamily: {
             "headline": ["Newsreader", "serif"],
@@ -57,36 +79,39 @@
     </div>
     <span class="text-sm font-bold text-[#10381E]">EGGOLOGIC</span>
   </a>
-  <nav class="hidden md:flex items-center gap-10 text-white/80 font-medium text-sm">
+  <div class="hidden md:flex items-center gap-10 text-white/80 font-medium text-sm" role="navigation" aria-label="Main navigation">
     <a class="hover:text-white transition-colors" href="index.html">Dashboard</a>
-    <a class="nav-active" href="impact.html">Impact Report</a>
+    <a class="nav-active" href="impact.html" aria-current="page">Impact Report</a>
     <a class="hover:text-white transition-colors" href="wallet.html">Wallet</a>
     <a class="hover:text-white transition-colors" href="marketplace.html">Marketplace</a>
-  </nav>
-  <div class="flex items-center gap-4">
-    <div id="auth-btn" class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10 cursor-pointer">
+  </div>
+  <div class="flex items-center gap-3">
+    <button onclick="toggleTheme()" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="material-symbols-outlined text-[18px] theme-toggle-icon">dark_mode</span>
+    </button>
+    <div id="auth-btn" role="button" aria-label="Sign in to your account" tabindex="0" class="flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-3 py-1.5 border border-white/10 cursor-pointer">
       <div class="w-6 h-6 rounded-full overflow-hidden border border-white/20 bg-white/10 flex items-center justify-center">
-        <span class="material-symbols-outlined text-[14px] text-white">person</span>
+        <span class="material-symbols-outlined text-[14px] text-white" aria-hidden="true">person</span>
       </div>
       <span class="text-white text-xs font-semibold">Log In</span>
-      <span class="material-symbols-outlined text-white text-sm">keyboard_arrow_down</span>
+      <span class="material-symbols-outlined text-white text-sm" aria-hidden="true">keyboard_arrow_down</span>
     </div>
   </div>
 </nav>
 </header>
-<!-- Hero Content -->
+<!-- Hero -->
 <div class="max-w-screen-2xl mx-auto px-4 md:px-10 pt-12 md:pt-20 text-center relative z-10">
   <span class="font-label text-xs uppercase tracking-[0.3em] text-white/60 font-bold mb-4 block">The Global Ledger</span>
-  <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 md:mb-8">Our Shared <br/><i class="font-newsreader italic" style="color: #FBD54E;">Regenerative</i> Pulse.</h1>
-  <p class="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-6">A real-time manifestation of decentralized environmental stewardship. Explore the tangible metamorphosis of waste into wealth across our global estate.</p>
-  <button onclick="window.print()" class="no-print bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2.5 text-white text-sm font-bold hover:bg-white/20 transition-all inline-flex items-center gap-2 mb-10 md:mb-16">
+  <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl text-white leading-tight mb-6 md:mb-8">Terraforming change, <br/><i class="font-newsreader italic" style="color: #FBD54E;">one egg</i> at a time.</h1>
+  <p class="text-white/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed mb-6">Every kilogram is traceable, every credit is real. Explore the metamorphosis of waste into wealth in real-time. Our system is designed in a way that even the sub-products generated are valuable for everyone.</p>
+  <button onclick="document.querySelector('.hero-curved-bg').dataset.date=new Date().toLocaleDateString();window.print()" class="no-print bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2.5 text-white text-sm font-bold hover:bg-white/20 transition-all inline-flex items-center gap-2 mb-10 md:mb-16">
     <span class="material-symbols-outlined text-sm">download</span>
     Download Impact Report
   </button>
   <div class="flex justify-center">
     <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 flex flex-col gap-2 min-w-[320px] text-center">
       <span class="text-white/60 font-label text-xs uppercase tracking-widest">Aggregate Score</span>
-      <div id="aggregate-score" class="text-4xl md:text-6xl font-headline italic text-white">—</div>
+      <div id="aggregate-score" class="text-4xl md:text-6xl font-headline italic text-white" aria-live="polite" aria-label="Aggregate delivery approval score">—</div>
       <div class="flex items-center justify-center gap-2 mt-4 text-sm text-[#C1EDC7]">
         <span class="material-symbols-outlined text-sm">trending_up</span>
         <span id="score-detail">Loading...</span>
@@ -98,8 +123,8 @@
 
 <main class="max-w-screen-2xl mx-auto px-4 md:px-10 mt-10 md:mt-20 pb-16 md:pb-32">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
-  <!-- CO2 Avoidance Chart -->
-  <div class="md:col-span-4 bg-white rounded-3xl p-10 shadow-sm border border-stone-200/50 flex flex-col justify-between">
+  <!-- Chart -->
+  <div class="md:col-span-4 bg-surface-container-lowest rounded-3xl p-10 shadow-sm border border-stone-200/50 flex flex-col justify-between">
     <div>
       <h3 class="font-headline text-2xl text-primary mb-2">CO2 Avoidance</h3>
       <p class="text-on-surface-variant text-sm mb-12">Measuring atmospheric relief in metric tonnes.</p>
@@ -127,7 +152,7 @@
   </div>
 
   <!-- Organic Waste Processed Chart -->
-  <div class="md:col-span-8 bg-white rounded-3xl p-10 shadow-sm border border-stone-200/50 relative overflow-hidden">
+  <div class="md:col-span-8 bg-surface-container-lowest rounded-3xl p-10 shadow-sm border border-stone-200/50 relative overflow-hidden">
     <div class="flex justify-between items-start mb-12">
       <div>
         <h3 class="font-headline text-2xl text-primary mb-2">Organic Waste Processed</h3>
@@ -137,10 +162,10 @@
         <div id="chart-filter-btn" onclick="toggleFilterDropdown()" class="bg-surface-container-low px-4 py-2 rounded-full text-xs font-bold text-primary flex items-center gap-2 cursor-pointer border border-stone-100 hover:border-primary/20 transition-all select-none">
           All Deliveries <span class="material-symbols-outlined text-sm">expand_more</span>
         </div>
-        <div id="chart-filter-dropdown" class="hidden absolute right-0 top-full mt-2 bg-white rounded-2xl shadow-xl border border-stone-100 py-2 z-20 min-w-[180px]">
+        <div id="chart-filter-dropdown" class="hidden absolute right-0 top-full mt-2 bg-surface-container-lowest rounded-2xl shadow-xl border border-stone-100 py-2 z-20 min-w-[180px]">
           <button onclick="filterChart('all')" class="w-full text-left px-4 py-2.5 text-xs font-bold text-primary hover:bg-stone-50 transition-colors">All Deliveries</button>
           <button onclick="filterChart('A')" class="w-full text-left px-4 py-2.5 text-xs font-bold text-primary hover:bg-stone-50 transition-colors flex items-center gap-2">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#10381E]"></span> Cat. A — Clean
+            <span class="w-2.5 h-2.5 rounded-full bg-primary"></span> Cat. A — Clean
           </button>
           <button onclick="filterChart('B')" class="w-full text-left px-4 py-2.5 text-xs font-bold text-primary hover:bg-stone-50 transition-colors flex items-center gap-2">
             <span class="w-2.5 h-2.5 rounded-full bg-[#FBD54E]"></span> Cat. B — Fair
@@ -157,15 +182,15 @@
         <div class="border-t border-primary"></div>
         <div class="border-t border-primary"></div>
       </div>
-      <!-- Bars populated by JS -->
+      <!-- Graphic -->
       <p class="text-stone-400 text-sm m-auto">Sign in to view delivery data</p>
     </div>
     <div id="waste-chart-labels" class="flex justify-between mt-6 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/40">
     </div>
   </div>
 
-  <!-- Regenerative Impact Map -->
-  <div class="md:col-span-12 lg:col-span-7 bg-white rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-stone-200/50">
+  <!-- Policy Card -->
+  <div class="md:col-span-12 lg:col-span-7 bg-surface-container-lowest rounded-3xl overflow-hidden flex flex-col md:flex-row shadow-sm border border-stone-200/50">
     <div class="p-10 md:w-1/2 flex flex-col justify-between">
       <div>
         <span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">Live Activity</span>
@@ -202,11 +227,11 @@
 
   <!-- Milestones -->
   <div class="md:col-span-12 lg:col-span-5 flex flex-col gap-6">
-    <div class="bg-white rounded-3xl p-10 shadow-sm border border-stone-200/50 flex-1">
+    <div class="bg-surface-container-lowest rounded-3xl p-10 shadow-sm border border-stone-200/50 flex-1">
       <h3 class="font-headline text-3xl text-primary mb-10">Milestones</h3>
       <div id="milestones" class="space-y-10 relative">
         <div class="absolute left-[13px] top-2 bottom-2 w-0.5 bg-outline-variant/30"></div>
-        <!-- Milestones populated by JS -->
+
         <div class="relative flex gap-6">
           <div class="z-10 w-7 h-7 rounded-full bg-[#C1EDC7] flex items-center justify-center ring-4 ring-white">
             <span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">check</span>
@@ -248,7 +273,7 @@
   </div>
 </div>
 
-<!-- CTA Section -->
+<!-- CTA Buttons-->
 <section class="mt-20 bg-primary-container rounded-3xl p-16 overflow-hidden relative">
   <div class="relative z-10 max-w-2xl">
     <h2 class="font-headline text-5xl text-white mb-8">Amplify Your <i class="font-newsreader italic" style="color: #FBD54E;">Legacy</i>.</h2>

@@ -1,6 +1,211 @@
 /* Eggologic Dashboard — Shared custom styles */
 
-/* Loading pulse animation */
+/* ── Theme Color Variables ── */
+:root {
+  --c-background: 245 243 232;
+  --c-surface: 245 243 232;
+  --c-surface-dim: 222 217 209;
+  --c-surface-bright: 254 249 240;
+  --c-surface-container-lowest: 255 255 255;
+  --c-surface-container-low: 248 243 234;
+  --c-surface-container: 242 237 228;
+  --c-surface-container-high: 236 232 223;
+  --c-surface-container-highest: 231 226 217;
+  --c-surface-variant: 231 226 217;
+  --c-surface-tint: 63 103 73;
+  --c-on-surface: 29 28 22;
+  --c-on-background: 29 28 22;
+  --c-on-surface-variant: 66 73 66;
+  --c-inverse-surface: 50 48 42;
+  --c-inverse-on-surface: 245 240 231;
+  --c-inverse-primary: 165 209 172;
+  --c-primary: 16 56 30;
+  --c-on-primary: 255 255 255;
+  --c-primary-container: 40 79 51;
+  --c-on-primary-container: 149 192 156;
+  --c-primary-fixed: 193 237 199;
+  --c-primary-fixed-dim: 165 209 172;
+  --c-on-primary-fixed: 0 33 13;
+  --c-on-primary-fixed-variant: 40 79 51;
+  --c-secondary: 56 104 70;
+  --c-on-secondary: 255 255 255;
+  --c-secondary-container: 183 236 193;
+  --c-on-secondary-container: 61 109 74;
+  --c-secondary-fixed: 186 239 195;
+  --c-secondary-fixed-dim: 159 211 169;
+  --c-on-secondary-fixed: 0 33 13;
+  --c-on-secondary-fixed-variant: 32 80 48;
+  --c-tertiary: 17 56 23;
+  --c-on-tertiary: 255 255 255;
+  --c-tertiary-container: 40 79 44;
+  --c-on-tertiary-container: 149 192 147;
+  --c-tertiary-fixed: 193 238 190;
+  --c-tertiary-fixed-dim: 166 210 164;
+  --c-on-tertiary-fixed: 0 33 7;
+  --c-on-tertiary-fixed-variant: 40 79 44;
+  --c-outline: 114 121 113;
+  --c-outline-variant: 193 200 191;
+  --c-error: 186 26 26;
+  --c-on-error: 255 255 255;
+  --c-error-container: 255 218 214;
+  --c-on-error-container: 147 0 10;
+}
+
+html.dark {
+  --c-background: 17 23 18;
+  --c-surface: 17 23 18;
+  --c-surface-dim: 17 23 18;
+  --c-surface-bright: 55 66 57;
+  --c-surface-container-lowest: 12 18 13;
+  --c-surface-container-low: 22 31 23;
+  --c-surface-container: 28 38 29;
+  --c-surface-container-high: 36 48 37;
+  --c-surface-container-highest: 44 56 45;
+  --c-surface-variant: 66 73 66;
+  --c-surface-tint: 165 209 172;
+  --c-on-surface: 231 226 217;
+  --c-on-background: 231 226 217;
+  --c-on-surface-variant: 193 200 191;
+  --c-inverse-surface: 231 226 217;
+  --c-inverse-on-surface: 50 48 42;
+  --c-inverse-primary: 16 56 30;
+  --c-primary: 165 209 172;
+  --c-on-primary: 0 33 13;
+  --c-primary-container: 26 77 46;
+  --c-on-primary-container: 193 237 199;
+  --c-secondary: 159 211 169;
+  --c-on-secondary: 0 33 13;
+  --c-secondary-container: 32 80 48;
+  --c-on-secondary-container: 186 239 195;
+  --c-tertiary: 166 210 164;
+  --c-on-tertiary: 0 33 7;
+  --c-tertiary-container: 40 79 44;
+  --c-on-tertiary-container: 193 238 190;
+  --c-outline: 140 147 137;
+  --c-outline-variant: 66 73 66;
+  --c-error: 255 180 171;
+  --c-on-error: 105 0 5;
+  --c-error-container: 147 0 10;
+  --c-on-error-container: 255 218 214;
+}
+
+/* ── Dark Mode — Body & Overrides ── */
+html.dark body {
+  background-color: rgb(var(--c-background)) !important;
+  background-image:
+    radial-gradient(circle at 100% 100%, rgba(165, 209, 172, 0.03) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 48%, rgba(165, 209, 172, 0.02) 50%, transparent 52%) !important;
+}
+
+/* Premium card (marketplace) */
+html.dark .premium-card {
+  background: rgb(var(--c-surface-container)) !important;
+  border-color: rgb(var(--c-outline-variant) / 0.3) !important;
+}
+html.dark .premium-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Skeleton shimmer for dark mode */
+html.dark .skeleton {
+  background: linear-gradient(90deg, rgba(165,209,172,0.06) 25%, rgba(165,209,172,0.12) 50%, rgba(165,209,172,0.06) 75%);
+  background-size: 200% 100%;
+}
+
+/* Stone-* borders (Tailwind defaults, not theme-aware) */
+html.dark [class*="border-stone"] {
+  border-color: rgb(var(--c-outline-variant) / 0.3) !important;
+}
+
+/* Stone-* text colors */
+html.dark .text-stone-400,
+html.dark .text-stone-500 {
+  color: rgb(var(--c-on-surface-variant)) !important;
+}
+
+/* Form inputs & selects in dark mode */
+html.dark select,
+html.dark input[type="number"],
+html.dark input[type="url"],
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark input[type="password"] {
+  background-color: rgb(var(--c-surface-container-low)) !important;
+  border-color: rgb(var(--c-outline-variant) / 0.4) !important;
+  color: rgb(var(--c-on-surface)) !important;
+}
+
+/* Toast adapts slightly */
+html.dark .toast {
+  background: rgb(var(--c-inverse-surface));
+  color: rgb(var(--c-inverse-on-surface));
+}
+
+/* Stone color overrides for dark mode */
+html.dark .bg-stone-50,
+html.dark .bg-stone-100 {
+  background-color: rgb(var(--c-surface-container)) !important;
+}
+html.dark .bg-stone-200 {
+  background-color: rgb(var(--c-surface-container-high)) !important;
+}
+html.dark .hover\:bg-stone-50:hover,
+html.dark .hover\:bg-stone-100:hover {
+  background-color: rgb(var(--c-surface-container-high)) !important;
+}
+html.dark .text-stone-300 {
+  color: rgb(var(--c-outline)) !important;
+}
+html.dark .text-red-700 {
+  color: rgb(var(--c-error)) !important;
+}
+html.dark .bg-red-50 {
+  background-color: rgb(var(--c-error-container)) !important;
+}
+
+/* Milestone ring-white → ring-surface-container-lowest */
+html.dark .ring-white {
+  --tw-ring-color: rgb(var(--c-surface-container-lowest)) !important;
+}
+
+/* Footer logo SVGs — boost opacity in dark mode */
+html.dark footer img[alt="Hedera"],
+html.dark footer img[alt="Guardian"],
+html.dark footer img[alt="Hashgraph"] {
+  filter: brightness(2) !important;
+  opacity: 0.5 !important;
+}
+
+/* Login modal dark overrides */
+html.dark #login-modal > div:last-child {
+  background-color: rgb(var(--c-surface-container)) !important;
+  color: rgb(var(--c-on-surface)) !important;
+}
+
+/* bg-[#f0f7f1] certification card bg */
+html.dark .bg-\[\#f0f7f1\] {
+  background-color: rgb(var(--c-surface-container)) !important;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  cursor: pointer;
+  transition: background 0.2s;
+  color: white;
+}
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ── Loading pulse animation ── */
 @keyframes eggPulse {
   0%, 100% { opacity: 0.4; }
   50% { opacity: 1; }
@@ -183,7 +388,43 @@
 
 /* Print styles for Impact Report */
 @media print {
-  nav, #auth-btn, footer, .no-print, .mobile-menu-overlay, .mobile-menu-panel, #hamburger-btn { display: none !important; }
-  .hero-curved-bg { border-radius: 0 !important; }
-  body { background: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  nav, #auth-btn, footer, .no-print, .mobile-menu-overlay, .mobile-menu-panel, #hamburger-btn, .theme-toggle,
+  #chart-filter-btn, #chart-filter-dropdown, .toast { display: none !important; }
+
+  * { box-shadow: none !important; }
+  body { background: white !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; color: #1D1C16 !important; font-size: 12pt; }
+
+  .hero-curved-bg { border-radius: 0 !important; background: #10381E !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; padding-bottom: 2rem !important; }
+  .hero-curved-bg h1 { font-size: 28pt !important; }
+  .hero-curved-bg p { font-size: 10pt !important; }
+
+  /* Ensure chart bars print with color */
+  .bar-grow, [class*="bg-primary"], [class*="bg-red-"], [class*="bg-\[#FBD54E\]"] {
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .glass-card { background: rgba(255,255,255,0.05) !important; backdrop-filter: none !important; }
+
+  /* Page breaks */
+  main > .grid { page-break-inside: avoid; }
+  main > .grid > div { page-break-inside: avoid; margin-bottom: 1rem; }
+  section { page-break-before: auto; page-break-inside: avoid; }
+
+  /* CTA section — hide in print */
+  main > section:last-child { display: none !important; }
+
+  /* Milestone ring colors */
+  .ring-white, .ring-4 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Force SVG ring chart to print */
+  svg circle { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Print header */
+  .hero-curved-bg::before {
+    content: "Eggologic Impact Report — Printed " attr(data-date);
+    display: block;
+    text-align: center;
+    color: rgba(255,255,255,0.5);
+    font-size: 8pt;
+    padding-top: 0.5rem;
+  }
 }

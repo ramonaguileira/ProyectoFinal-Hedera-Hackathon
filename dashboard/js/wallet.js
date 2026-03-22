@@ -213,7 +213,7 @@ function renderHolders(balances) {
       const isKnown = !!knownAccounts[b.account];
       const accountUrl = `${CONFIG.HASHSCAN_URL}/account/${b.account}`;
       return `
-        <a href="${accountUrl}" target="_blank" rel="noopener" class="group flex items-center justify-between p-6 bg-white hover:bg-surface-container-highest transition-all rounded-2xl hover:shadow-xl hover:-translate-y-1 border border-stone-100 hover:border-primary/10 duration-300 no-underline text-inherit">
+        <a href="${accountUrl}" target="_blank" rel="noopener" class="group flex items-center justify-between p-6 bg-surface-container-lowest hover:bg-surface-container-highest transition-all rounded-2xl hover:shadow-xl hover:-translate-y-1 border border-stone-100 hover:border-primary/10 duration-300 no-underline text-inherit">
           <div class="flex items-center gap-6">
             <div class="w-14 h-14 rounded-full ${isKnown ? 'bg-secondary-container' : 'bg-stone-100'} flex items-center justify-center">
               <span class="material-symbols-outlined text-primary text-2xl">${isKnown ? 'verified_user' : 'account_balance_wallet'}</span>

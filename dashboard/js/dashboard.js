@@ -1,13 +1,13 @@
-// Eggologic Dashboard — Screen 4 (index.html) Data Binding
-// Loads: hero metrics (global, no login), wallet balance + transactions (user-specific)
-
+// EGGOLOGIC Dashboard
+// Loads: hero metrics (global, no login), balance + transactions (user-specific)
+//Ever heard of CAPS? fun guy.
 /**
- * Animate a number counting up from 0 to target.
- * @param {string} elementId - DOM element ID to animate
- * @param {number} target - Final numeric value
- * @param {string} suffix - Text appended after number (e.g. 't', 'kg')
- * @param {number} decimals - Decimal places (0 for integers, 1 for '1.8t')
- * @param {number} duration - Animation duration in ms (default 1400)
+ * Numboor animation counting from 0 to target.
+ * @param {string} elementId - DOM elementID to animate
+ * @param {number} target - Final value
+ * @param {string} suffix - Text appended wnumber (e.g. 't', 'kg')
+ * @param {number} decimals - Decimals (0 for integers, 1 for '1.8t')
+ * @param {number} duration - Animation duration in ms (default 1100)
  */
 function countUp(elementId, target, suffix = '', decimals = 0, duration = 1100) {
   const el = document.getElementById(elementId);
@@ -33,18 +33,18 @@ function countUp(elementId, target, suffix = '', decimals = 0, duration = 1100) 
 }
 
 /**
- * Load global metrics — visible to ALL visitors (no login required).
- * Sources: Guardian cache (local JSON) + Hedera Mirror Node (public API).
+ * Load global metrics to ALL visitors.
+ * Sources: Cache(local JSON) + Hedera Mirror Node (public API).
  */
 async function loadGlobalMetrics() {
   ['metric-waste', 'metric-co2', 'metric-eggs'].forEach(id => UI.showLoading(id));
 
   try {
-    // Live EGGOCOIN supply from Hedera Mirror Node (public, no login needed)
+    // Live EGGOCOIN supply from Mirror Node
     const supplyData = await HederaMirror.getEggocoinSupply();
     const totalEggo = supplyData.totalSupply;
 
-    // CDM AMS-III.F: 1 $EGGO ≈ 1 kg_ajustados
+    // 1 $EGGO ≈ 1 kg_ajustados
     // Organic waste processed (gross) ≈ kg_ajustados / 0.70
     const wasteKg = totalEggo / 0.70;
     if (wasteKg >= 1000) {
@@ -70,7 +70,7 @@ async function loadGlobalMetrics() {
     countUp('metric-eggs', 936, '', 0);
   }
 
-  // Also fetch Guardian data for delivery count (used by form ID generation)
+  // Guardian fetch for delivery count (used by form ID generation)
   try {
     const deliveryData = await GuardianAPI.getBlockData(CONFIG.BLOCKS.VVB_DELIVERY);
     const docs = extractDocuments(deliveryData);
@@ -81,8 +81,8 @@ async function loadGlobalMetrics() {
 }
 
 /**
- * Load user-specific data — wallet balance, transactions, recent activity.
- * Requires login (needs a specific Hedera account ID).
+ * Load user-specific data
+ * login (requires a specific Hedera account ID, duhh).
  */
 async function loadUserData() {
   if (!GuardianAPI.isLoggedIn()) return;
@@ -106,21 +106,21 @@ async function loadUserData() {
 }
 
 /**
- * Extract VC documents from Guardian block response (handles various formats).
+ * Extract VC documents (various formats).
  */
 function extractDocuments(blockData) {
   if (!blockData) return [];
-  // Could be { data: [...] } or { documents: [...] } or array directly
+  // Either { data: [...] } or { documents: [...] } or array directly
   if (Array.isArray(blockData)) return blockData;
   if (blockData.data && Array.isArray(blockData.data)) return blockData.data;
   if (blockData.documents && Array.isArray(blockData.documents)) return blockData.documents;
-  // Single document wrapper
+  // Doc wrapper
   if (blockData.document) return [blockData];
   return [];
 }
 
 /**
- * Populate the wallet transaction widget (3 most recent).
+ * Wallet transaction widget (3 most recent).
  */
 async function loadWalletWidget(accountId) {
   try {
@@ -167,7 +167,7 @@ async function loadWalletWidget(accountId) {
 }
 
 /**
- * Populate the recent activity section.
+ * Recent activity section load.
  */
 async function loadRecentActivity(accountId) {
   try {
@@ -231,7 +231,7 @@ function updateDeliveryCard() {
   if (isPP) {
     cta.classList.add('hidden');
     form.classList.remove('hidden');
-    // Set delivery ID chip from mint events (more reliable than cache)
+    // Set delivery ID chip from mint events (more reliable than cache. Like, REALLY)
     _updateDeliveryId();
   } else {
     cta.classList.remove('hidden');
@@ -244,7 +244,7 @@ async function _updateDeliveryId() {
     const mintEvents = await HederaMirror.getMintEvents();
     window._deliveryCount = mintEvents.length;
   } catch {
-    // Fallback: keep whatever was set by loadGlobalMetrics
+    // Fallback
   }
   const count = (window._deliveryCount || 0) + 1;
   const chip = document.getElementById('delivery-id-chip');
@@ -252,7 +252,7 @@ async function _updateDeliveryId() {
 }
 
 /**
- * Live preview: compute adjusted kg as user types.
+ * Live preview
  */
 function updateDeliveryPreview() {
   const bruto = parseFloat(document.getElementById('delivery-kg-bruto')?.value) || 0;
@@ -308,7 +308,7 @@ function updateDeliveryPreview() {
 }
 
 /**
- * Submit the delivery form to Guardian API, then auto-trigger VVB approval.
+ * Guardian API Submit + VVB approval auto-trigger.
  */
 async function submitDeliveryForm() {
   const btn = document.getElementById('delivery-submit-btn');
@@ -330,7 +330,7 @@ async function submitDeliveryForm() {
 
   btn.disabled = true;
 
-  // Show workflow stepper in the preview area
+  // Workflow stepper in preview area
   const stepperHTML = `
     <div id="workflow-stepper" class="space-y-3">
       <div id="ws-1" class="flex items-center gap-3">
@@ -370,7 +370,7 @@ async function submitDeliveryForm() {
     _updateStep('ws-2', 'active', 'VVB reviewing delivery...');
     window._deliveryCount = count;
 
-    // Step 2: Auto-approve as VVB
+    // Step 2: Auto-approve as VVB. ABSOLUTE ALPHA MOVE FOR DEMO
     try {
       await _autoApproveAsVVB(deliveryId);
       _updateStep('ws-2', 'done', 'VVB approved delivery');
@@ -392,7 +392,7 @@ async function submitDeliveryForm() {
     btn.disabled = true;
     btn.textContent = 'Enter weight to submit';
 
-    // Refresh metrics after a delay (let Guardian process)
+    // Refresh metrics after delay (let Guardian process, big boi sometimes slow)
     setTimeout(() => { loadGlobalMetrics(); if (GuardianAPI.isLoggedIn()) loadUserData(); }, 3000);
   } catch (e) {
     console.error('Delivery submission error:', e);
@@ -403,7 +403,7 @@ async function submitDeliveryForm() {
   }
 }
 
-/** Update a workflow stepper step's visual state. */
+/** Update workflow stepper step's vstate. */
 function _updateStep(id, state, text) {
   const el = document.getElementById(id);
   if (!el) return;
@@ -424,11 +424,11 @@ function _updateStep(id, state, text) {
 }
 
 /**
- * Auto-approve a delivery as VVB (behind the scenes).
- * Logs in as VVB, fetches pending deliveries, approves the matching one.
+ * Auto-approve a delivery as VVB (Backdoor).
+ * Logs as VVB, fetches pending deliveries, approves the matching one. Genius
  */
 async function _autoApproveAsVVB(deliveryId) {
-  // Login as VVB (separate session, doesn't affect current user)
+  // Login as VVB (separate session, current user won't know)
   const loginRes = await fetch(`${CONFIG.GUARDIAN_URL}/accounts/loginByEmail`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -446,17 +446,17 @@ async function _autoApproveAsVVB(deliveryId) {
   if (!tokenRes.ok) throw new Error(`VVB access token failed: ${tokenRes.status}`);
   const vvbToken = (await tokenRes.json()).accessToken;
 
-  // Wait for Guardian to process the delivery (indexing delay)
+  // Indexing delay
   await new Promise(r => setTimeout(r, 4000));
 
-  // Fetch VVB delivery documents
+  // Fetch VVB delivery docs
   const docsRes = await fetch(`${CONFIG.GUARDIAN_URL}/policies/${CONFIG.POLICY_ID}/blocks/${CONFIG.BLOCKS.VVB_DELIVERY}`, {
     headers: { 'Authorization': `Bearer ${vvbToken}` },
   });
   if (!docsRes.ok) throw new Error(`VVB docs fetch failed: ${docsRes.status}`);
   const docsData = await docsRes.json();
 
-  // Find the document matching our delivery ID
+  // Find document matching our delivery ID
   const allDocs = docsData.data || docsData.documents || (Array.isArray(docsData) ? docsData : []);
   const target = allDocs.find(d => {
     const cs = d.document?.credentialSubject;
@@ -466,7 +466,7 @@ async function _autoApproveAsVVB(deliveryId) {
 
   if (!target) throw new Error(`Delivery ${deliveryId} not found in VVB queue (may need intermediate steps)`);
 
-  // Approve: POST full document with Button_0 tag
+  // Approve: POST doc with Button_0 tag
   const approveRes = await fetch(`${CONFIG.GUARDIAN_URL}/policies/${CONFIG.POLICY_ID}/blocks/${CONFIG.BLOCKS.VVB_DELIVERY_APPROVE}`, {
     method: 'POST',
     headers: {

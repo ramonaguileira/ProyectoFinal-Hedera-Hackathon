@@ -1,24 +1,24 @@
-// Eggologic Dashboard — Screen 2 (impact.html) Data Binding
-// Loads: aggregate score, CO2 avoidance, waste chart, milestones
+// EGGOLOGIC Dashboard — impact.html Data Binding
+// Loads: aggregate score, CO2 avoidance, waste chart, milestones, PAIN.
 
-// Module-level state for chart filtering
+// Chart filtering
 let _allBars = [];
 let _currentFilter = 'all';
 
 /**
- * Fetch VVB delivery block data regardless of who is logged in.
- * The VVB_DELIVERY block is role-restricted — only VVB tokens can read it.
- * For PP, other roles, or no login, we authenticate as VVB behind the scenes.
+ * Fetch VVB delivery block data regardless of who is logged in. THIS IS A HACKATHON BYPASS. WE ARE *NOT* DOING THIS IN PRODUCTION.
+ * VVB_DELIVERY block is role-restricted — only VVB tokens can read it, who knew.
+ * For PP, other roles, or no login, we authenticate as VVB behind the scenes. Facilitates vision of the stuff. judges spend less time switching accs. Otherwise some datapoints would be lost.
  */
 async function fetchImpactData() {
   const user = GuardianAPI.isLoggedIn() ? GuardianAPI.currentUser() : null;
 
-  // VVB can access the delivery block directly
+  // VVB accesses the delivery block as intended
   if (user && user.role === 'VVB' && !user.offline) {
     return GuardianAPI.getBlockData(CONFIG.BLOCKS.VVB_DELIVERY);
   }
 
-  // For everyone else: login as VVB behind the scenes and fetch
+  // For the rest: login as VVB behind the scenes and fetch, hehehe
   const loginRes = await fetch(`${CONFIG.GUARDIAN_URL}/accounts/loginByEmail`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -51,7 +51,7 @@ async function loadImpact() {
   UI.showLoading('supply-pct');
   UI.showLoading('total-minted');
 
-  // Load Hedera data first (always works — public API)
+  // Hedera public API data load
   try {
     const supply = await HederaMirror.getEggocoinSupply();
     UI.setText('total-minted', `${UI.fmt(supply.totalSupply)} EGGOCOIN minted`);
@@ -60,7 +60,7 @@ async function loadImpact() {
     console.error('Supply error:', e);
   }
 
-  // Load Guardian policy data — always fetches as VVB (block is role-restricted)
+  // Guardian policy data load — always fetches as VVB (block role-restricted, REMEMBER??)
   try {
     const deliveryData = await fetchImpactData();
     const docs = extractDocs(deliveryData);
@@ -75,18 +75,17 @@ async function loadImpact() {
         : d.document?.credentialSubject;
       if (!cs) return;
 
-      // Guardian uses field8=kg_ingreso, field12=kg_ajustados, field4=id_entrega
+      // Guardian uses field8=kg_ingreso, field12=kg_ajustados, field4=id_entrega, so we just parse them 
       const kg = parseFloat(cs.kg_ingreso || cs.field8) || 0;
       const kgAdj = parseFloat(cs.kg_ajustados || cs.field12) || 0;
       const id = cs.id_entrega || cs.field4 || cs.id || '';
 
-      // Extract waste quality category (A/B/C) for colored bars
+      // Extract waste quality category (A/B/C) for colored bars. PM's absolutely LOSE it when they see graphs with colors and stuff. Funny creatures.
       const cat = cs.categoria || cs.field13 || '';
 
-      // CDM AMS-III.F methodology determines approval:
+      // This is based off CDM AMS-III.F methodology. Since it's a PAIN to use that bloody policy atm, we took a different approach. but we're on it and plan to do so in the future, tho.
       // Cat A (≤5% contamination) and Cat B (5-10%) → approved
       // Cat C (>10%) → rejected
-      // This is more reliable than d.option.status which varies by role/view
       const isApproved = cat !== 'C';
 
       totalKg += kg;
@@ -95,8 +94,8 @@ async function loadImpact() {
       deliveryBars.push({ id, kg, kgAdj, approved: isApproved, category: cat });
     });
 
-    // Sort bars by ENT number (ascending), then re-number sequentially
-    // (Guardian has duplicate IDs for deliveries submitted while counter was broken)
+    // Sort bars by ENT number (ascending), then re-number sequentially.
+    // (Guardian duplicated IDs for some deliveries submitted while counter was broken - quick bugfix.)                     I know, it's messy - sorry :(
     deliveryBars.sort((a, b) => {
       const numA = parseInt(a.id.replace(/\D/g, '')) || 0;
       const numB = parseInt(b.id.replace(/\D/g, '')) || 0;
@@ -112,7 +111,7 @@ async function loadImpact() {
 
     // Update ring chart proportion
     const circumference = 502; // 2 * PI * 80
-    const pct = Math.min(co2Kg / 1000, 1); // Proportion toward 1 tonne
+    const pct = Math.min(co2Kg / 1000, 1); // Proportion towards 1 tonne
     const offset = circumference * (1 - pct);
     const ring = document.getElementById('co2-ring');
     if (ring) ring.setAttribute('stroke-dashoffset', offset.toString());
@@ -121,13 +120,13 @@ async function loadImpact() {
     UI.setText('methane-pct', '72%');
     UI.setText('supply-pct', '28%');
 
-    // Update NFT milestone with actual kg
+    // Update NFT's milestone with actual kg - fun little details
     const nftDetail = document.getElementById('ms-nft-detail');
     if (nftDetail && totalKg >= 1000) {
       nftDetail.textContent = `${UI.fmt(totalKg, 1)} kg processed — exceeded 1,000 kg threshold`;
     }
 
-    // Store for filtering, render chart, then update aggregate score
+    // Store for filtering, render chart, then update aggregate score hehe
     _allBars = deliveryBars;
     _currentFilter = 'all';
     renderWasteChart(deliveryBars);
@@ -146,7 +145,7 @@ async function loadImpact() {
 
 /**
  * Compute and render aggregate score from _allBars.
- * Uses direct DOM manipulation to guarantee the card updates.
+ * Using direct DOM to guarantee the card updates. Tried some other stuff, FAILED.
  */
 function updateAggregateScore() {
   const approved = _allBars.filter(b => b.approved).length;
@@ -199,7 +198,7 @@ function renderWasteChart(bars) {
     <div class="w-full h-full flex items-end gap-3">
       ${bars.map((b, i) => {
         const pct = (b.kg / maxVal) * 100;
-        // Color by waste quality: A=green, B=yellow, C/rejected=red
+        // Color bar by waste quality: A=green, B=yellow, C/rejected=red
         const color = !b.approved ? 'bg-red-400/70'
           : b.category === 'B' ? 'bg-[#FBD54E]'
           : b.category === 'C' ? 'bg-red-400/70'
@@ -222,7 +221,7 @@ function renderWasteChart(bars) {
 }
 
 function renderFallbackChart() {
-  // Known delivery data from Guardian cache (with waste quality categories)
+  // Known delivery data from Guardian's first working cache after policy finally worked (w/waste quality cat)
   const fallback = [
     { id: 'ENT-001', kg: 48.5, kgAdj: 33.11, approved: true, category: 'A' },
     { id: 'ENT-002', kg: 52, kgAdj: 33.74, approved: true, category: 'A' },
@@ -255,7 +254,7 @@ function filterChart(category) {
 
   renderWasteChart(filtered);
 
-  // Update button label
+  // Updated button for filtering
   const btn = document.getElementById('chart-filter-btn');
   if (btn) {
     const labels = {
@@ -267,7 +266,7 @@ function filterChart(category) {
     btn.innerHTML = `${labels[category] || 'All Deliveries'} <span class="material-symbols-outlined text-sm">expand_more</span>`;
   }
 
-  // Close dropdown
+  // Dropdown closing
   const dropdown = document.getElementById('chart-filter-dropdown');
   if (dropdown) dropdown.classList.add('hidden');
 }
@@ -276,11 +275,11 @@ function onLogin() {
   loadImpact();
 }
 
-// Load global impact data for all visitors (no login required)
+// Load data for all visitors
 document.addEventListener('DOMContentLoaded', () => {
   loadImpact();
 
-  // Close filter dropdown when clicking outside
+  // Close dropdown when clicking outside
   document.addEventListener('click', (e) => {
     const dropdown = document.getElementById('chart-filter-dropdown');
     const btn = document.getElementById('chart-filter-btn');

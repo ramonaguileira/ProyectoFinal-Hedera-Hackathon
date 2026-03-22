@@ -1,10 +1,10 @@
-// Eggologic Dashboard — Shared UI (Login modal, nav, loading states)
+// EGGOLOGIC Dashboard — Vanilla is GOOD(Login modal, nav, loading states).
 
 const UI = (() => {
 
   /**
-   * Inject the login modal HTML into the page.
-   * Call once on DOMContentLoaded.
+   * Inject HTML login into the page.
+   * Call once on DOMContentLoaded. My Vanilla JS professor would be SO proud for this :') 
    */
   function initLoginModal() {
     const modal = document.createElement('div');
@@ -38,6 +38,28 @@ const UI = (() => {
           </button>
         </div>
         <p class="text-[10px] text-stone-400 text-center mt-6">Demo accounts — Hedera Testnet</p>
+        <div id="privy-section" class="hidden">
+          <div class="relative flex items-center my-6">
+            <div class="flex-grow border-t border-stone-200"></div>
+            <span class="mx-4 text-xs text-stone-400 font-medium">or continue with email</span>
+            <div class="flex-grow border-t border-stone-200"></div>
+          </div>
+          <div id="privy-email-step">
+            <div class="flex gap-2">
+              <input id="privy-email" type="email" placeholder="you@email.com" class="flex-1 px-4 py-3 rounded-xl border border-stone-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#6C63FF]/20 bg-stone-50" />
+              <button id="privy-send-btn" onclick="Privy.sendCode()" class="px-5 py-3 bg-[#6C63FF] text-white rounded-xl font-bold text-sm hover:opacity-90 transition-opacity whitespace-nowrap">Send Code</button>
+            </div>
+          </div>
+          <div id="privy-otp-step" class="hidden">
+            <p class="text-xs text-stone-500 mb-2">Enter the code sent to your email</p>
+            <div class="flex gap-2">
+              <input id="privy-otp" type="text" placeholder="6-digit code" maxlength="6" class="flex-1 px-4 py-3 rounded-xl border border-stone-200 text-sm text-center tracking-[0.3em] font-mono focus:outline-none focus:ring-2 focus:ring-[#6C63FF]/20 bg-stone-50" />
+              <button id="privy-verify-btn" onclick="Privy.verifyCode()" class="px-5 py-3 bg-[#6C63FF] text-white rounded-xl font-bold text-sm hover:opacity-90 transition-opacity">Verify</button>
+            </div>
+            <button onclick="Privy.reset()" class="text-xs text-stone-400 hover:text-stone-600 mt-2">Use a different email</button>
+          </div>
+          <p class="text-[10px] text-stone-400 text-center mt-3">Powered by <span class="font-bold">Privy</span> — Web2 onboarding</p>
+        </div>
       </div>
     `;
     document.body.appendChild(modal);
@@ -67,7 +89,7 @@ const UI = (() => {
       updateAuthUI();
       const user = GuardianAPI.currentUser();
       showToast(`Signed in as ${user.role || 'User'}`);
-      // Trigger page-specific data load
+      // Data load Triggoor
       if (typeof onLogin === 'function') onLogin();
     } catch (e) {
       errorEl.textContent = e.message;
@@ -79,7 +101,7 @@ const UI = (() => {
   }
 
   /**
-   * Update the nav bar auth button to reflect login state.
+   * Nav bar update auth button for login state.
    */
   function updateAuthUI() {
     const authBtn = document.getElementById('auth-btn');
@@ -95,6 +117,16 @@ const UI = (() => {
         <span class="material-symbols-outlined text-white text-sm cursor-pointer" onclick="event.stopPropagation(); GuardianAPI.logout(); UI.updateAuthUI(); location.reload();">logout</span>
       `;
       authBtn.onclick = null;
+    } else if (window.Privy?.isLoggedIn()) {
+      const pUser = window.Privy.getUser();
+      authBtn.innerHTML = `
+        <div class="w-6 h-6 rounded-full bg-[#6C63FF] flex items-center justify-center">
+          <span class="material-symbols-outlined text-[14px] text-white">mail</span>
+        </div>
+        <span class="text-white text-xs font-semibold">${pUser.email || 'Web2 User'}</span>
+        <span class="material-symbols-outlined text-white text-sm cursor-pointer" onclick="event.stopPropagation(); Privy.logout();">logout</span>
+      `;
+      authBtn.onclick = null;
     } else {
       authBtn.innerHTML = `
         <div class="w-6 h-6 rounded-full overflow-hidden border border-white/20 bg-white/10 flex items-center justify-center">
@@ -108,7 +140,7 @@ const UI = (() => {
   }
 
   /**
-   * Set text content of an element by ID, with optional formatting.
+   * Set text (with optional formatting).
    */
   function setText(id, value) {
     const el = document.getElementById(id);
@@ -119,7 +151,7 @@ const UI = (() => {
   }
 
   /**
-   * Set innerHTML of an element by ID.
+   * innerHTML by ID.
    */
   function setHTML(id, html) {
     const el = document.getElementById(id);
@@ -127,14 +159,14 @@ const UI = (() => {
   }
 
   /**
-   * Show a skeleton loading state inside an element.
-   * Uses shimmer animation instead of "···".
+   * Show a skeleton loading state inside elements.
+   * Chad shimmer animation instead of virgin "···".
    */
   function showLoading(id) {
     const el = document.getElementById(id);
     if (el) {
       el.dataset.original = el.textContent;
-      // Pick light skeleton for elements inside dark containers
+      // Light skeleton for elements inside dark stuff
       const isDark = el.closest('.hero-curved-bg, .glass-card, [class*="bg-primary"], [class*="bg-\\[\\#10381E"]');
       const cls = isDark ? 'skeleton-light' : 'skeleton';
       el.innerHTML = `<span class="${cls}" style="display:inline-block;min-width:4rem;height:1em;">&nbsp;</span>`;
@@ -142,14 +174,14 @@ const UI = (() => {
   }
 
   /**
-   * Format a number with locale separators.
+   * Format for numbers with separatoors.
    */
   function fmt(n, decimals = 0) {
     return Number(n).toLocaleString('en-US', { maximumFractionDigits: decimals });
   }
 
   /**
-   * Format a timestamp to relative time (e.g., "2 hours ago").
+   * Timestamp to relative time (e.g., "2 hours ago, 1 day ago, 6 FULL YEARS OF MY LIFE ON YOUR TRAIL").
    */
   function timeAgo(date) {
     const seconds = Math.floor((Date.now() - date.getTime()) / 1000);
@@ -160,27 +192,27 @@ const UI = (() => {
   }
 
   /**
-   * Inject mobile hamburger menu.
+   * Mobile hamburger injection
    */
   function initMobileMenu() {
-    // Find the desktop nav links
+    // Find desktop nav links
     const nav = document.querySelector('nav');
     if (!nav) return;
 
-    // Create hamburger button (visible only on small screens)
+    // Hamburger button (4 smol screens)
     const hamburger = document.createElement('button');
     hamburger.id = 'hamburger-btn';
     hamburger.className = 'md:hidden text-white p-2';
     hamburger.innerHTML = '<span class="material-symbols-outlined text-2xl">menu</span>';
     hamburger.setAttribute('aria-label', 'Open menu');
 
-    // Insert hamburger before the auth button
+    // Insert hamburger BEFORE auth button (!)
     const authBtn = document.getElementById('auth-btn');
     if (authBtn && authBtn.parentElement) {
       authBtn.parentElement.insertBefore(hamburger, authBtn);
     }
 
-    // Create overlay + panel
+    // Overlay + panel
     const overlay = document.createElement('div');
     overlay.className = 'mobile-menu-overlay';
     overlay.id = 'mobile-overlay';
@@ -189,7 +221,7 @@ const UI = (() => {
     panel.className = 'mobile-menu-panel';
     panel.id = 'mobile-panel';
 
-    // Get current page for active state
+    // Get current for active state
     const currentPage = location.pathname.split('/').pop() || 'index.html';
 
     panel.innerHTML = `
@@ -230,7 +262,7 @@ const UI = (() => {
   }
 
   /**
-   * Initialize page: login modal + auth state + nav links + mobile menu.
+   * Page load: login modal + auth state + nav links + mobile menu.
    */
   function init() {
     initLoginModal();
@@ -239,7 +271,7 @@ const UI = (() => {
   }
 
   /**
-   * Show skeleton rows inside a container (for transaction lists, holder lists, etc.).
+   * Show skeleton rows in container (for transaction lists, holder lists, etc.).
    */
   function showSkeletonRows(id, count = 3) {
     const el = document.getElementById(id);
@@ -262,7 +294,7 @@ const UI = (() => {
   }
 
   /**
-   * Show a toast notification.
+   * Show toast of shame - would've been nice tho...definitely shipping this wen mainnet prod
    */
   function showToast(message) {
     let toast = document.getElementById('app-toast');

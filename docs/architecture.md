@@ -4,72 +4,9 @@
 
 Eggologic runs on a **two-layer architecture** with zero middleware. The dashboard (static frontend hosted on GitHub Pages) communicates directly with two APIs: Guardian MGS for policy operations and Hedera Mirror Node for on-chain data.
 
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        PHYSICAL LAYER                               │
-│                                                                     │
-│   Restaurants ──(organic waste)──► Eggologic Hub (El Tesoro, Maldonado)│
-│                                    ├─ BSF Larvae processing        │
-│                                    ├─ Egg production               │
-│                                    └─ Compost output               │
-└────────────────────────────┬────────────────────────────────────────┘
-                             │ data entry
-                             ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                     DASHBOARD (GitHub Pages)                        │
-│                     Vanilla HTML/JS + Tailwind CSS                  │
-│                                                                     │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌─────────────┐        │
-│  │  index   │  │  impact  │  │  wallet  │  │ marketplace │        │
-│  │  .html   │  │  .html   │  │  .html   │  │    .html    │        │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └──────┬──────┘        │
-│       │              │             │               │                │
-│  ┌────▼──────────────▼─────────────▼───────────────▼────────┐      │
-│  │                    js/ modules                            │      │
-│  │  config.js ─ api.js ─ hedera.js ─ ui.js ─ dashboard.js  │      │
-│  │                    impact.js ─ wallet.js ─ marketplace.js │      │
-│  └────┬──────────────────────────────────────┬──────────────┘      │
-│       │                                      │                      │
-└───────┼──────────────────────────────────────┼──────────────────────┘
-        │ HTTPS (JWT auth)                     │ HTTPS (public, no auth)
-        ▼                                      ▼
-┌───────────────────┐                ┌─────────────────────┐
-│  Guardian MGS     │                │  Hedera Mirror Node │
-│  v1.5.1           │                │  (Testnet)          │
-│                   │                │                     │
-│  guardianservice  │                │  testnet.mirrornode │
-│  .app/api/v1      │                │  .hedera.com        │
-│                   │                │                     │
-│  • Auth (JWT)     │                │  • Token balances   │
-│  • Policy blocks  │                │  • Transactions     │
-│  • VC submission  │                │  • NFT holdings     │
-│  • VC retrieval   │                │  • Token info       │
-│  • Approval flow  │                │  • Mint events      │
-└────────┬──────────┘                └──────────┬──────────┘
-         │                                      │
-         ▼                                      ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                       HEDERA TESTNET                                │
-│                                                                     │
-│  ┌────────────────────────────────────────────────────────────┐     │
-│  │  Policy: EWD-RB v0.3                                      │     │
-│  │  Topic:  0.0.8291451                                      │     │
-│  │  Hash:   69bc4638e755119d0774dd03                         │     │
-│  │                                                            │     │
-│  │  ┌─────────────────┐  ┌──────────────────┐                │     │
-│  │  │ EGGOCOIN $EGGO  │  │ CIN NFT          │                │     │
-│  │  │ 0.0.8287358     │  │ 0.0.8287362      │                │     │
-│  │  │ Fungible HTS    │  │ Non-Fungible HTS │                │     │
-│  │  │ Mint on VVB     │  │ Mint on VVB      │                │     │
-│  │  │ approval of     │  │ approval of      │                │     │
-│  │  │ Waste Delivery  │  │ Impact Calc      │                │     │
-│  │  └─────────────────┘  └──────────────────┘                │     │
-│  └────────────────────────────────────────────────────────────┘     │
-│                                                                     │
-│  HCS Topics: 0.0.8291451 (policy) · 0.0.8294148 (instance)        │
-│  VCs: Stored as Verifiable Presentations on IPFS via Guardian      │
-└─────────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+  <img src="./architecture-diagram.jpg" alt="EggoLogic Architecture" width="850">
+</p>
 
 ---
 

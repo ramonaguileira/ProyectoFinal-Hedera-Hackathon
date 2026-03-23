@@ -88,40 +88,9 @@ The demo shows the complete pipeline:
 
 ## Architecture
 
-```
-  Suppliers / Restaurants          VVB (Validator)            Public Viewers
-         │                              │                          │
-         │ (deliver waste)              │ (review + approve)       │
-         │                              │                          │
-    ┌────▼──────────────────────────────▼──────────────────────────▼────┐
-    │                    Dashboard (GitHub Pages)                       │
-    │              Vanilla HTML/JS + Tailwind CSS                      │
-    │                                                                  │
-    │   index.html        impact.html      wallet.html   marketplace   │
-    │   ├─ Hero metrics   ├─ CO₂ chart     ├─ Balance    ├─ Redeem     │
-    │   ├─ Delivery form  ├─ Score %       ├─ Tx history │  catalog    │
-    │   └─ Activity feed  └─ Milestones    └─ CIN NFTs   └─ Stats     │
-    └────┬────────────────────────┬────────────────────────────────────┘
-         │                        │
-    Guardian API              Hedera Mirror Node
-    (MGS v1.5.1)              (Public REST API)
-         │                        │
-    ┌────▼────────────────────────▼────┐
-    │        Hedera Testnet            │
-    │                                  │
-    │  ┌──────────────────────────┐    │
-    │  │ Policy: EWD-RB v0.3     │    │
-    │  │ Topic:  0.0.8291451     │    │
-    │  │                         │    │
-    │  │ 8 Schemas (VCs)         │    │
-    │  │ 5 Roles + OWNER        │    │
-    │  │ VVB manual approval     │    │
-    │  │                         │    │
-    │  │ EGGOCOIN  0.0.8287358   │    │
-    │  │ CIN NFT   0.0.8287362   │    │
-    │  └──────────────────────────┘    │
-    └──────────────────────────────────┘
-```
+<p align="center">
+  <img src="./docs/architecture-diagram.jpg" alt="EggoLogic Architecture" width="850">
+</p>
 
 ### Key Design Decision: No Middleware
 

@@ -123,6 +123,9 @@
           <a href="marketplace.html" class="flex-1 bg-white text-[#10381E] py-4 rounded-full text-sm font-bold shadow-lg transition-all hover:bg-[#A3CFA1] text-center">Buy $EGGO</a>
           <button onclick="UI.showToast('Coming soon')" class="flex-1 bg-transparent border border-white/20 text-white py-4 rounded-full text-sm font-bold hover:bg-white/5 transition-all">Redeem Credits</button>
         </div>
+        <button onclick="UI.showToast('Connecting to HashPack WalletConnect...', 'info'); setTimeout(() => UI.showToast('Phase 2 Feature: Self-custody wallet pairing is currently in preview.', 'success'), 2000);" class="w-full flex items-center justify-center gap-3 bg-white/5 border border-white/20 text-white py-3 rounded-full text-sm font-bold hover:bg-white/10 transition-all mt-4">
+          <img src="img/logo-hedera.svg" class="w-5 h-5 opacity-80 filter grayscale brightness-200" alt=""/> Pair HashPack Wallet
+        </button>
       </div>
       <div id="tx-history" class="bg-white p-6 md:p-8 space-y-4">
         <p class="text-stone-400 text-sm text-center py-6">Sign in to view transactions</p>

@@ -4,7 +4,8 @@
   "description": "Circular economy verified on Hedera — Organic Waste → BSF → Eggs → Compost → Verified Carbon Credits",
   "private": true,
   "scripts": {
-    "dashboard:dev": "cd dashboard && npx serve ."
+    "dashboard:dev": "cd dashboard && npx serve .",
+    "test": "jest tests/"
   },
   "keywords": [
     "hedera",
@@ -21,5 +22,8 @@
     "CIN"
   ],
   "author": "Rafael Aguileira",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
 }

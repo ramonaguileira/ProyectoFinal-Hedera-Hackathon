@@ -53,8 +53,8 @@ async function loadGlobalMetrics() {
       countUp('metric-waste', wasteKg, 'kg', 0);
     }
 
-    // CO2 avoided = kg_ajustados × 0.70 (CDM emission factor)
-    const co2Kg = totalEggo * 0.70;
+    // CO2 avoided = kg_ajustados (1 $EGGO = 1 kg CO2 avoided per EWD-RB)
+    const co2Kg = totalEggo;
     if (co2Kg >= 1000) {
       countUp('metric-co2', co2Kg / 1000, 't', 1);
     } else {

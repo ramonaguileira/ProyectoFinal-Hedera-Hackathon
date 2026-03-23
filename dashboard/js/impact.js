@@ -132,17 +132,22 @@ async function loadImpact() {
     });
 
     // Circular Impact NFT tracking
-    let nftCount = Math.floor(totalKg / 1000);
+    let nftCount = Math.floor(totalKgAdj / 1000);
+    let totalEggo = totalKgAdj;
     try {
+      const supplyToken = await HederaMirror.getEggocoinSupply();
+      if(supplyToken && supplyToken.totalSupply) {
+        totalEggo = supplyToken.totalSupply;
+      }
       nftCount = await HederaMirror.getCITSupply();
     } catch (e) {
-      console.warn("Could not fetch actual CIT supply, falling back to math", e);
+      console.warn("Could not fetch actual token supply, falling back to math", e);
     }
-    const progressKg = totalKg % 1000;
+    const progressKg = totalEggo % 1000;
     const remainingToNext = 1000 - progressKg;
 
-    // Use totalKg for the center text, but progress for the ring
-    UI.setText('co2-tonnes', UI.fmt(totalKg, 0));
+    // Use totalEggo for the center text, but progress for the ring
+    UI.setText('co2-tonnes', UI.fmt(totalEggo, 0));
     const nftsMintedEl = document.getElementById('nfts-minted-count');
     if(nftsMintedEl) {
       nftsMintedEl.textContent = `${nftCount} CIT NFTs`;
@@ -155,14 +160,14 @@ async function loadImpact() {
     const ring = document.getElementById('co2-ring');
     if (ring) ring.setAttribute('stroke-dashoffset', offset.toString());
 
-    // Verified Avoidance & Next Target (Replacing methane/supply logic)
-    UI.setText('methane-pct', `${UI.fmt(totalKg, 0)} kg total`);
+    // Verified Avoidance & Next Target
+    UI.setText('methane-pct', `${UI.fmt(totalEggo, 0)} kg total`);
     UI.setText('supply-pct', `${UI.fmt(remainingToNext, 0)} kg to NFT #${nftCount + 1}`);
 
-    // Update NFT's milestone with actual kg - fun little details
+    // Update NFT's milestone with actual kg
     const nftDetail = document.getElementById('ms-nft-detail');
-    if (nftDetail && totalKg >= 1000) {
-      nftDetail.textContent = `${UI.fmt(totalKg, 1)} kg processed — exceeded 1,000 kg threshold`;
+    if (nftDetail && totalEggo >= 1000) {
+      nftDetail.textContent = `${UI.fmt(totalEggo, 1)} kg processed — exceeded 1,000 kg threshold`;
     }
 
     // Store for filtering, render chart, then update aggregate score hehe

@@ -61,7 +61,7 @@ This is **not a simulation**. Every data point maps to a physical operation happ
 - **Real operation** running in El Tesoro, Maldonado, Uruguay — 300-600 kg/week processed
 - **Digitized methodology** (EWD-RB) published as a Guardian policy with 8 schemas
 - **Two-token model**: EGGOCOIN (supplier incentive) + CIN (environmental impact NFT)
-- **VVB manual validation** — not automated, maintaining credibility and auditability
+- **VVB manual validation** — not automated, maintaining credibility and auditability (automated for the hackathon)
 - **70% conservative factor** on carbon calculations — deliberately under-counting
 - **Zero middleware** — dashboard connects directly to Guardian API + Hedera Mirror Node
 
@@ -71,7 +71,7 @@ This is **not a simulation**. Every data point maps to a physical operation happ
 
 ## Demo
 
-> **[Watch the Demo Video](https://youtu.be/PLACEHOLDER)**
+> **[Watch the Demo Video](https://youtu.be/hENzHwvPzm4)**
 
 The demo shows the complete pipeline:
 

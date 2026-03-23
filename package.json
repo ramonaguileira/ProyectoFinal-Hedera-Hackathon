@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dashboard:dev": "cd dashboard && npx serve .",
-    "test": "jest tests/"
+    "test": "jest tests/api.test.js tests/hedera.test.js tests/ui.test.js"
   },
   "keywords": [
     "hedera",

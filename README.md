@@ -569,7 +569,7 @@ All token mints and VC submissions are verifiable on Hedera testnet:
 | Name | Role | Links |
 |---|---|---|
 | Ramon Aguileira | Founder & Developer | [GitHub](https://github.com/ramonaguileira) |
-| Santiago | Technical Advisor | [GitHub](https://github.com/c4p5) |
+| Santiago | Technical Advisor | [GitHub](https://github.com/ramonaguileira) |
 
 ---
 
@@ -591,3 +591,4 @@ This project is licensed under the MIT License — see [LICENSE](./LICENSE) for 
 <p align="center">
   <strong>Turning waste into protein, eggs, compost, and verified carbon credits — one delivery at a time.</strong>
 </p>
+

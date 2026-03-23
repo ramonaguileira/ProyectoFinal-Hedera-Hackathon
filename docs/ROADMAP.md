@@ -33,7 +33,7 @@
 - [x] Dashboard (vanilla HTML/JS + Tailwind) connected directly to Guardian API + Hedera Mirror Node
 - [x] Zero-middleware architecture — static frontend on GitHub Pages, no servers
 - [x] VVB manual approval triggers token minting via Guardian policy engine
-- [x] Live dashboard: [c4p5.github.io/EggoLogic-Hedera-Hackathon](https://c4p5.github.io/EggoLogic-Hedera-Hackathon/)
+- [x] Live dashboard: [ramonaguileira.github.io/EggoLogic-Hedera-Hackathon](https://ramonaguileira.github.io/EggoLogic-Hedera-Hackathon/)
 - [x] Hackathon submission: Hedera Hello Future Apex 2026 (Sustainability Track, Hiero Bounty)
 
 ### Key Metrics — Phase 1
@@ -202,10 +202,11 @@ We're looking for:
 - **Impact investors** aligned with circular economy and ReFi principles
 - **VVBs** (Verification Bodies) interested in becoming part of our verification network
 
-Contact: [GitHub Issues](https://github.com/c4p5/EggoLogic-Hedera-Hackathon/issues) | [Project Discussions](https://github.com/c4p5/EggoLogic-Hedera-Hackathon/discussions)
+Contact: [GitHub Issues](https://github.com/ramonaguileira/EggoLogic-Hedera-Hackathon/issues) | [Project Discussions](https://github.com/ramonaguileira/EggoLogic-Hedera-Hackathon/discussions)
 
 ---
 
 <p align="center">
   <strong>Every kilogram diverted. Every token minted. Every credit verified. One delivery at a time.</strong>
 </p>
+

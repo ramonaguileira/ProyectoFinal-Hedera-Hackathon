@@ -270,7 +270,7 @@ No project on Hedera (or any blockchain) verifies **waste-to-BSF circular econom
 | **Physical operation** | BSF hub in El Tesoro processes 300–600 kg/week | ✅ Running |
 | **Restaurant partnership** | 1 active partner delivering 3–5 times/week, consistently Cat A (≤5% contamination) | ✅ Active |
 | **On-chain tokens** | EGGOCOIN mints and CIN NFTs verifiable on HashScan | ✅ Minted |
-| **Live dashboard** | 4 screens deployed at c4p5.github.io/EggoLogic-Hedera-Hackathon | ✅ Live |
+| **Live dashboard** | 4 screens deployed at ramonaguileira.github.io/EggoLogic-Hedera-Hackathon | ✅ Live |
 | **Guardian policy** | 8 schemas published, 5 roles registered, VCs created | ✅ Published |
 
 ### Feedback Sources
@@ -393,3 +393,4 @@ No project on Hedera (or any blockchain) verifies **waste-to-BSF circular econom
 | 8. Validation Strategy | Validation (primary) |
 | 9. Go-To-Market | Execution, Success |
 | 10. Pitch Outline | Pitch (primary) |
+
